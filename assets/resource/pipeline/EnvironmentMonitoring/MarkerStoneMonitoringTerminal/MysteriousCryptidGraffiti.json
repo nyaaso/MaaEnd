@@ -53,7 +53,7 @@
             "謎之生物的塗鴉",
             "(?i)Mysterious\\s*Cryptid\\s*Graffiti",
             "謎の生物に関する落書き",
-            "미지의 생물이 남긴 낙서"
+            "미지의\\s*생물이\\s*남긴\\s*낙서"
         ],
         "replace": [],
         "order_by": "Vertical",
@@ -108,7 +108,7 @@
             "接取委託",
             "(?i)Accept\\s*Job",
             "引き受ける",
-            "의뢰 수령"
+            "의뢰\\s*수령"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -129,7 +129,7 @@
             "前往任務",
             "(?i)Go\\s*to\\s*Mission",
             "任務へ",
-            "임무로 이동하기"
+            "임무로\\s*이동하기"
         ],
         "pre_delay": 0,
         "post_delay": 0,

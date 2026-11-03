@@ -136,7 +136,7 @@
             "実験区域",
             "Test Area",
             "무릉성",
-            "실험 구역"
+            "실험\\s*구역"
         ],
         "order_by": "Vertical"
     },
@@ -154,7 +154,7 @@
             "接取運送委託",
             "配達依頼を受ける",
             "Accept Delivery Job",
-            "운송 의뢰 수령"
+            "운송\\s*의뢰\\s*수령"
         ],
         "order_by": "Vertical"
     },
@@ -171,7 +171,7 @@
             "查看位置",
             "位置確認",
             "Check Location",
-            "위치 보기"
+            "위치\\s*보기"
         ],
         "order_by": "Vertical"
     },

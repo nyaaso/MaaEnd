@@ -13,7 +13,7 @@
             "彈性需求物資",
             "(?i)Elastic\\s*Goods",
             "時価商品",
-            "변동 수요 물자"
+            "변동\\s*수요\\s*물자"
         ],
         "pre_wait_freezes": 100,
         "pre_delay": 0,
@@ -59,7 +59,7 @@
             "好友價格",
             "(?i)Friends\\s*'\\s*Prices",
             "フレンド価格",
-            "친구의 가격"
+            "친구의\\s*가격"
         ],
         "pre_delay": 0,
         "post_delay": 0,

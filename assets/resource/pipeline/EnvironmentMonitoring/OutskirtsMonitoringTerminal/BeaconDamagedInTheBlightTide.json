@@ -53,7 +53,7 @@
             "侵蝕潮中損壞的信標",
             "(?i)Beacon\\s*Damaged\\s*in\\s*the\\s*Blight\\s*Tide",
             "侵蝕潮で壊れたビーコン",
-            "침식 조류로 인해 훼손된 신호기"
+            "침식\\s*조류로\\s*인해\\s*훼손된\\s*신호기"
         ],
         "replace": [],
         "order_by": "Vertical",
@@ -108,7 +108,7 @@
             "接取委託",
             "(?i)Accept\\s*Job",
             "引き受ける",
-            "의뢰 수령"
+            "의뢰\\s*수령"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -129,7 +129,7 @@
             "前往任務",
             "(?i)Go\\s*to\\s*Mission",
             "任務へ",
-            "임무로 이동하기"
+            "임무로\\s*이동하기"
         ],
         "pre_delay": 0,
         "post_delay": 0,

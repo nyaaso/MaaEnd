@@ -233,7 +233,7 @@
             "回收條件達成",
             "回収条件達成",
             "SALVAGING REQUIREMENTS MET",
-            "회수 조건 달성"
+            "회수\\s*조건\\s*달성"
         ],
         "pre_delay": 0,
         "action": "Click",

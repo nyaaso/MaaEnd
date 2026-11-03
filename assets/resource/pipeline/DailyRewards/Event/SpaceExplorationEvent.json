@@ -36,7 +36,7 @@
             "快速領取",
             "(?i)Claim\\s*All",
             "一括受取",
-            "일괄 획득"
+            "일괄\\s*획득"
         ],
         "pre_delay": 0,
         "action": "Click",
@@ -81,7 +81,8 @@
             "太空主題活動",
             "Space Exploration Event",
             "宇宙事業",
-            "우주 테마 이벤트"
+            "우주 테마 이벤트",
+            "콜라보\\s*이벤트"
         ],
         "only_rec": true
     }

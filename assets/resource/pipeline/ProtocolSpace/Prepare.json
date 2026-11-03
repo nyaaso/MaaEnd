@@ -12,7 +12,8 @@
             "协议空间",
             "協議空間",
             "(?i)Protocol\\s*Space",
-            "協約空間"
+            "協約空間",
+            "프로토콜\\s*공간"
         ],
         "pre_delay": 0,
         "post_wait_freezes": 200,
@@ -69,7 +70,7 @@
             "切換獎勵",
             "Switch Rewards",
             "報酬切替",
-            "보상 전환"
+            "보상\\s*전환"
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -161,7 +162,8 @@
             "协议空间",
             "協議空間",
             "(?i)Protocol\\s*Space",
-            "協約空間"
+            "協約空間",
+            "프로토콜\\s*공간"
         ],
         "pre_delay": 0,
         "post_wait_freezes": 200,

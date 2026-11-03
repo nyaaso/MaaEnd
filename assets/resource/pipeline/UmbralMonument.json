@@ -61,7 +61,8 @@
             40
         ],
         "expected": [
-            "幽影刻形"
+            "幽影刻形",
+            "그림자\\s*형상\\s*각인"
         ]
     },
     "UmbralMonumentListComplete": {
@@ -127,7 +128,7 @@
             "苦難模式",
             "(?i)Agony\\s*Mode",
             "ハードモード",
-            "고난 모드"
+            "고난\\s*모드"
         ],
         "pre_wait_freezes": 300,
         "action": "Custom",
@@ -277,7 +278,7 @@
             "觸摸光點",
             "(?i)Touch\\s*the\\s*light",
             "光に触れる",
-            "빛나는 점과 접촉하기"
+            "빛나는\\s*점과\\s*접촉하기"
         ]
     },
     "UmbralMonumentTouchStart": {
@@ -371,11 +372,11 @@
             "獲得獎勵",
             "(?i)Rewards\\s*Acquired",
             "報酬一覧",
-            "보상 획득",
+            "보상\\s*획득",
             "行动失败",
             "行動失敗",
             "(?i)Operation\\s*Failed",
-            "작전 실패"
+            "작전\\s*실패"
         ]
     },
     "UmbralMonumentFightSuccessText": {
@@ -392,7 +393,7 @@
             "獲得獎勵",
             "(?i)Rewards\\s*Acquired",
             "報酬一覧",
-            "보상 획득"
+            "보상\\s*획득"
         ]
     },
     "UmbralMonumentFightSuccess": {

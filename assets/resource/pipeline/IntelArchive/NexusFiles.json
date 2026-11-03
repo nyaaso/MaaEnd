@@ -29,7 +29,8 @@
             100
         ],
         "expected": [
-            "中枢档案"
+            "中枢档案",
+            "중추\\s*파일"
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -86,7 +87,8 @@
             320
         ],
         "expected": [
-            "调查报告"
+            "调查报告",
+            "조사\\s*보고서"
         ],
         "action": "Click",
         "post_wait_freezes": 100,

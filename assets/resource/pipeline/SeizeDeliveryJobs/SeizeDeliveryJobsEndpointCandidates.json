@@ -85,7 +85,7 @@
             "實驗園區",
             "Test Area",
             "実験区域",
-            "실험 구역"
+            "실험\\s*구역"
         ],
         "next": [
             "SeizeDeliveryJobsEndpointCandidatesTestArea",
@@ -147,7 +147,7 @@
             "源石研究園",
             "Originium Science Park",
             "源石研究パーク",
-            "오리지늄 연구 구역"
+            "오리지늄\\s*연구\\s*구역"
         ],
         "next": [
             "SeizeDeliveryJobsEndpointCandidatesOriginiumSciencePark",
@@ -223,7 +223,7 @@
             "礦脈源區",
             "Origin Lodespring",
             "鉱山エリア",
-            "광맥 구역"
+            "광맥\\s*구역"
         ],
         "next": [
             "SeizeDeliveryJobsEndpointCandidatesOriginLodespring",
@@ -298,7 +298,7 @@
             "供能高地",
             "Power Plateau",
             "エネルギー高地",
-            "에너지 공급 고지"
+            "에너지\\s*공급\\s*고지"
         ],
         "next": [
             "SeizeDeliveryJobsEndpointCandidatesPowerPlateau",

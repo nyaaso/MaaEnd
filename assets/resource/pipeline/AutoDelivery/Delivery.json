@@ -113,7 +113,7 @@
             "交貨",
             "(?i)Deliver",
             "引き渡す",
-            "화물 제출"
+            "화물\\s*제출"
         ]
     },
     "AutoDeliveryCheckSubmitGoodsName": {

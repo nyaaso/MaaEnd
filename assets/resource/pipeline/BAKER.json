@@ -168,7 +168,8 @@
             "未读",
             "未讀",
             "(?i)Unread",
-            "未読"
+            "未読",
+            "읽지\\s*않음"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -188,7 +189,8 @@
         "expected": [
             "保存",
             "儲存",
-            "(?i)Save"
+            "(?i)Save",
+            "저장"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -248,7 +250,8 @@
             "未读",
             "未讀",
             "(?i)Unread",
-            "未読"
+            "未読",
+            "읽지\\s*않음"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -268,7 +271,8 @@
         "expected": [
             "保存",
             "儲存",
-            "(?i)Save"
+            "(?i)Save",
+            "저장"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -522,7 +526,8 @@
             "(?i)No\\s*New\\s*Topics",
             "新しいトピックはありません",
             "话题结束",
-            "話題結束"
+            "話題結束",
+            "새로운\\s*대화가\\s*없습니다\\."
         ],
         "next": [
             "BakerTalkWith",
@@ -742,7 +747,8 @@
         "expected": [
             "保存",
             "儲存",
-            "(?i)Save"
+            "(?i)Save",
+            "저장"
         ],
         "action": "Click",
         "post_wait_freezes": 1,

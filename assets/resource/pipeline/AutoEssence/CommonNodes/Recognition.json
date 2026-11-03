@@ -207,7 +207,7 @@
                     "對應地區刻寫券不足，本次挑戰獎勵預刻寫將不生效，確定直接開啟挑戰嗎？",
                     "(?i)Insufficient\\s*regional\\s*engraving\\s*permits\\s*to\\s*validate\\s*pre-engrave\\s*rewards\\s*from\\s*this\\s*challenge\\.\\s*Start\\s*the\\s*challenge\\s*anyway\\?",
                     "該当地域の刻印券が不足しているため、刻印指定は適用されませんが、続行しますか？",
-                    "해당 지역 각인권이 부족하여 이번 도전에서는 사전 각인이 적용되지 않습니다. 정말 이대로 도전을 시작하시겠습니까?"
+                    "해당\\s*지역\\s*각인권이\\s*부족하여\\s*이번\\s*도전에서는\\s*사전\\s*각인이\\s*적용되지\\s*않습니다\\.\\s*정말\\s*이대로\\s*도전을\\s*시작하시겠습니까\\?"
                 ]
             }
         }

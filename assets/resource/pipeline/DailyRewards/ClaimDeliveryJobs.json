@@ -22,7 +22,7 @@
             "外部委託",
             "My Transferred Jobs",
             "転送した依頼",
-            "내가 위탁한 의뢰"
+            "내가\\s*위탁한\\s*의뢰"
         ]
     },
     "ClaimDeliveryJobsClickMyTransferredTab": {

@@ -76,7 +76,7 @@
             "限時活動",
             "Limited-Time Event",
             "期間限定",
-            "기간 한정 이벤트"
+            "기간\\s*한정\\s*이벤트"
         ],
         "only_rec": true
     }

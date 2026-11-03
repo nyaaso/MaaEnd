@@ -45,7 +45,7 @@
             "本次交易份數",
             "(?i)QTY\\s*in\\s*current\\s*trade",
             "取引予定数",
-            "이번 거래 수량"
+            "이번\\s*거래\\s*수량"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -69,7 +69,8 @@
             "據點",
             "(?i)Outpost",
             "拠点",
-            "거점 관리"
+            "거점\\s*관리",
+            "거점"
         ],
         "pre_delay": 0,
         "post_delay": 0,

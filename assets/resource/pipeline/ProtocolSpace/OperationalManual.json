@@ -15,7 +15,7 @@
                     "行動手冊",
                     "(?i)Operational\\s*Manual",
                     "案内所",
-                    "작전 매뉴얼"
+                    "작전\\s*매뉴얼"
                 ]
             }
         },
@@ -37,7 +37,9 @@
         "expected": [
             "索引",
             "(?i)Index",
-            "協約空間"
+            "協約空間",
+            "가이드\\s*목록",
+            "프로토콜\\s*공간"
         ],
         "action": "Custom",
         "custom_action": "RepeatUntilFoundAction",

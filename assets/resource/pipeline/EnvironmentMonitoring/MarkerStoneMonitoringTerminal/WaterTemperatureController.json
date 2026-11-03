@@ -53,7 +53,7 @@
             "淨水溫控裝置",
             "(?i)Water\\s*Temperature\\s*Controller",
             "浄水温度調整装置",
-            "정수 온도 조절 장치"
+            "정수\\s*온도\\s*조절\\s*장치"
         ],
         "replace": [],
         "order_by": "Vertical",
@@ -108,7 +108,7 @@
             "接取委託",
             "(?i)Accept\\s*Job",
             "引き受ける",
-            "의뢰 수령"
+            "의뢰\\s*수령"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -129,7 +129,7 @@
             "前往任務",
             "(?i)Go\\s*to\\s*Mission",
             "任務へ",
-            "임무로 이동하기"
+            "임무로\\s*이동하기"
         ],
         "pre_delay": 0,
         "post_delay": 0,

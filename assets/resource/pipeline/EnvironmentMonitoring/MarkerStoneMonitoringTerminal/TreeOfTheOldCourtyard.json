@@ -53,7 +53,7 @@
             "「舊庭樹」",
             "(?i)\"Tree\\s*of\\s*the\\s*Old\\s*Courtyard\"",
             "「旧庭の木」",
-            "옛 정원의 나무"
+            "옛\\s*정원의\\s*나무"
         ],
         "replace": [],
         "order_by": "Vertical",
@@ -108,7 +108,7 @@
             "接取委託",
             "(?i)Accept\\s*Job",
             "引き受ける",
-            "의뢰 수령"
+            "의뢰\\s*수령"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -129,7 +129,7 @@
             "前往任務",
             "(?i)Go\\s*to\\s*Mission",
             "任務へ",
-            "임무로 이동하기"
+            "임무로\\s*이동하기"
         ],
         "pre_delay": 0,
         "post_delay": 0,

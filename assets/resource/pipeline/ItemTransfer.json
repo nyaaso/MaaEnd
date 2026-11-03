@@ -217,7 +217,8 @@
             "(?i)Switch\\s*Depot",
             "倉庫切替",
             "Switch",
-            "Depot"
+            "Depot",
+            "창고\\s*전환"
         ]
     },
     "ItemTransferSwitchRepoToOrigin": {
@@ -303,7 +304,8 @@
             "已连接",
             "已連接",
             "(?i)Connected",
-            "接続済み"
+            "接続済み",
+            "연결됨"
         ],
         "next": [
             "ItemTransferClickEscOrigin"
@@ -456,7 +458,8 @@
         "expected": [
             "降序",
             "(?i)DESC",
-            "降順"
+            "降順",
+            "내림"
         ],
         "action": "Click",
         "anchor": {
@@ -483,7 +486,8 @@
         "expected": [
             "升序",
             "(?i)ASC",
-            "昇順"
+            "昇順",
+            "오름"
         ],
         "action": "Click",
         "anchor": {
@@ -923,7 +927,8 @@
             "已连接",
             "已連接",
             "(?i)Connected",
-            "接続済み"
+            "接続済み",
+            "연결됨"
         ],
         "next": [
             "ItemTransferClickEscDestination"
@@ -1265,7 +1270,8 @@
             "(?i)Full",
             "FULL",
             "已满",
-            "已滿"
+            "已滿",
+            "가득\\s*참"
         ],
         "next": [
             "ItemTransferForwardTargetFull"
@@ -1285,7 +1291,8 @@
             "(?i)Full",
             "FULL",
             "已满",
-            "已滿"
+            "已滿",
+            "가득\\s*참"
         ],
         "next": [
             "ItemTransferReturnTargetFull"
@@ -1516,7 +1523,8 @@
             "已连接",
             "已連接",
             "(?i)Connected",
-            "接続済み"
+            "接続済み",
+            "연결됨"
         ],
         "next": [
             "ItemTransferClickEscOriginReturn"
@@ -1648,7 +1656,8 @@
             "(?i)Full",
             "FULL",
             "已满",
-            "已満"
+            "已満",
+            "가득\\s*참"
         ],
         "anchor": {
             "ItemTransferQuickStashItemStillInBag": "ItemTransferForwardQuickStashItemStillInBag",
@@ -1673,7 +1682,8 @@
             "(?i)Full",
             "FULL",
             "已满",
-            "已満"
+            "已満",
+            "가득\\s*참"
         ],
         "anchor": {
             "ItemTransferQuickStashItemStillInBag": "ItemTransferReturnQuickStashItemStillInBag",

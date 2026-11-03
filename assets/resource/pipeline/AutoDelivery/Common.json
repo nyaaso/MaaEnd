@@ -75,7 +75,8 @@
             "送貨任務",
             "(?i)Delivery\\s*Job",
             "配達任務",
-            "배송 임무"
+            "배송 임무",
+            "운송\\s*임무"
         ],
         "order_by": "Expected"
     },
@@ -93,7 +94,8 @@
             "送貨任務",
             "(?i)Delivery\\s*Job",
             "配達任務",
-            "배송 임무"
+            "배송 임무",
+            "운송\\s*임무"
         ],
         "order_by": "Expected",
         "pre_delay": 0,

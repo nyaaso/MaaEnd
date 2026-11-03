@@ -167,7 +167,7 @@
             "訪客終端",
             "(?i)Guest\\s*Terminal",
             "訪問端末",
-            "방문자 단말기"
+            "방문자\\s*단말기"
         ],
         "pre_wait_freezes": 400,
         "pre_delay": 0,

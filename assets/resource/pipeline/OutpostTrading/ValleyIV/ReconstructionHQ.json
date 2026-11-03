@@ -1085,7 +1085,7 @@
             "重建指挥部",
             "重建指揮部",
             "再建管理本部",
-            "재건 지휘부",
+            "재건\\s*지휘부",
             "(?i)^Reconstruction\\s*HQ$",
             "Reconstruction Hc"
         ],
@@ -1107,7 +1107,7 @@
             "重建指挥部",
             "重建指揮部",
             "再建管理本部",
-            "재건 지휘부",
+            "재건\\s*지휘부",
             "(?i)^Reconstruction\\s*HQ$",
             "Reconstruction Hc"
         ],

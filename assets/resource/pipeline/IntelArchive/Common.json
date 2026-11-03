@@ -49,7 +49,8 @@
             80
         ],
         "expected": [
-            "下"
+            "下",
+            "아래쪽"
         ],
         "action": "Click",
         "post_delay": 600, // 等待切换完成

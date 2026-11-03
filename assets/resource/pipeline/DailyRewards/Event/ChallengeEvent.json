@@ -77,7 +77,7 @@
             "挑戰活動",
             "Challenge Event",
             "上級者",
-            "도전 이벤트"
+            "도전\\s*이벤트"
         ],
         "only_rec": true
     }

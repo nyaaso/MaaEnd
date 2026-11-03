@@ -13,7 +13,7 @@
             "開始追蹤",
             "(?i)Track",
             "追跡開始",
-            "추적 시작"
+            "추적\\s*시작"
         ],
         "pre_delay": 0,
         "action": "Click",
@@ -34,7 +34,7 @@
             "停止追蹤",
             "(?i)Stop\\s*Tracking",
             "追跡停止",
-            "추적 중지"
+            "추적\\s*중지"
         ],
         "pre_delay": 0,
         "post_delay": 0,

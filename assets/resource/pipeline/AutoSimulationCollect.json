@@ -34,7 +34,8 @@
                 "expected": [
                     "模拟",
                     "模擬",
-                    "(?i)Simulation"
+                    "(?i)Simulation",
+                    "시뮬레이션"
                 ]
             }
         },
@@ -60,7 +61,8 @@
                 "expected": [
                     "四号谷地",
                     "四號谷地",
-                    "(?i)Valley\\s*IV"
+                    "(?i)Valley\\s*IV",
+                    "4번\\s*협곡"
                 ]
             }
         },
@@ -94,7 +96,9 @@
             "模擬",
             "(?i)Simulation",
             "模拟空间",
-            "模擬空間"
+            "模擬空間",
+            "시뮬레이션",
+            "시뮬레이션\\s*공간"
         ],
         "timeout": 1000,
         "next": [
@@ -125,7 +129,8 @@
             "篩選",
             "(?i)Sort",
             "ソート",
-            "筛选"
+            "筛选",
+            "필터"
         ],
         "action": {
             "type": "Click",
@@ -215,7 +220,8 @@
             "确定",
             "確定",
             "(?i)Confirm",
-            "保存"
+            "保存",
+            "확인"
         ],
         "action": {
             "type": "Click"
@@ -243,7 +249,8 @@
             "篩選",
             "(?i)Sort",
             "ソート",
-            "筛选"
+            "筛选",
+            "필터"
         ],
         "action": {
             "type": "Click",
@@ -337,7 +344,9 @@
             "(?i)Fully\\s*Grasped",
             "Content Mastered",
             "Complete SIM",
-            "已掌握"
+            "已掌握",
+            "시뮬레이션\\s*즉시\\s*완료",
+            "장악"
         ],
         "action": {
             "type": "Click"

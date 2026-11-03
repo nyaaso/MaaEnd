@@ -23,7 +23,8 @@
                     "(?i)Shared\\s*Blueprints",
                     "共有図面",
                     "Shared Blueprint",
-                    "Shared"
+                    "Shared",
+                    "공용\\s*청사진"
                 ]
             }
         },
@@ -170,7 +171,8 @@
                 "expected": [
                     "存至共享蓝图",
                     "存至共享藍圖",
-                    "(?i)Save\\s*to\\s*Shared\\s*Blueprints"
+                    "(?i)Save\\s*to\\s*Shared\\s*Blueprints",
+                    "공용\\s*청사진에\\s*저장"
                 ]
             }
         },
@@ -196,7 +198,8 @@
                     "已儲存",
                     "(?i)Saved",
                     "保存済み",
-                    "Already"
+                    "Already",
+                    "저장\\s*완료"
                 ]
             }
         },

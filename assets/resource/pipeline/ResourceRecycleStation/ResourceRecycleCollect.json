@@ -32,7 +32,7 @@
             "事務提醒",
             "(?i)Mission\\s*Reminder",
             "業務通知",
-            "업무 알림"
+            "업무\\s*알림"
         ],
         "action": "Click",
         "target": true,
@@ -56,7 +56,7 @@
             "事務提醒",
             "(?i)Mission\\s*Reminder",
             "業務通知",
-            "업무 알림"
+            "업무\\s*알림"
         ],
         "action": "Click",
         "target": true,
@@ -80,7 +80,7 @@
             "採集提示",
             "(?i)Gathering\\s*Tip",
             "採集通知",
-            "채집 안내"
+            "채집\\s*안내"
         ],
         "action": "Click",
         "target": true,
@@ -106,7 +106,7 @@
             "採集提示",
             "(?i)Gathering\\s*Tip",
             "採集通知",
-            "채집 안내"
+            "채집\\s*안내"
         ],
         "action": "Click",
         "target": true,
@@ -157,7 +157,8 @@
         "expected": [
             "上限",
             "(?i)Full",
-            "최대"
+            "최대",
+            "가득\\s*참"
         ],
         "action": "Swipe",
         "begin": [
@@ -192,7 +193,8 @@
         "expected": [
             "上限",
             "(?i)Full",
-            "최대"
+            "최대",
+            "가득\\s*참"
         ],
         "action": "Swipe",
         "begin": [
@@ -252,7 +254,8 @@
             "遠端收取資源",
             "(?i)Remote\\s*Resource\\s*Collection",
             "遠隔受取",
-            "원거리로 자원 수령"
+            "원거리로 자원 수령",
+            "자원\\s*원격\\s*회수"
         ],
         "action": "Click",
         "target": true,

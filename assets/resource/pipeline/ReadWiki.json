@@ -17,7 +17,8 @@
             "终末地百科",
             "終末地百科",
             "(?i)Endfield\\s*Database",
-            "エンドフィールドWiki"
+            "エンドフィールドWiki",
+            "엔드필드\\s*백과"
         ],
         "next": [
             "WikiClickHomePageUnreadBadge",

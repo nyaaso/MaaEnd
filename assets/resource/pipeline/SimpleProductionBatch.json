@@ -50,7 +50,8 @@
             "目前材料不足",
             "(?i)Insufficient\\s*materials",
             "素材が不足しています",
-            "Not enough"
+            "Not enough",
+            "비료\\s*수량\\s*부족"
         ]
     },
     "CheckMaterialEnough": {
@@ -71,7 +72,8 @@
             "空間已滿",
             "可销毁或丢弃部分",
             "可銷毀或丟棄部分",
-            "Discard"
+            "Discard",
+            "가득\\s*참"
         ]
     },
     "CheckIsSimpleProductionPage": {
@@ -143,7 +145,8 @@
             "製作成功",
             "(?i)Crafting\\s*Successful",
             "Success",
-            "Crafted"
+            "Crafted",
+            "제작\\s*성공"
         ],
         "next": [
             "ClickSimpleProductionRightDown"
@@ -162,7 +165,8 @@
             "製作成功",
             "(?i)Crafting\\s*Successful",
             "Success",
-            "Crafted"
+            "Crafted",
+            "제작\\s*성공"
         ],
         "next": [
             "ClickSimpleProductionRightDown"

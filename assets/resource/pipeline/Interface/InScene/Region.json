@@ -478,7 +478,7 @@
             "探索等級",
             "Exploration Level",
             "探索レベル",
-            "탐색 레벨"
+            "탐색\\s*레벨"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -660,7 +660,8 @@
             "工業點",
             "AIC Index",
             "工業ポイント",
-            "공업 포인트"
+            "공업 포인트",
+            "공업\\s*과학기술\\s*포인트"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -745,7 +746,7 @@
             "環境監測終端",
             "(?i)Environment\\s*Monitoring\\s*Terminal",
             "環境観測端末",
-            "환경 관측 단말기"
+            "환경\\s*관측\\s*단말기"
         ]
     },
     "EnvironmentMonitoringInMonitoringTerminal": {
@@ -778,7 +779,7 @@
             "城郊監測終端",
             "(?i)Outskirts\\s*Monitoring\\s*Terminal",
             "郊外観測端末",
-            "교외 관측 단말기"
+            "교외\\s*관측\\s*단말기"
         ]
     },
     "EnvironmentMonitoringCheckMarkerStoneMonitoringTerminalText": {
@@ -795,7 +796,8 @@
             "首墩監測終端",
             "(?i)Marker\\s*Stone\\s*Monitoring\\s*Terminal",
             "マーカーストーン観測端末",
-            "마커 스톤 관측 단말기"
+            "마커 스톤 관측 단말기",
+            "수돈\\s*관측\\s*단말기"
         ]
     },
     "EnvironmentMonitoringOutskirtsMonitoringTerminalSelected": {

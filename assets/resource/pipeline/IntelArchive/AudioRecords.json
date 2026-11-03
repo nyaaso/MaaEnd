@@ -28,7 +28,8 @@
             400
         ],
         "expected": [
-            "多媒体"
+            "多媒体",
+            "멀티미디어"
         ],
         "pre_delay": 0,
         "action": "Click",

@@ -166,7 +166,8 @@
             "输入名称搜索好友",
             "輸入名稱搜尋好友",
             "(?i)Search\\s*friend\\s*by\\s*name",
-            "名前を入力して検索"
+            "名前を入力して検索",
+            "이름을\\s*입력하세요\\."
         ],
         "threshold": 0.7,
         "pre_delay": 0,
@@ -196,7 +197,8 @@
             "載入中",
             "Loading",
             "読み込み中",
-            "로딩\\s+중"
+            "로딩\\s+중",
+            "로딩\\s*중"
         ],
         "threshold": 0.7,
         "pre_delay": 0,
@@ -474,7 +476,7 @@
             "情報交流進行中",
             "Clue Exchange in Progress",
             "情報共有中",
-            "정보 교류 중"
+            "정보\\s*교류\\s*중"
         ]
     },
     "VisitFriendsCheckAssistControlNexus": {

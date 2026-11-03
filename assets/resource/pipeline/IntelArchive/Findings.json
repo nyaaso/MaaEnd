@@ -30,7 +30,8 @@
             400
         ],
         "expected": [
-            "纸质记录"
+            "纸质记录",
+            "문서\\s*기록"
         ],
         "pre_delay": 0,
         "action": "Click",
@@ -90,7 +91,8 @@
             400
         ],
         "expected": [
-            "电子档案"
+            "电子档案",
+            "전자\\s*파일"
         ],
         "pre_delay": 0,
         "action": "Click",
@@ -150,7 +152,8 @@
             400
         ],
         "expected": [
-            "藏品"
+            "藏品",
+            "소장품"
         ],
         "pre_delay": 0,
         "action": "Click",

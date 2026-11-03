@@ -39,7 +39,7 @@
             "快速領取",
             "(?i)Claim\\s*All",
             "一括受取",
-            "일괄 획득"
+            "일괄\\s*획득"
         ],
         "pre_delay": 0,
         "action": "Click",
@@ -84,7 +84,7 @@
             "限時簽到",
             "Limited-Time Sign-In",
             "時限スタンプ",
-            "기간 한정 출석 체크"
+            "기간\\s*한정\\s*출석\\s*체크"
         ],
         "only_rec": true
     }

@@ -45,7 +45,8 @@
         ],
         "expected": [
             "当前星数",
-            "當前星數"
+            "當前星數",
+            "현재\\s*성급"
         ]
     },
     "WarEchoSelectCruel": {
@@ -439,7 +440,7 @@
             "觸摸光點",
             "(?i)Touch\\s*the\\s*light",
             "光に触れる",
-            "빛나는 점과 접촉하기"
+            "빛나는\\s*점과\\s*접촉하기"
         ]
     },
     "WarEchoTouchStart": {
@@ -538,7 +539,8 @@
         ],
         "expected": [
             "挑战成功",
-            "挑戰成功"
+            "挑戰成功",
+            "도전\\s*성공"
         ]
     },
     "WarEchoFightSuccess": {

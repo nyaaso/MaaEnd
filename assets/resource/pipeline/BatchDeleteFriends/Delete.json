@@ -25,7 +25,8 @@
             180
         ],
         "expected": [
-            "移除好友"
+            "移除好友",
+            "친구\\s*삭제"
         ],
         "pre_wait_freezes": 100,
         "action": "Click",

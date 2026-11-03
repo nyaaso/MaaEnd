@@ -1036,7 +1036,7 @@
             "用餐中",
             "Dining",
             "食事中",
-            "식사 중"
+            "식사\\s*중"
         ]
     },
     "RestaurantTable1Observation": {
@@ -1362,7 +1362,7 @@
             "用餐中",
             "Dining",
             "食事中",
-            "식사 중"
+            "식사\\s*중"
         ]
     },
     "RestaurantTable2Observation": {
@@ -1688,7 +1688,7 @@
             "用餐中",
             "Dining",
             "食事中",
-            "식사 중"
+            "식사\\s*중"
         ]
     },
     "RestaurantTable3Observation": {
@@ -2014,7 +2014,7 @@
             "用餐中",
             "Dining",
             "食事中",
-            "식사 중"
+            "식사\\s*중"
         ]
     },
     "RestaurantTable4Observation": {
@@ -2340,7 +2340,7 @@
             "用餐中",
             "Dining",
             "食事中",
-            "식사 중"
+            "식사\\s*중"
         ]
     },
     "RestaurantTable5Observation": {
@@ -2666,7 +2666,7 @@
             "用餐中",
             "Dining",
             "食事中",
-            "식사 중"
+            "식사\\s*중"
         ]
     },
     "RestaurantTable6Observation": {

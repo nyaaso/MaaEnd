@@ -53,7 +53,7 @@
             "蓄水源石蟲",
             "(?i)Cistern\\s*Originium\\s*Slugs",
             "貯水オリジムシ",
-            "저수 원석충"
+            "저수\\s*원석충"
         ],
         "replace": [],
         "order_by": "Vertical",
@@ -108,7 +108,7 @@
             "接取委託",
             "(?i)Accept\\s*Job",
             "引き受ける",
-            "의뢰 수령"
+            "의뢰\\s*수령"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -129,7 +129,7 @@
             "前往任務",
             "(?i)Go\\s*to\\s*Mission",
             "任務へ",
-            "임무로 이동하기"
+            "임무로\\s*이동하기"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -149,7 +149,7 @@
             "拍攝一群蓄水源石蟲",
             "(?i)Photograph\\s*a\\s*group\\s*of\\s*Cistern\\s*Originium\\s*Slugs",
             "貯水オリジムシの群れの写真を撮る",
-            "저수 원석충 무리를 촬영하기"
+            "저수\\s*원석충\\s*무리를\\s*촬영하기"
         ],
         "replace": [],
         "pre_delay": 0,

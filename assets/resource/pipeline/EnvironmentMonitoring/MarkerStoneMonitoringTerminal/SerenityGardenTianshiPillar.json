@@ -53,7 +53,7 @@
             "安思園的天師樁",
             "(?i)Serenity\\s*Garden\\s*Tianshi\\s*Pillar",
             "安思園の天師杭",
-            "안사원의 천사장"
+            "안사원의\\s*천사장"
         ],
         "replace": [
             [
@@ -113,7 +113,7 @@
             "接取委託",
             "(?i)Accept\\s*Job",
             "引き受ける",
-            "의뢰 수령"
+            "의뢰\\s*수령"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -134,7 +134,7 @@
             "前往任務",
             "(?i)Go\\s*to\\s*Mission",
             "任務へ",
-            "임무로 이동하기"
+            "임무로\\s*이동하기"
         ],
         "pre_delay": 0,
         "post_delay": 0,

@@ -53,7 +53,7 @@
             "充滿活力的蓄水源石蟲",
             "(?i)Vigorous\\s*Cistern\\s*Originium\\s*Slug",
             "活発になっている貯水オリジムシ",
-            "활기찬 저수 원석충"
+            "활기찬\\s*저수\\s*원석충"
         ],
         "replace": [],
         "order_by": "Vertical",
@@ -108,7 +108,7 @@
             "接取委託",
             "(?i)Accept\\s*Job",
             "引き受ける",
-            "의뢰 수령"
+            "의뢰\\s*수령"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -129,7 +129,7 @@
             "前往任務",
             "(?i)Go\\s*to\\s*Mission",
             "任務へ",
-            "임무로 이동하기"
+            "임무로\\s*이동하기"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -149,7 +149,7 @@
             "拍攝充滿活力的蓄水源石蟲",
             "(?i)Photograph\\s*a\\s*Vigorous\\s*Cistern\\s*Originium\\s*Slug",
             "活発になっている貯水オリジムシの写真を撮る",
-            "활기찬 저수 원석충 촬영하기"
+            "활기찬\\s*저수\\s*원석충\\s*촬영하기"
         ],
         "replace": [],
         "pre_delay": 0,
