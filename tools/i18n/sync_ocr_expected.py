@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-将 pipeline 中 OCR 节点的 expected 统一替换为 CN/TC/EN/JP 四语文本。
+将 pipeline 中 OCR 节点的 expected 统一替换为 CN/TC/EN/JP/KR 五语文本。
 
 规则：
 1) 扫描目录：
@@ -14,20 +14,21 @@
    - node.expected
    - node.recognition.expected
    - node.recognition.param.expected
-4) 用 i18n 四语表反查语言 ID（默认目录：tools/i18n）：
+4) 用 i18n 五语表反查语言 ID（默认目录：tools/i18n）：
    - tools/i18n
    - 也可通过 --i18n-dir 指向临时克隆仓库的 i18n 目录
    - 若存在 I18nHotFix.json，会先将 hotfix 覆盖到对应语言表
-   简中(CN) -> 繁中(TC) -> 英文(EN) -> 日文(JP)
+   简中(CN) -> 繁中(TC) -> 英文(EN) -> 日文(JP) -> 韩文(KR)
 5) 额外处理：
    - 英文 expected 会转为仅忽略大小写、并在单词间放宽空格的正则
+   - 含空格的韩文 expected 会转为在空格处放宽为 \\s* 的正则（韩文 OCR 常漏识别空格）
    - OCR 节点会按新旧文本的最长显示宽度，通过 roi_offset 尝试扩展 roi 宽度
    - roi 优先读取 recognition.param.roi，其次 node.roi
    - only_rec: true 的节点不参与 roi 调整
 
 默认 dry-run，不修改文件；使用 --write 才会写入。
 若同一节点仅部分命中语言 ID，会保留未命中的原始 expected 文本，
-输出顺序为：四语补全内容在前，未命中内容追加在后。
+输出顺序为：五语补全内容在前，未命中内容追加在后。
 可在 expected 内部添加注释标记 @i18n-skip，脚本会跳过该节点。
 """
 
@@ -53,6 +54,7 @@ I18N_FILE_NAMES = {
     "TC": "I18nTextTable_TC.json",
     "EN": "I18nTextTable_EN.json",
     "JP": "I18nTextTable_JP.json",
+    "KR": "I18nTextTable_KR.json",
 }
 
 HOTFIX_FILE_NAME = "I18nHotFix.json"
@@ -61,7 +63,7 @@ DEFAULT_I18N_DIR_CANDIDATES = [
     Path("tools/i18n"),
 ]
 
-LANG_ORDER = ("CN", "TC", "EN", "JP")
+LANG_ORDER = ("CN", "TC", "EN", "JP", "KR")
 INDENT = "    "
 
 HOTFIX_TYPE_TO_LANG = {
@@ -83,6 +85,11 @@ HOTFIX_TYPE_TO_LANG = {
     "JP": "JP",
     "JA": "JP",
     "JPN": "JP",
+    # 韩文
+    "KR": "KR",
+    "KO": "KR",
+    "KOR": "KR",
+    "KO_KR": "KR",
 }
 
 I18N_SKIP_MARKER = "@i18n-skip"
@@ -306,7 +313,7 @@ def apply_hotfix_to_tables(
     tables: dict[str, dict[str, str]], i18n_dir: Path
 ) -> tuple[int, int, bool]:
     """
-    将 I18nHotFix.json 的文本覆盖到四语主表中。
+    将 I18nHotFix.json 的文本覆盖到五语主表中。
     返回: (applied_count, skipped_count, hotfix_exists)
     """
     hotfix_path = i18n_dir / HOTFIX_FILE_NAME
@@ -345,7 +352,7 @@ def apply_hotfix_to_tables(
 
             lang = normalize_hotfix_type(type_value)
             if lang is None:
-                # 非 CN/TC/EN/JP 的 hotfix 忽略
+                # 非 CN/TC/EN/JP/KR 的 hotfix 忽略
                 continue
 
             entry_id = entry.get("id")
@@ -370,6 +377,8 @@ def build_reverse_index(
             if lang == "EN":
                 english_reverse[normalize_english_for_match(text)].add(lang_id)
                 reverse[normalize_text(build_english_ocr_regex(text))].add(lang_id)
+            elif lang == "KR":
+                reverse[normalize_text(build_korean_ocr_regex(text))].add(lang_id)
     return reverse, english_reverse
 
 
@@ -689,9 +698,11 @@ def append_unresolved_texts(
 
 
 def build_expected_text_for_lang(lang: str, text: str) -> str:
-    if lang != "EN":
-        return text
-    return build_english_ocr_regex(text)
+    if lang == "EN":
+        return build_english_ocr_regex(text)
+    if lang == "KR":
+        return build_korean_ocr_regex(text)
+    return text
 
 
 def escape_regex_literal(text: str) -> str:
@@ -708,6 +719,17 @@ def build_english_ocr_regex(text: str) -> str:
         return r"(?i)\s*"
     pieces = [escape_regex_literal(token) for token in tokens]
     return rf"(?i){r'\s*'.join(pieces)}"
+
+
+def build_korean_ocr_regex(text: str) -> str:
+    """
+    韩文 OCR 常把词间空格漏掉（如「팀 편성」识别为「팀편성」），
+    含空格时转为在空格处放宽为 \\s* 的正则；不含空格时保持原文。
+    """
+    tokens = normalize_text(text).split(" ")
+    if len(tokens) <= 1:
+        return text
+    return r"\s*".join(escape_regex_literal(token) for token in tokens)
 
 
 def normalize_english_for_match(text: str) -> str:
@@ -728,6 +750,10 @@ def expected_text_matches_lang_text(
         return normalize_english_for_match(
             expected_text
         ) == normalize_english_for_match(lang_text)
+    if lang == "KR" and normalize_text(expected_text) == normalize_text(
+        build_korean_ocr_regex(lang_text)
+    ):
+        return True
     return normalize_text(expected_text) == normalize_text(lang_text)
 
 
@@ -1109,7 +1135,7 @@ def iter_pipeline_files(base_dir: Path) -> list[Path]:
 
 def main() -> int:
     argp = argparse.ArgumentParser(
-        description="统一 OCR expected 为 CN/TC/EN/JP 四语文本（默认 dry-run）"
+        description="统一 OCR expected 为 CN/TC/EN/JP/KR 五语文本（默认 dry-run）"
     )
     argp.add_argument(
         "--base-dir",
