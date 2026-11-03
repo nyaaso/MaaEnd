@@ -77,7 +77,8 @@
                     "导入蓝图",
                     "匯入藍圖",
                     "Import Blueprint",
-                    "Import"
+                    "Import",
+                    "청사진\\s*불러오기"
                 ]
             }
         },

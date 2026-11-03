@@ -185,7 +185,8 @@
         "expected": [
             "解锁",
             "解鎖",
-            "unlock"
+            "unlock",
+            "잠금\\s*해제"
         ],
         "focus": {
             "Node.Recognition.Succeeded": "$task.ProtocolSpace.focus.not_unlocked"

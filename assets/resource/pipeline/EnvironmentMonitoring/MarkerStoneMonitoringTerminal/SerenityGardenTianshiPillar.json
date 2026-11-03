@@ -154,7 +154,7 @@
             "拍攝安思園的天師樁",
             "(?i)Photo:\\s*Serenity\\s*Garden\\s*Tianshi\\s*Pillar",
             "安思園の天師杭の写真を撮る",
-            "안사원의 천사장을 촬영하기"
+            "안사원의\\s*천사장을\\s*촬영하기"
         ],
         "replace": [
             [

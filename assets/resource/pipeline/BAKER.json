@@ -127,7 +127,9 @@
             "(?i)Show\\s*All",
             "すべて",
             "篩選生效中",
-            "筛选生效中"
+            "筛选生效中",
+            "모두\\s*표시",
+            "필터\\s*활성화됨"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -147,7 +149,8 @@
         ],
         "expected": [
             "筛选生效中",
-            "篩選生效中"
+            "篩選生效中",
+            "필터\\s*활성화됨"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -211,7 +214,8 @@
             "全部显示",
             "全部顯示",
             "(?i)Show\\s*All",
-            "すべて"
+            "すべて",
+            "모두\\s*표시"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -593,7 +597,9 @@
             "(?i)Show\\s*All",
             "すべて",
             "篩選生效中",
-            "筛选生效中"
+            "筛选生效中",
+            "모두\\s*표시",
+            "필터\\s*활성화됨"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -692,7 +698,8 @@
             "全部显示",
             "全部顯示",
             "(?i)Show\\s*All",
-            "すべて"
+            "すべて",
+            "모두\\s*표시"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -711,7 +718,8 @@
         ],
         "expected": [
             "筛选生效中",
-            "篩選生效中"
+            "篩選生效中",
+            "필터\\s*활성화됨"
         ],
         "action": "Click",
         "post_wait_freezes": 1,

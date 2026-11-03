@@ -89,7 +89,8 @@
             "应急食药",
             "緊急食藥",
             "Emergency",
-            "Ration"
+            "Ration",
+            "응급\\s*식품\\s*및\\s*약품"
         ],
         "next": [
             "CheckCantProduceAnyMore", // 进行材料退出判断，在这里直接判断到就直接退出

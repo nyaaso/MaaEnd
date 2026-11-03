@@ -764,7 +764,7 @@
                     "CONTROL NEXUS",
                     "control nexus",
                     "指揮中枢",
-                    "핵심 제어 중추"
+                    "핵심\\s*제어\\s*중추"
                 ],
                 "only_rec": true,
                 "threshold": 0.15

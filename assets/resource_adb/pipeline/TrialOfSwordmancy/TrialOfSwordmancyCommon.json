@@ -49,7 +49,7 @@
             "抽取銘牌",
             "Draw",
             "カードを引く",
-            "플레이트 뽑기"
+            "플레이트\\s*뽑기"
         ]
     },
     "TrialOfSwordmancyInRewardMode": {

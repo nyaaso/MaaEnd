@@ -53,7 +53,7 @@
             "樞壤儀",
             "(?i)Xiranite\\s*Nexus",
             "枢壌儀",
-            "중추 식양 장치"
+            "중추\\s*식양\\s*장치"
         ],
         "replace": [],
         "order_by": "Vertical",
@@ -149,7 +149,7 @@
             "拍攝樞壤儀",
             "(?i)Photo:\\s*Xiranite\\s*Nexus",
             "枢壌儀の写真を撮る",
-            "중추 식양 장치를 촬영하기"
+            "중추\\s*식양\\s*장치를\\s*촬영하기"
         ],
         "replace": [],
         "pre_delay": 0,

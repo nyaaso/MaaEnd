@@ -182,7 +182,8 @@
             70
         ],
         "expected": [
-            "未完成"
+            "未完成",
+            "미완료"
         ],
         "action": "Click",
         "post_wait_freezes": 200,

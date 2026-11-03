@@ -41,7 +41,7 @@
             "快速領取",
             "(?i)Claim\\s*All",
             "一括受取",
-            "일괄 획득"
+            "일괄\\s*획득"
         ],
         "pre_delay": 0,
         "action": "Click",

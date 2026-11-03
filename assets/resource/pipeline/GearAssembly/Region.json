@@ -40,7 +40,7 @@
             "材料不足",
             "Insufficient Materials",
             "素材が不足",
-            "제작 재료 부족"
+            "제작\\s*재료\\s*부족"
         ]
     },
     "GearAssemblyCheckNotUnlocked": {
@@ -57,7 +57,8 @@
             "Stock Redistribution",
             "解鎖",
             "商品取引",
-            "해제"
+            "해제",
+            "잠금\\s*해제"
         ]
     }
 }

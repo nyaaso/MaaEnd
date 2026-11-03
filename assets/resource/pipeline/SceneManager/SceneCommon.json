@@ -111,7 +111,7 @@
             "權限等階",
             "Authority Level",
             "行動レベル",
-            "권한 등급"
+            "권한\\s*등급"
         ],
         "pre_delay": 0,
         "post_delay": 0
@@ -130,7 +130,7 @@
             "權限等階",
             "Authority Level",
             "行動レベル",
-            "권한 등급"
+            "권한\\s*등급"
         ],
         "inverse": true,
         "pre_delay": 0,
@@ -150,7 +150,7 @@
             "按下空白處繼續",
             "Click to continue",
             "クリックして続ける",
-            "빈 곳을 눌러 계속하기"
+            "빈\\s*곳을\\s*눌러\\s*계속하기"
         ],
         "pre_wait_freezes": 200,
         "action": "Click"

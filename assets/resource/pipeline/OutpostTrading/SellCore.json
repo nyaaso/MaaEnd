@@ -197,7 +197,7 @@
             "Insufficient stock bills in current outpost",
             "(?i)Insufficient",
             "拠点取引券が不足しています",
-            "거점 관리권 보유량 부족",
+            "거점\\s*관리권\\s*보유량\\s*부족",
             "不足"
         ],
         "pre_delay": 0,

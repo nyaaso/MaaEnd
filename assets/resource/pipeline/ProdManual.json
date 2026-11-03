@@ -145,7 +145,8 @@
                     "点击屏幕继续",
                     "點按螢幕繼續",
                     "Tap to continue",
-                    "Click to continue"
+                    "Click to continue",
+                    "화면을\\s*눌러\\s*계속하기"
                 ]
             }
         },
@@ -392,7 +393,8 @@
                     "应急食药",
                     "緊急食藥",
                     "Emergency",
-                    "Ration"
+                    "Ration",
+                    "응급\\s*식품\\s*및\\s*약품"
                 ]
             }
         },

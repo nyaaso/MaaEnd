@@ -22,7 +22,8 @@
                     "任意處繼續",
                     "Click anywhere",
                     "Tap anywhere",
-                    "anywhere to continue"
+                    "anywhere to continue",
+                    "아무\\s*곳이나\\s*눌러\\s*계속하기"
                 ]
             }
         },

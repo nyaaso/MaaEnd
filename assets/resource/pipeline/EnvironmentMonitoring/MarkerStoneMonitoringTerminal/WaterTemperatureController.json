@@ -149,7 +149,7 @@
             "拍攝淨水溫控裝置",
             "(?i)Photo:\\s*Water\\s*Temperature\\s*Controller",
             "浄水温度調整装置の写真を撮る",
-            "정수 온도 조절 장치를 촬영하기"
+            "정수\\s*온도\\s*조절\\s*장치를\\s*촬영하기"
         ],
         "replace": [],
         "pre_delay": 0,

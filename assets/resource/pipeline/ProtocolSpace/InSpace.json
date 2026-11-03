@@ -106,7 +106,8 @@
                 ],
                 "expected": [
                     "理智不足",
-                    "Insufficient Sanity"
+                    "Insufficient Sanity",
+                    "이성\\s*부족"
                 ]
             }
         },
@@ -575,7 +576,8 @@
         ],
         "expected": [
             "消耗",
-            "Cost"
+            "Cost",
+            "소모"
         ],
         "action": "Click",
         "next": [
@@ -953,7 +955,7 @@
                     "獲得獎勵",
                     "Rewards Acquired",
                     "報酬一覧",
-                    "보상 획득"
+                    "보상\\s*획득"
                 ]
             },
             "WhiteCancelButton"

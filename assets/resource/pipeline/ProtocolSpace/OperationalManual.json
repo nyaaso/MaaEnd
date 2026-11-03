@@ -65,7 +65,8 @@
         "expected": [
             "员养成",
             "員養成",
-            "Operator Progression"
+            "Operator Progression",
+            "오퍼레이터\\s*육성"
         ],
         "pre_wait_freezes": 200,
         "action": "Click",
@@ -142,7 +143,8 @@
         ],
         "expected": [
             "前往",
-            "Go"
+            "Go",
+            "바로가기"
         ]
     },
     "ProtocolSpaceEnterButtonDisableRecognition": {
@@ -157,7 +159,8 @@
         ],
         "expected": [
             "查看",
-            "View"
+            "View",
+            "보기"
         ]
     },
     "ProtocolSpaceOperationalManualFindProtocolSpaceNormalEntryColor": {

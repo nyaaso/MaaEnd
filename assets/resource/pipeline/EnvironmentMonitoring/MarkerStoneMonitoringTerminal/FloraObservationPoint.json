@@ -149,7 +149,7 @@
             "拍攝植物觀察點",
             "(?i)Photo:\\s*Flora\\s*Observation\\s*Point",
             "植物観察スポットの写真を撮る",
-            "식물 관찰 지점을 촬영하기"
+            "식물\\s*관찰\\s*지점을\\s*촬영하기"
         ],
         "replace": [],
         "pre_delay": 0,
