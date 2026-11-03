@@ -1,0 +1,19 @@
+{
+    "__SceneImageCheckLanguageSuccess": {
+        "desc": "游戏语言为韩文",
+        "expected": [
+            // 로그인 화면으로 나가시겠습니까?
+            // @i18n-skip
+            "로그인\\s*화면으로\\s*나가시겠습니까"
+        ]
+    },
+    "__SceneImageCheckLanguageFailedWarn": {
+        "desc": "游戏语言不是韩文，输出警告",
+        "focus": {
+            "Node.Recognition.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Starting": "$task.SceneManager.focus.language_not_ko_kr"
+        }
+    }
+}

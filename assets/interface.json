@@ -146,6 +146,14 @@
             "path": [
                 "./resource"
             ]
+        },
+        {
+            "name": "韩文客户端",
+            "label": "$resource.KR.label",
+            "path": [
+                "./resource",
+                "./resource_kr"
+            ]
         }
     ],
     "agent": [
