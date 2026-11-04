@@ -245,7 +245,8 @@
                 ],
                 "expected": [
                     "使用",
-                    "Interact"
+                    "Interact",
+                    "사용"
                 ]
             }
         },

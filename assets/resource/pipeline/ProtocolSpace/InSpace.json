@@ -35,7 +35,8 @@
         "expected": [
             "进入",
             "進入",
-            "Enter"
+            "Enter",
+            "진입"
         ]
     },
     "ProtocolSpaceEnterSpace": {

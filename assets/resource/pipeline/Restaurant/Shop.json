@@ -198,7 +198,7 @@
             "看看貨物",
             "Check the goods",
             "品物を見る",
-            "물품을\\s*확인하기\\."
+            "물품을\\s*확인하기"
         ],
         "pre_delay": 0,
         "action": "Custom",

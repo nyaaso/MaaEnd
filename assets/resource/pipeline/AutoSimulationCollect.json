@@ -277,7 +277,8 @@
             200
         ], // 覆盖右下角操作区域
         "expected": [
-            "保存"
+            "保存",
+            "저장"
         ],
         "action": {
             "type": "Click"
@@ -369,7 +370,8 @@
         ],
         "expected": [
             "确认",
-            "確定"
+            "確定",
+            "확인"
         ],
         "action": "Click",
         "post_wait_freezes": 200, // 降低延迟

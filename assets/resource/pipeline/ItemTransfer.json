@@ -281,7 +281,8 @@
         "expected": [
             "确认",
             "確定",
-            "Confirm"
+            "Confirm",
+            "확인"
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -904,7 +905,8 @@
         "expected": [
             "确认",
             "確定",
-            "Confirm"
+            "Confirm",
+            "확인"
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -1500,7 +1502,8 @@
         "expected": [
             "确认",
             "確定",
-            "Confirm"
+            "Confirm",
+            "확인"
         ],
         "action": "Click",
         "post_wait_freezes": {

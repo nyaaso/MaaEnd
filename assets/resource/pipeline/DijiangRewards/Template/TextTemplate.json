@@ -14,7 +14,8 @@
                 "expected": [
                     "确认",
                     "確定",
-                    "Confirm"
+                    "Confirm",
+                    "확인"
                 ]
             }
         }
@@ -98,7 +99,8 @@
                     "領取",
                     "(?i)Claim",
                     "受取",
-                    "[Cc]laim"
+                    "[Cc]laim",
+                    "획득"
                 ],
                 "only_rec": true
             }

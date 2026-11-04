@@ -67,7 +67,8 @@
             "領取",
             "(?i)Claim",
             "受取",
-            "[Cc]laim"
+            "[Cc]laim",
+            "획득"
         ]
     },
     "DailyTaskClaimSingleRewardTemplate": {
