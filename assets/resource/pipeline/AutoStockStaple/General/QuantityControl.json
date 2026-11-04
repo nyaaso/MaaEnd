@@ -142,10 +142,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.valley_engraving_permit"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlValleyEngravingPermitExclude": {
         "desc": "谷地刻写券达到阈值后退出",
@@ -288,10 +285,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.kunst_tube"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlKunstTubeExclude": {
         "desc": "附术铁瓶达到阈值后退出",
@@ -407,10 +401,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.jakubs_legacy"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlJakubsLegacyExclude": {
         "desc": "雅各布的遗产达到阈值后退出",
@@ -526,10 +517,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.pulled_slug_meat"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlPulledSlugMeatExclude": {
         "desc": "手撕虫肉达到阈值后退出",
@@ -645,10 +633,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.hazefyre_blossom"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlHazefyreBlossomExclude": {
         "desc": "雾火之花达到阈值后退出",
@@ -764,10 +749,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.cartilage_cookie"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlCartilageCookieExclude": {
         "desc": "软骨饼干达到阈值后退出",
@@ -883,10 +865,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.cosmo_melto_jelly"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlCosmoMeltoJellyExclude": {
         "desc": "星融果冻达到阈值后退出",
@@ -1002,10 +981,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.keen_valley_detector"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlKeenValleyDetectorExclude": {
         "desc": "新锐谷地探物器达到阈值后退出",
@@ -1121,10 +1097,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.keen_valley_compass"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlKeenValleyCompassExclude": {
         "desc": "新锐谷地罗盘达到阈值后退出",
@@ -1240,10 +1213,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.breeze_of_kjersch"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlBreezeOfKjerschExclude": {
         "desc": "耶尔什微风达到阈值后退出",
@@ -1359,10 +1329,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.tidestone_specimen"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlTidestoneSpecimenExclude": {
         "desc": "浪潮海石达到阈值后退出",
@@ -1478,10 +1445,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.simonch_shawl"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlSimonchShawlExclude": {
         "desc": "塞梦珂披巾达到阈值后退出",
@@ -1597,10 +1561,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.frontiers_watch"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlFrontiersWatchExclude": {
         "desc": "《前沿瞭望》达到阈值后退出",
@@ -1716,10 +1677,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.aurylene_camera"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlAuryleneCameraExclude": {
         "desc": "醚质相机达到阈值后退出",
@@ -1835,10 +1793,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.cosmic_gate_puzzle"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlCosmicGatePuzzleExclude": {
         "desc": "星门锁达到阈值后退出",
@@ -1954,10 +1909,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.surfing_festival_ticket"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlSurfingFestivalTicketExclude": {
         "desc": "冲浪大赛门票达到阈值后退出",
@@ -2073,10 +2025,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.wuling_engraving_permit"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlWulingEngravingPermitExclude": {
         "desc": "武陵刻写券达到阈值后退出",
@@ -2192,10 +2141,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.fortifying_infusion"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlFortifyingInfusionExclude": {
         "desc": "正本补元汤剂达到阈值后退出",
@@ -2311,10 +2257,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.garden_fried_rice"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlGardenFriedRiceExclude": {
         "desc": "锦素炒饭达到阈值后退出",
@@ -2430,10 +2373,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.master_pans_egg_pudding"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlMasterPansEggPuddingExclude": {
         "desc": "潘师傅蛋羹达到阈值后退出",
@@ -2549,10 +2489,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.echoing_remedy"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlEchoingRemedyExclude": {
         "desc": "回响秘剂达到阈值后退出",
@@ -2668,10 +2605,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.rind_flavored_sprouts"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlRindFlavoredSproutsExclude": {
         "desc": "陈皮拌笋达到阈值后退出",
@@ -2787,10 +2721,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.wuling_artificing_catalyst"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlWulingArtificingCatalystExclude": {
         "desc": "武陵精锻助剂达到阈值后退出",
@@ -2906,10 +2837,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.keen_wuling_detector"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlKeenWulingDetectorExclude": {
         "desc": "新锐武陵探物器达到阈值后退出",
@@ -3025,10 +2953,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.keen_wuling_compass"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlKeenWulingCompassExclude": {
         "desc": "新锐武陵罗盘达到阈值后退出",
@@ -3144,10 +3069,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.eureka_teabox"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlEurekaTeaboxExclude": {
         "desc": "岳研茶盒达到阈值后退出",
@@ -3263,10 +3185,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.yinglung_dumbbells"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlYinglungDumbbellsExclude": {
         "desc": "应龙哑铃达到阈值后退出",
@@ -3382,10 +3301,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.woven_aggelos"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlWovenAggelosExclude": {
         "desc": "草编天使达到阈值后退出",
@@ -3501,10 +3417,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.scrimshaw_of_the_pack"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlScrimshawOfThePackExclude": {
         "desc": "狼群骨雕达到阈值后退出",
@@ -3620,10 +3533,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.fin_n_chips"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlFinNChipsExclude": {
         "desc": "炸鳞薯条达到阈值后退出",
@@ -3739,10 +3649,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.bizarro_cupcake"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlBizarroCupcakeExclude": {
         "desc": "怪味纸杯蛋糕达到阈值后退出",
@@ -3858,10 +3765,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.chubby_lung_fangxing_memorabilia"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlChubbyLungFangxingMemorabiliaExclude": {
         "desc": "龙泡泡·方兴纪念达到阈值后退出",
@@ -3977,10 +3881,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.stonehold_remedy"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlStoneholdRemedyExclude": {
         "desc": "蓄石秘剂达到阈值后退出",
@@ -4096,10 +3997,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.ruin_purger_remedy"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlRuinPurgerRemedyExclude": {
         "desc": "洗灾秘剂达到阈值后退出",
@@ -4215,10 +4113,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.wuling_talosite_probe"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlWulingTalositeProbeExclude": {
         "desc": "武陵塔晶探针达到阈值后退出",
@@ -4334,10 +4229,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.fowlbeast_paper_kite"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlFowlbeastPaperKiteExclude": {
         "desc": "羽兽剪纸风筝达到阈值后退出",
@@ -4453,10 +4345,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.swinging_gentleman_classical_album"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlSwingingGentlemanClassicalAlbumExclude": {
         "desc": "《摇摆绅士古典特辑》达到阈值后退出",
@@ -4572,10 +4461,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.sear_toasted_liver"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlSearToastedLiverExclude": {
         "desc": "香焗兽肝达到阈值后退出",
@@ -4691,10 +4577,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.myrkwood_berry_preserve"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlMyrkwoodBerryPreserveExclude": {
         "desc": "黑森林浆果酱达到阈值后退出",
@@ -4810,10 +4693,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.miracle_cake"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlMiracleCakeExclude": {
         "desc": "奇迹蛋糕达到阈值后退出",
@@ -4967,7 +4847,7 @@
         "rate_limit": 0
     },
     "AutoStockStapleQuantityControlCloseRewards": {
-        "desc": "关闭奖励窗口",
+        "desc": "奖励窗口静止后由 IMS A3 累加本次购买物品并播报，再关闭窗口",
         "recognition": {
             "type": "And",
             "param": {
@@ -4977,18 +4857,41 @@
             }
         },
         "pre_wait_freezes": {
-            "time": 200,
+            "time": 300,
             "target": [
                 339,
                 231,
                 602,
                 239
-            ]
+            ],
+            "threshold": 0.97,
+            "timeout": 1500
         },
+        "pre_delay": 0,
         "action": {
-            "type": "Click"
+            "type": "Custom",
+            "param": {
+                "custom_action": "AddItemData",
+                "custom_action_param": {
+                    // 稳定物资 44 件按 IconRecognition catalog 逐件核对，全部落在这三个分类：
+                    // - Normal:Usable 16 件：食物与增益（星融果冻、附术铁瓶、正本补元汤剂等）
+                    // - ValuableDepot:CommercialItem 27 件：刻写券 x2、礼物 x20、罗盘/探物器/探针 x5
+                    // - ValuableDepot:SpecialItem 1 件：武陵精锻助剂
+                    // 不要改成只传 item_ids：A3 会把 item_ids 与默认 rewards 候选（Isolate:* + ValuableDepot:*）取交集，
+                    // 只传 item_ids 会让 16 件 Normal:Usable 食物全部被交集掉
+                    "item_filters": [
+                        "Normal:Usable",
+                        "ValuableDepot:CommercialItem",
+                        "ValuableDepot:SpecialItem"
+                    ]
+                }
+            }
         },
-        "post_delay": 0
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AddItemDataCloseRewards"
+        ]
     },
     "AutoStockStapleQuantityControlItemInkbiter1Wgshoal11": {
         "desc": "草本清凉饮的数量控制",
@@ -5060,10 +4963,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.item_inkbiter_1_wgshoal_1_1"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlItemInkbiter1Wgshoal11Exclude": {
         "desc": "草本清凉饮达到阈值后退出",
@@ -5179,10 +5079,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.item_inkkirin_1_hscrane_1_1"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlItemInkkirin1Hscrane11Exclude": {
         "desc": "酥麻炸虫蛹达到阈值后退出",
@@ -5298,10 +5195,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.item_gift_jinlong_12"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlItemGiftJinlong12Exclude": {
         "desc": "缘缘庄拼图达到阈值后退出",
@@ -5417,10 +5311,7 @@
         "next": [
             "AutoStockStapleCheckSliding",
             "AutoStockStapleBetterSliding"
-        ],
-        "focus": {
-            "Node.Action.Starting": "$task.AutoStockStaple.focus.quantity_control.buy.item_gift_jinlong_13"
-        }
+        ]
     },
     "AutoStockStapleQuantityControlItemGiftJinlong13Exclude": {
         "desc": "木雕剑达到阈值后退出",
