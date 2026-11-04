@@ -30,6 +30,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import sync_ocr_expected as s
 
 HANGUL = re.compile(r"[가-힣]")
+CJK = re.compile(r"[\u4e00-\u9fff\u3040-\u30ff]")
 
 
 def parse_string_elements(parser: s.JsoncParser, start: int) -> list[tuple[str, int, int]] | None:
@@ -86,6 +87,64 @@ def ambiguous_shared_kr_texts(
             if kr_text and kr_text not in shared:
                 shared.append(kr_text)
     return shared
+
+
+FALLBACK_MAX_LEN = 4  # 버튼·탭 이름 같은 짧은 문구만 (긴 문장은 오매칭 위험)
+FALLBACK_MIN_SHARE = 0.2
+FALLBACK_MAX_CANDIDATES = 3
+
+
+def intersected_kr_candidates(
+    values: list[str],
+    reverse_index: dict[str, set[str]],
+    english_reverse_index: dict[str, set[str]],
+    tables: dict[str, dict[str, str]],
+) -> list[str]:
+    """
+    한국어가 없고 언어 ID 가 하나로 정해지지 않는 배열에서, 짧은 UI 문구(버튼·탭 이름 등)의 후보 ID 를
+    교차(교집합이 비면 합집합)해 한국어 번역 분포를 구하고, 비중이 큰 후보를 돌려준다.
+    - 긴 문장·숫자·정규식은 대상에서 뺀다
+    - 한 후보가 다른 후보를 포함하면 짧은 쪽만 남긴다(부분 일치이므로 짧은 쪽이 둘 다 맞춘다)
+    """
+    if any(HANGUL.search(value) for value in values):
+        return []
+    # 숫자·영문만 있는 배열(「0」「NEW」 등)은 언어 문구가 아니므로 제외
+    if not any(CJK.search(value) for value in values):
+        return []
+    candidate_sets: list[set[str]] = []
+    for value in values:
+        normalized = s.normalize_text(value)
+        if not normalized or len(normalized) > FALLBACK_MAX_LEN * 3:
+            continue
+        candidates = set(reverse_index.get(normalized, set()))
+        if not candidates:
+            candidates = set(english_reverse_index.get(s.normalize_english_for_match(value), set()))
+        if not candidates:
+            continue
+        sample = next(iter(candidates))
+        if len(s.normalize_text(tables["CN"].get(sample, value))) > FALLBACK_MAX_LEN:
+            continue
+        candidate_sets.append(candidates)
+    if not candidate_sets:
+        return []
+    pool = set.intersection(*candidate_sets) or set().union(*candidate_sets)
+    counts: dict[str, int] = {}
+    for lang_id in pool:
+        kr_text = s.normalize_text(tables["KR"].get(lang_id, ""))
+        if kr_text and HANGUL.search(kr_text):
+            counts[kr_text] = counts.get(kr_text, 0) + 1
+    total = sum(counts.values())
+    if not total:
+        return []
+    ranked = sorted(counts.items(), key=lambda item: (-item[1], len(item[0])))
+    picked = [text for text, count in ranked if count / total >= FALLBACK_MIN_SHARE][:FALLBACK_MAX_CANDIDATES]
+    if not picked or counts[ranked[0][0]] / total < 0.5:
+        return []
+    reduced: list[str] = []
+    for text in sorted(picked, key=len):
+        if not any(shorter in text for shorter in reduced):
+            reduced.append(text)
+    return reduced
 
 
 def collect_ocr_expected_members(parser: s.JsoncParser, obj_start: int) -> list[s.Member]:
@@ -156,6 +215,7 @@ def main() -> int:
     regexified = 0
     no_kr_in_table: list[str] = []
     unresolved: list[str] = []
+    fallback_nodes: list[tuple[str, list[str], list[str]]] = []
     comment_arrays: list[str] = []
     touched_files: list[str] = []
 
@@ -183,25 +243,33 @@ def main() -> int:
                 # 여러 ID 로 겹쳐 해석되지 않은 문구라도, 후보 ID 들의 한국어 번역이 모두 같으면 그 번역을 쓴다
                 # (예: 「日常」은 ID 가 여럿이지만 한국어는 모두 「일상」)
                 ambiguous_kr = ambiguous_shared_kr_texts(old_expected, lang_ids, reverse_index, tables)
+                # 그래도 못 찾으면 같은 배열의 짧은 문구(간체/번체/영어 등) 후보 ID 를 교차해 한국어 후보를 고른다
+                # (예: 「确认 / 確定 / Confirm」→ 대부분 「확인」)
+                if not lang_ids and not ambiguous_kr and not skip_marked:
+                    ambiguous_kr = intersected_kr_candidates(old_expected, reverse_index, english_reverse_index, tables)
+                    if ambiguous_kr:
+                        fallback_nodes.append((label, old_expected, ambiguous_kr))
                 if not lang_ids and not ambiguous_kr:
                     if not skip_marked:
                         unresolved.append(label)
                     continue
 
-                # 언어표의 한국어 원문과 정확히 같은 리터럴만 공백 보정한다
-                # (이미 정규식으로 작성된 한국어 값은 그대로 둔다)
-                kr_literals = {
-                    s.normalize_text(tables["KR"][lang_id]) for lang_id in lang_ids if tables["KR"].get(lang_id)
-                } | {s.normalize_text(kr_text) for kr_text in ambiguous_kr}
+                # 언어표의 한국어 원문(또는 그 원문으로 만든 옛 정규식)과 같은 값만 새 규칙으로 보정한다
+                # (사람이 직접 쓴 다른 정규식은 그대로 둔다)
+                kr_sources = [tables["KR"][lang_id] for lang_id in lang_ids if tables["KR"].get(lang_id)] + list(
+                    ambiguous_kr
+                )
+                rewrite_map: dict[str, str] = {}
+                for kr_text in kr_sources:
+                    new_form = s.build_korean_ocr_regex(kr_text)
+                    for old_form in (kr_text, s.build_korean_ocr_regex_legacy(kr_text)):
+                        if s.normalize_text(old_form) != s.normalize_text(new_form):
+                            rewrite_map[s.normalize_text(old_form)] = new_form
                 element_fixes: list[tuple[int, int, str]] = []
                 new_expected: list[str] = []
                 for value, value_start, value_end in elements:
-                    if (
-                        HANGUL.search(value)
-                        and " " in s.normalize_text(value)
-                        and s.normalize_text(value) in kr_literals
-                    ):
-                        value_regex = s.build_korean_ocr_regex(value)
+                    if HANGUL.search(value) and s.normalize_text(value) in rewrite_map:
+                        value_regex = rewrite_map[s.normalize_text(value)]
                         if value_regex != value:
                             regexified += 1
                             element_fixes.append((value_start, value_end, json.dumps(value_regex, ensure_ascii=False)))
@@ -277,6 +345,9 @@ def main() -> int:
         print(f"---- {title}: {len(items)}")
         for item in items:
             print(f"  {item}")
+    print(f"---- cross-language fallback (교차 추정, 검토 권장): {len(fallback_nodes)}")
+    for label, values, kr_texts in fallback_nodes:
+        print(f"  {label}: {values[:4]} -> {kr_texts}")
     return 0
 
 

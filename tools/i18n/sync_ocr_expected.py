@@ -130,9 +130,7 @@ class JsoncParser:
                     continue
                 if nxt == "*":
                     i += 2
-                    while i + 1 < self.n and not (
-                        self.text[i] == "*" and self.text[i + 1] == "/"
-                    ):
+                    while i + 1 < self.n and not (self.text[i] == "*" and self.text[i + 1] == "/"):
                         i += 1
                     i += 2
                     continue
@@ -251,9 +249,7 @@ class JsoncParser:
             if self.text[i] == "]":
                 return values, i + 1
             if self.text[i] != '"':
-                raise ValueError(
-                    f"Expected string element in expected[] at index {i}, got '{self.text[i]}'"
-                )
+                raise ValueError(f"Expected string element in expected[] at index {i}, got '{self.text[i]}'")
             val, i = self.parse_string(i)
             values.append(val)
             i = self.skip_ws_comments(i)
@@ -268,11 +264,7 @@ class JsoncParser:
 
 def resolve_i18n_dir(base_dir: Path, i18n_dir_override: Path | None = None) -> Path:
     if i18n_dir_override is not None:
-        candidate = (
-            i18n_dir_override
-            if i18n_dir_override.is_absolute()
-            else base_dir / i18n_dir_override
-        )
+        candidate = i18n_dir_override if i18n_dir_override.is_absolute() else base_dir / i18n_dir_override
         if not candidate.exists():
             raise FileNotFoundError(f"指定的 i18n 目录不存在: {candidate}")
         return candidate
@@ -282,14 +274,11 @@ def resolve_i18n_dir(base_dir: Path, i18n_dir_override: Path | None = None) -> P
         if candidate.exists():
             return candidate
     raise FileNotFoundError(
-        "未找到可用 i18n 目录，已尝试: "
-        + ", ".join(str(base_dir / p) for p in DEFAULT_I18N_DIR_CANDIDATES)
+        "未找到可用 i18n 目录，已尝试: " + ", ".join(str(base_dir / p) for p in DEFAULT_I18N_DIR_CANDIDATES)
     )
 
 
-def load_i18n_tables(
-    base_dir: Path, i18n_dir_override: Path | None = None
-) -> tuple[dict[str, dict[str, str]], Path]:
+def load_i18n_tables(base_dir: Path, i18n_dir_override: Path | None = None) -> tuple[dict[str, dict[str, str]], Path]:
     i18n_dir = resolve_i18n_dir(base_dir, i18n_dir_override)
     tables: dict[str, dict[str, str]] = {}
     for lang, file_name in I18N_FILE_NAMES.items():
@@ -309,9 +298,7 @@ def normalize_hotfix_type(type_value: str) -> str | None:
     return HOTFIX_TYPE_TO_LANG.get(normalized)
 
 
-def apply_hotfix_to_tables(
-    tables: dict[str, dict[str, str]], i18n_dir: Path
-) -> tuple[int, int, bool]:
+def apply_hotfix_to_tables(tables: dict[str, dict[str, str]], i18n_dir: Path) -> tuple[int, int, bool]:
     """
     将 I18nHotFix.json 的文本覆盖到五语主表中。
     返回: (applied_count, skipped_count, hotfix_exists)
@@ -400,9 +387,7 @@ def get_object_members(parser: JsoncParser, member: Member) -> list[Member] | No
     return members
 
 
-def get_array_member_if_exists(
-    parser: JsoncParser, members: dict[str, Member], key: str
-) -> Member | None:
+def get_array_member_if_exists(parser: JsoncParser, members: dict[str, Member], key: str) -> Member | None:
     m = members.get(key)
     if not m:
         return None
@@ -440,20 +425,14 @@ def detect_closing_brace_indent(text: str, brace_index: int) -> str:
     return text[line_start:i]
 
 
-def build_expected_array_text(
-    values: Sequence[str], key_indent: str, newline: str
-) -> str:
+def build_expected_array_text(values: Sequence[str], key_indent: str, newline: str) -> str:
     if not values:
         return "[]"
-    inner = ("," + newline).join(
-        f"{key_indent}{INDENT}{json.dumps(v, ensure_ascii=False)}" for v in values
-    )
+    inner = ("," + newline).join(f"{key_indent}{INDENT}{json.dumps(v, ensure_ascii=False)}" for v in values)
     return f"[{newline}{inner}{newline}{key_indent}]"
 
 
-def build_numeric_array_text(
-    values: Sequence[int | float], key_indent: str, newline: str
-) -> str:
+def build_numeric_array_text(values: Sequence[int | float], key_indent: str, newline: str) -> str:
     def format_number(value: int | float) -> str:
         if isinstance(value, float) and value.is_integer():
             value = int(value)
@@ -461,15 +440,11 @@ def build_numeric_array_text(
 
     if not values:
         return "[]"
-    inner = ("," + newline).join(
-        f"{key_indent}{INDENT}{format_number(v)}" for v in values
-    )
+    inner = ("," + newline).join(f"{key_indent}{INDENT}{format_number(v)}" for v in values)
     return f"[{newline}{inner}{newline}{key_indent}]"
 
 
-def parse_array_number_values(
-    parser: JsoncParser, member: Member
-) -> list[int | float] | None:
+def parse_array_number_values(parser: JsoncParser, member: Member) -> list[int | float] | None:
     if parser.text[member.value_start] != "[":
         return None
 
@@ -529,9 +504,7 @@ def apply_roi_offset(
     return [x + left, y + top, new_w, new_h]
 
 
-def locate_node_roi_members(
-    parser: JsoncParser, node_member: Member
-) -> tuple[Member | None, Member | None]:
+def locate_node_roi_members(parser: JsoncParser, node_member: Member) -> tuple[Member | None, Member | None]:
     node_members, _ = parser.parse_object_members(node_member.value_start)
     node_map = member_map(node_members)
 
@@ -548,9 +521,7 @@ def locate_node_roi_members(
                     if param_members is not None:
                         param_map = member_map(param_members)
                         roi_member = param_map.get("roi")
-                        roi_offset_member = get_array_member_if_exists(
-                            parser, param_map, "roi_offset"
-                        )
+                        roi_offset_member = get_array_member_if_exists(parser, param_map, "roi_offset")
                         if roi_member is not None:
                             return roi_member, roi_offset_member
 
@@ -584,9 +555,7 @@ def resolve_effective_roi(
             if ref_member is None or roi_ref in visiting:
                 return None
             visiting.add(roi_ref)
-            ref_roi_member, ref_roi_offset_member = locate_node_roi_members(
-                parser, ref_member
-            )
+            ref_roi_member, ref_roi_offset_member = locate_node_roi_members(parser, ref_member)
             if ref_roi_member is not None:
                 base_roi = resolve_effective_roi(
                     parser,
@@ -620,9 +589,7 @@ def resolve_lang_ids(
         norm = normalize_text(text)
         candidates = set(reverse_index.get(norm, set()))
         if not candidates:
-            candidates = set(
-                english_reverse_index.get(normalize_english_for_match(text), set())
-            )
+            candidates = set(english_reverse_index.get(normalize_english_for_match(text), set()))
         candidates_by_text.append((text, candidates))
 
     resolved_in_order: list[str] = []
@@ -642,19 +609,14 @@ def resolve_lang_ids(
     # 第二轮：如果歧义候选与已解析 ID 有交集，用交集兜底
     for text, candidates in candidates_by_text:
         if len(candidates) > 1:
-            intersection = [
-                lang_id for lang_id in resolved_in_order if lang_id in candidates
-            ]
+            intersection = [lang_id for lang_id in resolved_in_order if lang_id in candidates]
             if len(intersection) == 1:
                 # 这里表示“该歧义文本可复用一个已解析 ID”，无需重复加入列表
                 # 只把它视为已解析，不进入 unresolved_texts
                 pass
             else:
                 # Third fallback: if ambigous IDs have identical rows in all languages, pick anyone (smallest ID)
-                rows = [
-                    tuple(tables[lang].get(lid, "") for lang in LANG_ORDER)
-                    for lid in candidates
-                ]
+                rows = [tuple(tables[lang].get(lid, "") for lang in LANG_ORDER) for lid in candidates]
                 if len(set(rows)) == 1:
                     lang_id = min(candidates)  # Choose smallest ID
                     if lang_id not in resolved_set:
@@ -666,9 +628,7 @@ def resolve_lang_ids(
     return resolved_in_order, unresolved_texts
 
 
-def expand_expected_from_ids(
-    lang_ids: Sequence[str], tables: dict[str, dict[str, str]]
-) -> list[str]:
+def expand_expected_from_ids(lang_ids: Sequence[str], tables: dict[str, dict[str, str]]) -> list[str]:
     expanded: list[str] = []
     seen: set[str] = set()
     for lang_id in lang_ids:
@@ -682,9 +642,7 @@ def expand_expected_from_ids(
     return expanded
 
 
-def append_unresolved_texts(
-    base_expected: list[str], unresolved_texts: Sequence[str]
-) -> list[str]:
+def append_unresolved_texts(base_expected: list[str], unresolved_texts: Sequence[str]) -> list[str]:
     """
     将未命中的原始 expected 追加到结果末尾，并避免重复追加。
     """
@@ -721,11 +679,29 @@ def build_english_ocr_regex(text: str) -> str:
     return rf"(?i){r'\s*'.join(pieces)}"
 
 
+KOREAN_TRAILING_PUNCT = re.compile(r"[.。!！?？…~]+$")
+
+
 def build_korean_ocr_regex(text: str) -> str:
     """
-    韩文 OCR 常把词间空格漏掉（如「팀 편성」识别为「팀편성」），
-    含空格时转为在空格处放宽为 \\s* 的正则；不含空格时保持原文。
+    韩文 OCR 常把词间空格漏掉（如「팀 편성」识别为「팀편성」），也常漏掉句末标点
+    （如选项「선물 수령.」识别为「선물수령」）。
+    - 含空格时在空格处放宽为 \\s*
+    - 去掉句末标点（OCR expected 为部分匹配，去掉后仍能命中带标点的原文）
+    不含空格且没有句末标点时保持原文。
     """
+    normalized = normalize_text(text)
+    stripped = KOREAN_TRAILING_PUNCT.sub("", normalized).strip()
+    if not stripped:
+        return text
+    tokens = stripped.split(" ")
+    if len(tokens) <= 1 and stripped == normalized:
+        return text
+    return r"\s*".join(escape_regex_literal(token) for token in tokens)
+
+
+def build_korean_ocr_regex_legacy(text: str) -> str:
+    """旧版生成规则（保留句末标点），用于识别并迁移已写入 pipeline 的旧正则。"""
     tokens = normalize_text(text).split(" ")
     if len(tokens) <= 1:
         return text
@@ -733,26 +709,16 @@ def build_korean_ocr_regex(text: str) -> str:
 
 
 def normalize_english_for_match(text: str) -> str:
-    tokens = split_english_text_tokens(
-        text.replace("\r\n", "\n").replace("\r", "\n").strip()
-    )
+    tokens = split_english_text_tokens(text.replace("\r\n", "\n").replace("\r", "\n").strip())
     return "\u0000".join(token.casefold() for token in tokens)
 
 
-def expected_text_matches_lang_text(
-    expected_text: str, lang: str, lang_text: str
-) -> bool:
+def expected_text_matches_lang_text(expected_text: str, lang: str, lang_text: str) -> bool:
     if lang == "EN":
-        if normalize_text(expected_text) == normalize_text(
-            build_english_ocr_regex(lang_text)
-        ):
+        if normalize_text(expected_text) == normalize_text(build_english_ocr_regex(lang_text)):
             return True
-        return normalize_english_for_match(
-            expected_text
-        ) == normalize_english_for_match(lang_text)
-    if lang == "KR" and normalize_text(expected_text) == normalize_text(
-        build_korean_ocr_regex(lang_text)
-    ):
+        return normalize_english_for_match(expected_text) == normalize_english_for_match(lang_text)
+    if lang == "KR" and normalize_text(expected_text) == normalize_text(build_korean_ocr_regex(lang_text)):
         return True
     return normalize_text(expected_text) == normalize_text(lang_text)
 
@@ -791,9 +757,7 @@ def estimate_expected_max_width(
     return max(widths, default=0.0)
 
 
-def estimate_translated_max_width(
-    lang_ids: Sequence[str], tables: dict[str, dict[str, str]]
-) -> float:
+def estimate_translated_max_width(lang_ids: Sequence[str], tables: dict[str, dict[str, str]]) -> float:
     widths = [
         estimate_text_display_width(text)
         for lang_id in lang_ids
@@ -870,11 +834,7 @@ def safe_print(message: str) -> None:
         if hasattr(sys.stdout, "buffer"):
             sys.stdout.buffer.write((message + "\n").encode(encoding, errors="replace"))
         else:
-            print(
-                message.encode(encoding, errors="replace").decode(
-                    encoding, errors="replace"
-                )
-            )
+            print(message.encode(encoding, errors="replace").decode(encoding, errors="replace"))
 
 
 @dataclass
@@ -940,45 +900,30 @@ def process_pipeline_file(
                 if rec_members is not None:
                     rec_map = member_map(rec_members)
                     type_member = rec_map.get("type")
-                    rec_type = (
-                        get_string_value(parser, type_member) if type_member else None
-                    )
+                    rec_type = get_string_value(parser, type_member) if type_member else None
                     if rec_type == "OCR":
                         is_ocr = True
 
                     # 优先取 recognition.param.expected，其次 recognition.expected
                     param_member = rec_map.get("param")
                     if param_member:
-                        param_members, param_end = parser.parse_object_members(
-                            param_member.value_start
-                        )
+                        param_members, param_end = parser.parse_object_members(param_member.value_start)
                         if param_members is not None:
                             param_map = member_map(param_members)
-                            only_rec = only_rec or (
-                                get_bool_value(parser, param_map.get("only_rec"))
-                                is True
-                            )
-                            expected_member = get_array_member_if_exists(
-                                parser, param_map, "expected"
-                            )
+                            only_rec = only_rec or (get_bool_value(parser, param_map.get("only_rec")) is True)
+                            expected_member = get_array_member_if_exists(parser, param_map, "expected")
                             roi_member = param_map.get("roi")
-                            roi_offset_member = get_array_member_if_exists(
-                                parser, param_map, "roi_offset"
-                            )
+                            roi_offset_member = get_array_member_if_exists(parser, param_map, "roi_offset")
                             if roi_member is not None:
                                 roi_container_end = param_end
                     if expected_member is None:
-                        expected_member = get_array_member_if_exists(
-                            parser, rec_map, "expected"
-                        )
+                        expected_member = get_array_member_if_exists(parser, rec_map, "expected")
 
         if expected_member is None:
             expected_member = get_array_member_if_exists(parser, node_map, "expected")
         if roi_member is None:
             roi_member = node_map.get("roi")
-            roi_offset_member = get_array_member_if_exists(
-                parser, node_map, "roi_offset"
-            )
+            roi_offset_member = get_array_member_if_exists(parser, node_map, "roi_offset")
             if roi_member is not None:
                 roi_container_end = node_end
 
@@ -991,21 +936,15 @@ def process_pipeline_file(
 
         ocr_nodes_with_expected += 1
         old_expected, _ = parser.parse_array_string_values(expected_member.value_start)
-        lang_ids, unresolved_texts = resolve_lang_ids(
-            old_expected, reverse_index, english_reverse_index, tables
-        )
+        lang_ids, unresolved_texts = resolve_lang_ids(old_expected, reverse_index, english_reverse_index, tables)
 
         if not lang_ids:
-            unresolved_nodes.append(
-                (str(path), node_name, unresolved_texts or old_expected)
-            )
+            unresolved_nodes.append((str(path), node_name, unresolved_texts or old_expected))
             continue
 
         new_expected = expand_expected_from_ids(lang_ids, tables)
         if not new_expected:
-            unresolved_nodes.append(
-                (str(path), node_name, unresolved_texts or old_expected)
-            )
+            unresolved_nodes.append((str(path), node_name, unresolved_texts or old_expected))
             continue
         new_expected = append_unresolved_texts(new_expected, unresolved_texts)
         replacements: list[Replacement] = []
@@ -1033,42 +972,29 @@ def process_pipeline_file(
                 {node_name},
             )
             if effective_roi is not None and len(effective_roi) == 4:
-                old_max_width = estimate_roi_base_width(
-                    old_expected, new_expected, lang_ids, tables
-                )
+                old_max_width = estimate_roi_base_width(old_expected, new_expected, lang_ids, tables)
                 new_max_width = estimate_translated_max_width(lang_ids, tables)
-                expanded_roi = compute_expanded_roi(
-                    effective_roi, old_max_width, new_max_width
-                )
+                expanded_roi = compute_expanded_roi(effective_roi, old_max_width, new_max_width)
                 if expanded_roi is not None:
                     delta_w = expanded_roi[2] - effective_roi[2]
                     if delta_w > 0:
                         key_indent = detect_line_indent(text, roi_member.key_start)
                         if roi_offset_member is not None:
-                            roi_offset_values = parse_array_number_values(
-                                parser, roi_offset_member
-                            )
-                            if (
-                                roi_offset_values is not None
-                                and len(roi_offset_values) == 4
-                            ):
+                            roi_offset_values = parse_array_number_values(parser, roi_offset_member)
+                            if roi_offset_values is not None and len(roi_offset_values) == 4:
                                 new_roi_offset = list(roi_offset_values)
                                 new_roi_offset[2] = float(new_roi_offset[2]) + delta_w
                                 replacements.append(
                                     Replacement(
                                         value_start=roi_offset_member.value_start,
                                         value_end=roi_offset_member.value_end,
-                                        replacement=build_numeric_array_text(
-                                            new_roi_offset, key_indent, newline
-                                        ),
+                                        replacement=build_numeric_array_text(new_roi_offset, key_indent, newline),
                                     )
                                 )
                             else:
                                 delta_w = 0
                         else:
-                            closing_indent = detect_closing_brace_indent(
-                                text, roi_container_end - 1
-                            )
+                            closing_indent = detect_closing_brace_indent(text, roi_container_end - 1)
                             replacements.append(
                                 Replacement(
                                     value_start=roi_container_end - 1,
@@ -1105,15 +1031,9 @@ def process_pipeline_file(
         return text, [], unresolved_nodes, ocr_nodes_with_expected, skipped_by_marker
 
     new_text = text
-    replacements = [
-        replacement for change in changes for replacement in change.replacements
-    ]
+    replacements = [replacement for change in changes for replacement in change.replacements]
     for change in sorted(replacements, key=lambda c: c.value_start, reverse=True):
-        new_text = (
-            new_text[: change.value_start]
-            + change.replacement
-            + new_text[change.value_end :]
-        )
+        new_text = new_text[: change.value_start] + change.replacement + new_text[change.value_end :]
     return (
         new_text,
         changes,
@@ -1134,9 +1054,7 @@ def iter_pipeline_files(base_dir: Path) -> list[Path]:
 
 
 def main() -> int:
-    argp = argparse.ArgumentParser(
-        description="统一 OCR expected 为 CN/TC/EN/JP/KR 五语文本（默认 dry-run）"
-    )
+    argp = argparse.ArgumentParser(description="统一 OCR expected 为 CN/TC/EN/JP/KR 五语文本（默认 dry-run）")
     argp.add_argument(
         "--base-dir",
         type=Path,
@@ -1163,9 +1081,7 @@ def main() -> int:
 
     base_dir = args.base_dir.resolve()
     tables, i18n_dir = load_i18n_tables(base_dir, args.i18n_dir)
-    hotfix_applied, hotfix_skipped, has_hotfix = apply_hotfix_to_tables(
-        tables, i18n_dir
-    )
+    hotfix_applied, hotfix_skipped, has_hotfix = apply_hotfix_to_tables(tables, i18n_dir)
     reverse_index, english_reverse_index = build_reverse_index(tables)
     pipeline_files = iter_pipeline_files(base_dir)
 
@@ -1188,10 +1104,8 @@ def main() -> int:
 
     for file_path in pipeline_files:
         try:
-            new_text, changes, unresolved_nodes, ocr_nodes, skipped_nodes = (
-                process_pipeline_file(
-                    file_path, tables, reverse_index, english_reverse_index
-                )
+            new_text, changes, unresolved_nodes, ocr_nodes, skipped_nodes = process_pipeline_file(
+                file_path, tables, reverse_index, english_reverse_index
             )
         except Exception as exc:
             safe_print(f"[ERROR] {file_path}: {exc}")
