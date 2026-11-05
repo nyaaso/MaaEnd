@@ -1,7 +1,7 @@
 {
     "GiftOperatorMoveAhead": {
         "desc": "移动尝试接触到干员",
-        "max_hit": 8, // 子节点到 max_hit 之后此节点仍然会空执行报错，所以要设置一个和它的子节点次数一样多的值，让它的父节点正常跳出
+        "max_hit": 12, // 子节点到 max_hit 之后此节点仍然会空执行报错，所以要设置一个和它的子节点次数一样多的值，让它的父节点正常跳出（原 8 次只覆盖东/东南/西/西北/北偏西，补充东北/南/西南/北 4 次）
         "recognition": {
             "type": "Custom",
             "param": {
@@ -27,7 +27,11 @@
             "GiftOperatorTurnNorthwest",
             "GiftOperatorTurnNorthByWest",
             "GiftOperatorTurnWest",
-            "GiftOperatorTurnSoutheast"
+            "GiftOperatorTurnSoutheast",
+            "GiftOperatorTurnNortheast",
+            "GiftOperatorTurnSouth",
+            "GiftOperatorTurnSouthwest",
+            "GiftOperatorTurnNorth"
         ]
     },
     "GiftOperatorMoveResetBackward": {
@@ -547,5 +551,125 @@
         "next": [
             "GiftOperatorMoveSCAway"
         ]
+    },
+    "GiftOperatorTurnNortheast": {
+        "desc": "转向45度(东北)尝试接触到干员",
+        "max_hit": 1,
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapNavigateAction",
+                "custom_action_param": {
+                    "path": [
+                        {
+                            "action": "HEADING",
+                            "angle": 45,
+                            "zone_id": "OMVBase01"
+                        }
+                    ]
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    },
+    "GiftOperatorTurnSouth": {
+        "desc": "转向180度(正南)尝试接触到干员",
+        "max_hit": 1,
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapNavigateAction",
+                "custom_action_param": {
+                    "path": [
+                        {
+                            "action": "HEADING",
+                            "angle": 180,
+                            "zone_id": "OMVBase01"
+                        }
+                    ]
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    },
+    "GiftOperatorTurnSouthwest": {
+        "desc": "转向225度(西南)尝试接触到干员",
+        "max_hit": 1,
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapNavigateAction",
+                "custom_action_param": {
+                    "path": [
+                        {
+                            "action": "HEADING",
+                            "angle": 225,
+                            "zone_id": "OMVBase01"
+                        }
+                    ]
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    },
+    "GiftOperatorTurnNorth": {
+        "desc": "转向0度(正北)尝试接触到干员",
+        "max_hit": 1,
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapNavigateAction",
+                "custom_action_param": {
+                    "path": [
+                        {
+                            "action": "HEADING",
+                            "angle": 0,
+                            "zone_id": "OMVBase01"
+                        }
+                    ]
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
     }
 }
