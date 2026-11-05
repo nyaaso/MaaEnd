@@ -51,7 +51,9 @@
             "(?i)Insufficient\\s*materials",
             "素材が不足しています",
             "Not enough",
-            "비료\\s*수량\\s*부족"
+            "비료\\s*수량\\s*부족",
+            "재료\\s*부족",
+            "재료가\\s*부족합니다"
         ]
     },
     "CheckMaterialEnough": {

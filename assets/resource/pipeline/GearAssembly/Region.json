@@ -40,7 +40,8 @@
             "材料不足",
             "Insufficient Materials",
             "素材が不足",
-            "제작\\s*재료\\s*부족"
+            "제작\\s*재료\\s*부족",
+            "재료\\s*부족"
         ]
     },
     "GearAssemblyCheckNotUnlocked": {
