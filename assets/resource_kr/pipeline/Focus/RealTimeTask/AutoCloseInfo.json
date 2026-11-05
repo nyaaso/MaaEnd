@@ -1,0 +1,32 @@
+{
+    "Guard_CheckMailboxandClickToContinue": {
+        "focus": {
+            "Node.Action.Succeeded": "'아무 곳이나 눌러 계속하기'를 넘깁니다"
+        }
+    },
+    "CheckSpecialInfoPanel": {
+        "focus": {
+            "Node.Recognition.Succeeded": "스토리 문서/음성을 인식해 닫습니다"
+        }
+    },
+    "HandleTutorialPaging": {
+        "focus": {
+            "Node.Action.Succeeded": "설명서 페이지를 넘깁니다"
+        }
+    },
+    "HandleTutorialConfirm": {
+        "focus": {
+            "Node.Action.Succeeded": "설명서 확인 버튼을 누릅니다"
+        }
+    },
+    "HandleTutorialGuide_RightUp": {
+        "focus": {
+            "Node.Action.Succeeded": "안내 화살표를 누릅니다"
+        }
+    },
+    "HandleTutorialGuide_LeftUp": {
+        "focus": {
+            "Node.Action.Succeeded": "안내 화살표를 누릅니다"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "RealTimeAutoSkip": {
+        "focus": {
+            "Node.Recognition.Succeeded": "스토리 장면에 들어갔습니다"
+        }
+    },
+    "RealTimeAutoSkipExit": {
+        "focus": {
+            "Node.Recognition.Succeeded": "스토리 장면에서 나왔습니다"
+        }
+    },
+    "RealTimeAutoSkipAll": {
+        "focus": {
+            "Node.Action.Succeeded": "스토리를 모두 건너뜁니다"
+        }
+    },
+    "RealTimeAutoSkipAllConfirm": {
+        "focus": {
+            "Node.Action.Succeeded": "스토리 전체 건너뛰기를 확인합니다"
+        }
+    },
+    "RealTimeAutoSkipChoose": {
+        "focus": {
+            "Node.Action.Succeeded": "스토리 선택지를 고릅니다"
+        }
+    },
+    "RealTimeAutoSkipNext": {
+        "focus": {
+            "Node.Action.Succeeded": "스토리를 다음으로 넘깁니다"
+        }
+    }
+}

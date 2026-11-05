@@ -1,0 +1,7 @@
+{
+    "RestaurantPatronageInsufficient": {
+        "focus": {
+            "Node.Recognition.Succeeded": "현재 손님 유입이 60 미만이라 영업을 종료합니다"
+        }
+    }
+}

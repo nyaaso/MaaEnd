@@ -1,0 +1,17 @@
+{
+    "EssenceFindLockItem": {
+        "focus": {
+            "Node.Action.Succeeded": "기질이 잠겨 있지 않습니다"
+        }
+    },
+    "EssenceFilterAfterBattleIsflawless": {
+        "focus": {
+            "Node.Recognition.Succeeded": "무결 기질입니다"
+        }
+    },
+    "EssenceFilterAfterBattleIsPure": {
+        "focus": {
+            "Node.Recognition.Succeeded": "순수 기질입니다"
+        }
+    }
+}

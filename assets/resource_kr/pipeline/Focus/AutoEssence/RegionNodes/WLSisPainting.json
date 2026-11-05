@@ -1,0 +1,23 @@
+{
+    "GotoTriggerPointSetAnchor_WLSisPainting": {
+        "focus": {
+            "Node.Action.Starting": "📌목표 지점: 사의 그림"
+        }
+    },
+    "GotoTriggerPointMaybeTeleport_WLSisPainting": {
+        "focus": {
+            "Node.Action.Starting": "✈️가장 가까운 앵커로 순간이동을 준비합니다"
+        }
+    },
+    "GotoTriggerPointMove_WLSisPainting": {
+        "focus": {
+            "Node.Action.Starting": "🚶활성화 지점으로 이동하는 중입니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    }
+}

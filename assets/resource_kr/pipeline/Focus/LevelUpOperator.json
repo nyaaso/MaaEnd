@@ -1,0 +1,62 @@
+{
+    "LevelUpOperatorOpenOperatorList": {
+        "focus": {
+            "Node.Action.Succeeded": "오퍼레이터 목록에 들어가는 중입니다"
+        }
+    },
+    "LevelUpOperatorSwitchAscending": {
+        "focus": {
+            "Node.Action.Succeeded": "정렬 방식을 오름차순으로 바꿨습니다"
+        }
+    },
+    "LevelUpOperatorInitialSelectOperatorPosition": {
+        "focus": {
+            "Node.Action.Succeeded": "목록의 첫 번째 오퍼레이터를 선택하는 중입니다"
+        }
+    },
+    "OperatorListScrollUpFinished": {
+        "focus": {
+            "Node.Action.Succeeded": "첫 번째 오퍼레이터를 선택했습니다"
+        }
+    },
+    "LevelUpOperatorExitOperatorList": {
+        "focus": {
+            "Node.Action.Succeeded": "오퍼레이터 목록에서 나왔습니다"
+        }
+    },
+    "LevelUpOperatorSearchAvailableOperator": {
+        "focus": {
+            "Node.Action.Succeeded": "레벨업할 수 있는 오퍼레이터를 찾는 중입니다"
+        }
+    },
+    "LevelUpOperatorLevelThresholdCheck": {
+        "focus": {
+            "Node.Recognition.Succeeded": "현재 오퍼레이터 레벨이 최대 레벨 제한 이상이라 다음 오퍼레이터로 넘어갑니다"
+        }
+    },
+    "LevelUpOperatorEnterLevelUpMenu": {
+        "focus": {
+            "Node.Recognition.Succeeded": "레벨업 화면을 열어 봅니다"
+        }
+    },
+    "LevelUpOperatorSearchFinished": {
+        "focus": {
+            "Node.Recognition.Succeeded": "모든 오퍼레이터를 확인했지만 레벨업할 수 있는 오퍼레이터가 없습니다"
+        }
+    },
+    "LevelUpOperatorLevelUpButton": {
+        "focus": {
+            "Node.Recognition.Succeeded": "레벨업 재료 추가 버튼을 인식했습니다"
+        }
+    },
+    "LevelUpOperatorConfirmLevelUp": {
+        "focus": {
+            "Node.Action.Succeeded": "레벨업을 확인했습니다"
+        }
+    },
+    "LevelUpOperatorFinished": {
+        "focus": {
+            "Node.Recognition.Starting": "오퍼레이터 레벨업 작업을 완료했습니다"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "AutoSellScanValleyIVMain": {
+        "focus": {
+            "Node.Recognition.Succeeded": "보유 물자를 확인하러 4번 협곡으로 이동하는 중입니다"
+        }
+    },
+    "AutoSellScanWulingMain": {
+        "focus": {
+            "Node.Recognition.Succeeded": "보유 물자를 확인하러 무릉으로 이동하는 중입니다"
+        }
+    },
+    "AutoSellScanRegionNull": {
+        "focus": {
+            "Node.Recognition.Succeeded": "현재 지역에 물자가 없습니다"
+        }
+    }
+}

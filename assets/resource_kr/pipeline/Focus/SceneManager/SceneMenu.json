@@ -1,0 +1,22 @@
+{
+    "__ScenePrivateMenuListEnterMenuValuables": {
+        "focus": {
+            "Node.PipelineNode.Failed": "메뉴 목록에서 귀중품 창고 메뉴에 들어가지 못했습니다"
+        }
+    },
+    "__ScenePrivateWorldEnterMenuValuablesClick": {
+        "focus": {
+            "Node.PipelineNode.Failed": "귀중품 창고 메뉴에 들어가지 못했습니다"
+        }
+    },
+    "__ScenePrivateMenuListEnterMenuShop": {
+        "focus": {
+            "Node.PipelineNode.Failed": "메뉴 목록에서 상점 메뉴에 들어가지 못했습니다"
+        }
+    },
+    "__ScenePrivateWorldEnterMenuEntryShopClick": {
+        "focus": {
+            "Node.PipelineNode.Failed": "상점 메뉴에 들어가지 못했습니다"
+        }
+    }
+}

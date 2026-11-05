@@ -77,7 +77,7 @@ func (a *TargetPlanAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bool 
 	}
 	if len(selected) == 0 {
 		log.Error().Str("component", componentPlan).Msg("no weapons selected in attach")
-		maafocus.Print(ctx, "🎯目标模式：未勾选任何武器，结束任务")
+		maafocus.Print(ctx, i18n.T("task.AutoEssence.focus.target_no_weapon_selected"))
 		return overrideNextFinish(ctx, arg.CurrentTaskName)
 	}
 
@@ -89,7 +89,7 @@ func (a *TargetPlanAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bool 
 	}
 	if len(missing) == 0 {
 		log.Info().Str("component", componentPlan).Int("selected", len(selected)).Msg("all targets satisfied")
-		maafocus.Print(ctx, "🎯目标模式：勾选武器的基质均已满足，结束任务")
+		maafocus.Print(ctx, i18n.T("task.AutoEssence.focus.target_all_satisfied"))
 		return overrideNextFinish(ctx, arg.CurrentTaskName)
 	}
 
@@ -111,7 +111,7 @@ func (a *TargetPlanAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bool 
 	}
 	if plan == nil {
 		log.Error().Str("component", componentPlan).Strs("missing", missing).Msg("no feasible farm plan")
-		maafocus.Print(ctx, "🎯目标模式：找不到可覆盖缺口武器的刷取方案，结束任务")
+		maafocus.Print(ctx, i18n.T("task.AutoEssence.focus.target_no_plan"))
 		return overrideNextFinish(ctx, arg.CurrentTaskName)
 	}
 
@@ -159,10 +159,10 @@ func (a *TargetPlanAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bool 
 	for _, w := range plan.Needs {
 		needNames = append(needNames, w.ChineseName)
 	}
-	maafocus.Print(ctx, fmt.Sprintf(
-		"🎯目标模式：缺口 %d → 前往 %s｜基础 %s+%s+%s｜固定%s %s｜本轮可覆盖 %d",
+	maafocus.Print(ctx, i18n.T(
+		"task.AutoEssence.focus.target_plan",
 		len(missing),
-		plan.LocationName,
+		regionLabel(plan.LocationKey, plan.LocationName),
 		plan.Slot1Names[0], plan.Slot1Names[1], plan.Slot1Names[2],
 		fixedSlotLabel(plan.FixedSlot), plan.FixedName,
 		len(plan.Needs),
@@ -191,9 +191,9 @@ func (a *TargetPlanAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bool 
 func fixedSlotLabel(slot int) string {
 	switch slot {
 	case 2:
-		return "附加"
+		return i18n.T("task.AutoEssence.focus.fixed_slot_attribute")
 	case 3:
-		return "技能"
+		return i18n.T("task.AutoEssence.focus.fixed_slot_skill")
 	default:
 		return fmt.Sprintf("slot%d", slot)
 	}

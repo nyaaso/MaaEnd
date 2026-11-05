@@ -1,0 +1,12 @@
+{
+    "AutoStockpileSkip": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이번 구매를 건너뜁니다"
+        }
+    },
+    "AutoStockpileDecisionFailed": {
+        "focus": {
+            "Node.Recognition.Starting": "<span style=\"color: orange\">⚠️재확인 최대 재시도 횟수를 넘어 이 지역을 건너뛰었습니다</span>"
+        }
+    }
+}

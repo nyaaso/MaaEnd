@@ -1,0 +1,12 @@
+{
+    "AutoPickFalls": {
+        "focus": {
+            "Node.Action.Succeeded": "떨어진 아이템을 줍습니다"
+        }
+    },
+    "AutoPickInteractive": {
+        "focus": {
+            "Node.Action.Succeeded": "상호작용 대상을 줍습니다"
+        }
+    }
+}

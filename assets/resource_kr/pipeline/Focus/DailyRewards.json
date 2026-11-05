@@ -1,0 +1,22 @@
+{
+    "DailyEmailRewardSub": {
+        "focus": {
+            "Node.Recognition.Succeeded": "메일 보상 수령을 시작합니다"
+        }
+    },
+    "DailyTaskRewardSub": {
+        "focus": {
+            "Node.Recognition.Succeeded": "일일 임무 보상 수령을 시작합니다"
+        }
+    },
+    "DailyEventRewardSub": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이벤트 보상 수령을 시작합니다"
+        }
+    },
+    "DailyProtocolPassRewardSub": {
+        "focus": {
+            "Node.Recognition.Succeeded": "통행증 보상 수령을 시작합니다"
+        }
+    }
+}

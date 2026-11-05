@@ -1,0 +1,12 @@
+{
+    "BatchAddFriendsSearchUidNotFound": {
+        "focus": {
+            "Node.Recognition.Succeeded": "UID가 존재하지 않아 다음 UID를 시도합니다"
+        }
+    },
+    "BatchAddFriendsSearchEmptyResult": {
+        "focus": {
+            "Node.Recognition.Succeeded": "해당 플레이어를 찾지 못했습니다"
+        }
+    }
+}

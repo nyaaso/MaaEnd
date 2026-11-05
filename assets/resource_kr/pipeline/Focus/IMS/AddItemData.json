@@ -1,0 +1,7 @@
+{
+    "AddItemDataCloseRewards": {
+        "focus": {
+            "Node.Action.Starting": "보상 화면을 닫습니다"
+        }
+    }
+}

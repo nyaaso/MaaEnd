@@ -1,0 +1,7 @@
+{
+    "CreditShoppingFailed": {
+        "focus": {
+            "Node.Action.Failed": "구매에 실패했습니다"
+        }
+    }
+}

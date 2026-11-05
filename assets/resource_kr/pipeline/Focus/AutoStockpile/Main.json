@@ -1,0 +1,12 @@
+{
+    "AutoStockpileElasticValleyIV": {
+        "focus": {
+            "Node.Recognition.Starting": "이동 중: 4번 협곡"
+        }
+    },
+    "AutoStockpileElasticWuling": {
+        "focus": {
+            "Node.Recognition.Starting": "이동 중: 무릉"
+        }
+    }
+}

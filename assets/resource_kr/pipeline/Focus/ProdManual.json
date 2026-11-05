@@ -1,0 +1,43 @@
+{
+    "ProdManualOpenInBackpack": {
+        "focus": {
+            "Node.Recognition.Succeeded": "간편 제작 화면에 들어갑니다"
+        }
+    },
+    "ProdManualOpenInList": {
+        "focus": {
+            "Node.Recognition.Succeeded": "수집 진행도 화면에 들어갑니다"
+        }
+    },
+    "ProdManualOpenInMain": {
+        "focus": {
+            "Node.Recognition.Succeeded": "가방 화면에 들어갑니다"
+        }
+    },
+    "ProdManualOpenInMenu": {
+        "focus": {
+            "Node.Recognition.Succeeded": "가방 화면에 들어갑니다"
+        }
+    },
+    "ProdManualOpenInProd": {
+        "focus": {
+            "Node.Recognition.Succeeded": "간편 제작 매뉴얼 화면에 들어갑니다"
+        }
+    },
+    "ProdManualBackAtBackpack": {
+        "focus": {
+            "Node.Action.Succeeded": "메인 화면으로 돌아왔습니다"
+        }
+    },
+    "ProdManualDone": {
+        "focus": {
+            "Node.Action.Succeeded": "메인 화면으로 돌아갑니다",
+            "Node.Recognition.Succeeded": "보상을 모두 받았습니다"
+        }
+    },
+    "ProdManualReceiveReward": {
+        "focus": {
+            "Node.Recognition.Succeeded": "수집 보상을 받습니다"
+        }
+    }
+}

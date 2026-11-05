@@ -1,0 +1,34 @@
+{
+    "GotoTriggerPointSetAnchor_WLTestArea": {
+        "focus": {
+            "Node.Action.Starting": "📌목표 지점: 실험 구역"
+        }
+    },
+    "GotoTriggerPointMaybeTeleport_WLTestArea": {
+        "focus": {
+            "Node.Action.Starting": "✈️가장 가까운 앵커로 순간이동을 준비합니다"
+        }
+    },
+    "GotoTriggerPointMove_WLTestArea": {
+        "focus": {
+            "Node.Action.Starting": "🚶활성화 지점 근처로 이동하는 중입니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    },
+    "GotoTriggerPointMoveExact_WLTestArea": {
+        "focus": {
+            "Node.Action.Starting": "🚶활성화 지점으로 이동하는 중입니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    }
+}

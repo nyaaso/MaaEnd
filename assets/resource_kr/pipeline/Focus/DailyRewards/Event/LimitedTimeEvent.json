@@ -1,0 +1,7 @@
+{
+    "DailyEventUnreadLimitedTimeEvent": {
+        "focus": {
+            "Node.Recognition.Succeeded": "기간 한정 이벤트에 들어갑니다"
+        }
+    }
+}

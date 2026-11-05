@@ -1,0 +1,12 @@
+{
+    "AutoCollectWulingBloodcapWulingstone1FindButtonUsing": {
+        "focus": {
+            "Node.Recognition.Succeeded": "승강 로프를 사용합니다"
+        }
+    },
+    "AutoCollectWulingBloodcapWulingstone1Wait10sec": {
+        "focus": {
+            "Node.Recognition.Succeeded": "수집이 끝나도록 10초 기다립니다"
+        }
+    }
+}

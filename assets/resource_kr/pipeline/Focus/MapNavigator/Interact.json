@@ -1,0 +1,13 @@
+{
+    "MapNavigatorInteract": {
+        "focus": {
+            "Node.Recognition.Succeeded": "상호작용 안내를 인식했습니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    }
+}

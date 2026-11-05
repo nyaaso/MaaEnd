@@ -1,0 +1,22 @@
+{
+    "BatchUseDetectorMain": {
+        "focus": {
+            "Node.Action.Starting": "메인 작업을 시작합니다"
+        }
+    },
+    "BatchUseDetectorFindNoItem": {
+        "focus": {
+            "Node.Recognition.Succeeded": "선택한 탐지기/나침반을 찾지 못했습니다"
+        }
+    },
+    "BatchUseDetectorClickYellowConfirmButton": {
+        "focus": {
+            "Node.PipelineNode.Failed": "지금은 탐지기/나침반을 사용할 수 없습니다"
+        }
+    },
+    "BatchUseDetectorFinished": {
+        "focus": {
+            "Node.Action.Starting": "메인 작업을 마쳤습니다"
+        }
+    }
+}

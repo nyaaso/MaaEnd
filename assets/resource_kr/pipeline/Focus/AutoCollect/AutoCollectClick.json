@@ -1,0 +1,13 @@
+{
+    "AutoCollectClick": {
+        "focus": {
+            "Node.Recognition.Succeeded": "채집물을 인식했습니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    }
+}

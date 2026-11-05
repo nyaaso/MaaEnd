@@ -1,0 +1,22 @@
+{
+    "BatchUseDetectorFindWulingDetector": {
+        "focus": {
+            "Node.Action.Starting": "무릉 탐지기를 찾는 중입니다"
+        }
+    },
+    "BatchUseDetectorConfirmWulingDetectorName": {
+        "focus": {
+            "Node.Action.Starting": "무릉 탐지기 이름을 확인합니다"
+        }
+    },
+    "BatchUseDetectorFindWulingCompass": {
+        "focus": {
+            "Node.Action.Starting": "무릉 무릉 나침반을 찾는 중입니다"
+        }
+    },
+    "BatchUseDetectorConfirmWulingCompassName": {
+        "focus": {
+            "Node.Action.Starting": "무릉 나침반 이름을 확인합니다"
+        }
+    }
+}

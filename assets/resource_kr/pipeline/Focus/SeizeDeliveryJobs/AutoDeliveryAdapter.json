@@ -1,0 +1,17 @@
+{
+    "SeizeDeliveryJobsPostProcessingEntry": {
+        "focus": {
+            "Node.Recognition.Succeeded": "**수주 후 처리 단계로 들어갑니다**"
+        }
+    },
+    "SeizeDeliveryJobsSuccessTeleportDone": {
+        "focus": {
+            "Node.Recognition.Succeeded": "**순간이동 완료! 제때 배송하세요~**"
+        }
+    },
+    "SeizeDeliveryJobsSuccessWalkDone": {
+        "focus": {
+            "Node.Recognition.Succeeded": "**도착했습니다! 제때 배송하세요~**"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "__ScenePrivateMenuRegionalDevelopmentTargetOutpostManagementLocked": {
+        "focus": {
+            "Node.Recognition.Succeeded": "거점 관리 메뉴가 해금되지 않았습니다"
+        }
+    },
+    "__ScenePrivateMenuRegionalDevelopmentStockRedistributionLocked": {
+        "focus": {
+            "Node.Recognition.Succeeded": "물자 관리 메뉴가 해금되지 않았습니다"
+        }
+    },
+    "__ScenePrivateMenuRegionalDevelopmentDepotNodeLocked": {
+        "focus": {
+            "Node.Recognition.Succeeded": "저장고 노드 메뉴가 해금되지 않았습니다"
+        }
+    },
+    "__ScenePrivateMenuRegionalDevelopmentEnvironmentMonitoringLocked": {
+        "focus": {
+            "Node.Recognition.Succeeded": "환경 관측 메뉴가 해금되지 않았습니다"
+        }
+    }
+}

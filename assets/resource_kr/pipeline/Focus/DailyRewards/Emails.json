@@ -1,0 +1,42 @@
+{
+    "DailyEmailAlreadyInEmail": {
+        "focus": {
+            "Node.Recognition.Succeeded": "메일 화면에 들어왔습니다"
+        }
+    },
+    "DailyEmailCheckEmailEnd": {
+        "focus": {
+            "Node.Recognition.Succeeded": "메인 화면으로 돌아갑니다"
+        }
+    },
+    "DailyEmailHasUnreadMessage": {
+        "focus": {
+            "Node.Action.Succeeded": "메일을 열어 봅니다"
+        }
+    },
+    "DailyEmailNoUnreadMessage": {
+        "focus": {
+            "Node.Recognition.Succeeded": "읽지 않은 메일이 없습니다"
+        }
+    },
+    "DailyEmailConfirmEmail": {
+        "focus": {
+            "Node.Recognition.Succeeded": "메일 보상을 받습니다"
+        }
+    },
+    "DailyEmailExistTSA": {
+        "focus": {
+            "Node.Recognition.Succeeded": "임시 보관소 물자를 받습니다"
+        }
+    },
+    "DailyEmailNoEmailRewards": {
+        "focus": {
+            "Node.Recognition.Succeeded": "받을 메일 보상이 없습니다"
+        }
+    },
+    "DailyEmailReceiveTSACannotClaim": {
+        "focus": {
+            "Node.Recognition.Succeeded": "받을 수 없습니다"
+        }
+    }
+}

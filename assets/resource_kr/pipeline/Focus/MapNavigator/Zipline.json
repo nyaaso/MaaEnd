@@ -1,0 +1,13 @@
+{
+    "MapNavigatorZiplineMount": {
+        "focus": {
+            "Node.Recognition.Succeeded": "집라인 후크 상호작용 안내를 인식했습니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    }
+}

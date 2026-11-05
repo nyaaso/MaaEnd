@@ -1,0 +1,27 @@
+{
+    "AutoStockpileCheckQuota": {
+        "focus": {
+            "Node.Recognition.Succeeded": "구매 가능 수량이 부족해 구매를 취소합니다"
+        }
+    },
+    "AutoStockpileSwipeSpecificQuantity": {
+        "focus": {
+            "Node.Action.Failed": "수량 슬라이드 조절에 실패해 구매를 취소합니다"
+        }
+    },
+    "AutoStockpileDevSkipSwipe": {
+        "focus": {
+            "Node.Recognition.Starting": "Dev: 슬라이드 건너뛰기"
+        }
+    },
+    "AutoStockpileDevSkipBuy": {
+        "focus": {
+            "Node.Recognition.Starting": "Dev: 구매 건너뛰기"
+        }
+    },
+    "AutoStockpileCheckBuyResult": {
+        "focus": {
+            "Node.Action.Succeeded": "구매했습니다"
+        }
+    }
+}

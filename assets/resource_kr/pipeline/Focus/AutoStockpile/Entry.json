@@ -1,0 +1,7 @@
+{
+    "AutoStockpileCheckInStore": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이 지역은 변동 수요 물자 관리가 해금되지 않아 건너뜁니다"
+        }
+    }
+}

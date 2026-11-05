@@ -1,0 +1,23 @@
+{
+    "AutoSellShipEnterStockRedistribution": {
+        "focus": {
+            "Node.Action.Starting": "물자 관리 단말기로 걸어가는 중입니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    },
+    "AutoSellTicketValleyIVOverflow": {
+        "focus": {
+            "Node.Recognition.Succeeded": "4번 협곡 관리권이 기준을 넘었습니다"
+        }
+    },
+    "AutoSellTicketWulingOverflow": {
+        "focus": {
+            "Node.Recognition.Succeeded": "무릉 관리권이 기준을 넘었습니다"
+        }
+    }
+}

@@ -1,0 +1,153 @@
+{
+    "AutoEssenceMain": {
+        "focus": {
+            "Node.Action.Starting": "▶️**이번 기질 파밍을 준비합니다**"
+        }
+    },
+    "AutoEssenceSetupLocationFailed": {
+        "focus": {
+            "Node.Action.Starting": "🤔**선택한 지역이 없습니다**\n작업 설정에서 지역을 하나 이상 선택한 뒤 다시 시도하세요~"
+        }
+    },
+    "AutoEssenceTargetPrepare": {
+        "focus": {
+            "Node.Action.Starting": "📦목표 모드: 기질 재고 확인을 시작합니다"
+        }
+    },
+    "AutoEssenceTargetLoadInventory": {
+        "focus": {
+            "Node.Action.Succeeded": "📦목표 모드: 기질 보관함을 불러왔습니다"
+        }
+    },
+    "AutoEssenceTargetPrepareFailed": {
+        "focus": {
+            "Node.Action.Starting": "❌**목표 모드: 기질 재고 확인에 실패했습니다**\n기질 화면에서 재고를 확인할 수 있는 상태인지 확인한 뒤 다시 시도하세요"
+        }
+    },
+    "AutoEssenceDispatcher": {
+        "focus": {
+            "Node.Action.Starting": "🧠현재 상태를 판단하는 중입니다"
+        }
+    },
+    "AutoEssenceClickTriggerButton": {
+        "focus": {
+            "Node.Action.Starting": "👆활성화 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceMistakeFactoryDevice": {
+        "focus": {
+            "Node.Action.Starting": "😕공업 설비 화면에 잘못 들어가서 닫기 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceEngraveConditionsMatched": {
+        "focus": {
+            "Node.Recognition.Succeeded": "✅사전 각인 조건이 올바릅니다"
+        }
+    },
+    "AutoEssenceEngraveConditionsAdjust": {
+        "focus": {
+            "Node.Action.Starting": "⚙️사전 각인 조건을 조정하는 중입니다"
+        }
+    },
+    "AutoEssenceClickEssenceStartButton": {
+        "focus": {
+            "Node.Action.Starting": "👆도전 시작 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceDismissWarningPreEngrave": {
+        "focus": {
+            "Node.Action.Starting": "👷사전 각인 경고를 무시하고 파밍을 계속합니다"
+        }
+    },
+    "AutoEssenceDismissWarningSanityLowContinue": {
+        "focus": {
+            "Node.Action.Starting": "👷이성이 부족하지만 파밍을 계속합니다"
+        }
+    },
+    "AutoEssenceChallengeEnter": {
+        "focus": {
+            "Node.Recognition.Starting": "⚔️자동 전투로 도전하는 중입니다"
+        }
+    },
+    "AutoEssenceChallengeFinished": {
+        "focus": {
+            "Node.Recognition.Starting": "🔍도전이 끝났는지 확인합니다",
+            "Node.Action.Starting": "👌도전 종료를 인식했습니다"
+        }
+    },
+    "AutoEssenceInObtain": {
+        "focus": {
+            "Node.Action.Starting": "🖐️상호작용 목록을 스크롤합니다"
+        }
+    },
+    "AutoEssenceClickObtainButtonRecheck": {
+        "focus": {
+            "Node.Action.Starting": "👆보상 획득 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceClickDiscardButton": {
+        "focus": {
+            "Node.Action.Starting": "👆보상 포기 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceChooseScaling1": {
+        "focus": {
+            "Node.Action.Starting": "👆1배 수령 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceChooseScaling2": {
+        "focus": {
+            "Node.Action.Starting": "👆2배 수령 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceChooseOverrideOff": {
+        "focus": {
+            "Node.Action.Starting": "👆각인 끄기 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceChooseOverrideOn": {
+        "focus": {
+            "Node.Action.Starting": "👆각인 켜기 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceConfirmObtain": {
+        "focus": {
+            "Node.Action.Starting": "👆수령 확인 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceConfirmDiscard": {
+        "focus": {
+            "Node.Action.Starting": "👆포기 확인 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceLowSp": {
+        "focus": {
+            "Node.Action.Starting": "✖️이성 부족 팝업을 닫습니다"
+        }
+    },
+    "AutoEssenceLowSpCancelObtain": {
+        "focus": {
+            "Node.Action.Starting": "✖️보상 획득 화면을 닫습니다"
+        }
+    },
+    "AutoEssenceLowSpStop": {
+        "focus": {
+            "Node.Action.Starting": "😴**이성이 부족하여 작업을 종료합니다**\n계속 파밍하려면 이성을 충분히 회복하세요~"
+        }
+    },
+    "AutoEssenceCloseObtainDialog": {
+        "focus": {
+            "Node.Action.Starting": "👆나가기 버튼을 누릅니다"
+        }
+    },
+    "AutoEssenceOnSuccess": {
+        "focus": {
+            "Node.Action.Starting": "✅기질 파밍 1회를 완료했습니다"
+        }
+    },
+    "AutoEssenceOnComplete": {
+        "focus": {
+            "Node.Action.Starting": "🎉**지정한 횟수만큼 기질 파밍을 완료했습니다**"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "__AutoFightRecognitionEnemyInScreen": {
+        "focus": {
+            "Node.Recognition.Succeeded": "적을 인식했습니다"
+        }
+    }
+}

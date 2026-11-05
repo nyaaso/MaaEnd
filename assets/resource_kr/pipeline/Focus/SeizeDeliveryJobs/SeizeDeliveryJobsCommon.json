@@ -1,0 +1,12 @@
+{
+    "__SeizeDeliveryJobsEnterJobList": {
+        "focus": {
+            "Node.Action.Starting": "운송 의뢰 목록을 누릅니다"
+        }
+    },
+    "__SeizeDeliveryJobsInJobList": {
+        "focus": {
+            "Node.Recognition.Succeeded": "운송 의뢰 목록에 있습니다"
+        }
+    }
+}

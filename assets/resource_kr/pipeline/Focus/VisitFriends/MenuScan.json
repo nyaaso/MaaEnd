@@ -1,0 +1,32 @@
+{
+    "VisitFriendsAssistFullInit": {
+        "focus": {
+            "Node.Action.Succeeded": "켜 둔 시설 지원이 없습니다"
+        }
+    },
+    "VisitFriendsMenuScanScrollFinishDone": {
+        "focus": {
+            "Node.Recognition.Succeeded": "친구 목록 끝까지 확인해서 방문을 마칩니다"
+        }
+    },
+    "VisitFriendsBtwSellRestore": {
+        "focus": {
+            "Node.Action.Succeeded": "방문 중 판매용으로 바꾼 설정을 모두 되돌렸습니다"
+        }
+    },
+    "VisitFriendsMenuScanPriorityFallbackToRemark": {
+        "focus": {
+            "Node.Action.Succeeded": "지정 친구를 모두 확인해서 메모가 있는 친구 방문으로 넘어갑니다"
+        }
+    },
+    "VisitFriendsMenuScanPriorityFallbackToNormal": {
+        "focus": {
+            "Node.Action.Succeeded": "지정 친구를 모두 확인해서 목록을 다시 열고 아무 친구나 방문합니다"
+        }
+    },
+    "VisitFriendsMenuScanRemarkFallback": {
+        "focus": {
+            "Node.Action.Succeeded": "메모가 있는 친구를 모두 확인해서 목록을 다시 열고 아무 친구나 방문합니다"
+        }
+    }
+}

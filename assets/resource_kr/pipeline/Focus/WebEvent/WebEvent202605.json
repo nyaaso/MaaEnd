@@ -1,0 +1,28 @@
+{
+    "WebEvent202605_Start": {
+        "focus": {
+            "Node.Action.Starting": "👆시작 버튼을 누릅니다"
+        }
+    },
+    "WebEvent202605_BackToHome": {
+        "focus": {
+            "Node.Action.Starting": "👆돌아가기 버튼을 누릅니다"
+        }
+    },
+    "WebEvent202605_ClickToContinue": {
+        "focus": {
+            "Node.Action.Starting": "👆튜토리얼 안내를 누릅니다"
+        }
+    },
+    "WebEvent202605_Action": {
+        "focus": {
+            "Node.Action.Starting": "**🚀자동 쌓기를 시작합니다!**\n도중에 십여 초 동안 아무 조작이 없을 수 있는데 정상입니다. 작업이 끝날 때까지 기다려 주세요~",
+            "Node.Action.Succeeded": "**✅목표 쌓기 횟수를 달성했습니다!**\n돌아가기 버튼을 직접 눌러 게임을 끝내거나, 이 작업을 다시 시작해 계속 쌓을 수 있습니다~"
+        }
+    },
+    "WebEvent202605_Failed": {
+        "focus": {
+            "Node.Action.Starting": "⚠️**게임이 일찍 끝났습니다!**\n점수가 마음에 들지 않으면 몇 번 더 시도해 보세요~ 성능 한계 때문에 아주 높은 점수는 어렵고, 100점 정도면 충분히 잘한 거예요~"
+        }
+    }
+}

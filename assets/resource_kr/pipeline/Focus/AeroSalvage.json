@@ -1,0 +1,12 @@
+{
+    "AeroSalvageMain": {
+        "focus": {
+            "Node.Recognition.Succeeded": "🎈 부유식 회수를 시작합니다"
+        }
+    },
+    "AeroSalvageCompleteConfirm": {
+        "focus": {
+            "Node.Recognition.Succeeded": "👌 부유식 회수 1회를 완료했습니다"
+        }
+    }
+}

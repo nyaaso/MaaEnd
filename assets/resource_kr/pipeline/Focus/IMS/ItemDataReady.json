@@ -1,0 +1,7 @@
+{
+    "EnsureItemDataReadyAlreadyOk": {
+        "focus": {
+            "Node.Recognition.Succeeded": "육성 아이템 캐시가 아직 유효해 동기화를 건너뜁니다"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "AutoSellStockRedistributionItemOpenPrepareFriendsFailedToValleyIV": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이 친구에게 목표 물품이 없어 다음 친구를 찾습니다"
+        }
+    },
+    "AutoSellStockRedistributionItemOpenPrepareFriendsFailedToWuling": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이 친구에게 목표 물품이 없어 다음 친구를 찾습니다"
+        }
+    },
+    "AutoSellSellGoodsEmpty": {
+        "focus": {
+            "Node.Recognition.Succeeded": "판매할 수 있는 물자가 없습니다"
+        }
+    },
+    "AutoSellFriendsPricesExpectedBuy": {
+        "focus": {
+            "Node.Recognition.Succeeded": "지금 방문한 친구의 가격이 가장 높아 판매합니다"
+        }
+    },
+    "AutoSellFriendsPricesExpectedBuyClick": {
+        "focus": {
+            "Node.Action.Succeeded": "판매했습니다"
+        }
+    },
+    "AutoSellFriendsPricesExpectedGoTo": {
+        "focus": {
+            "Node.Recognition.Succeeded": "지금 방문한 친구의 가격이 가장 높지 않아 다른 친구를 방문하러 갑니다"
+        }
+    }
+}

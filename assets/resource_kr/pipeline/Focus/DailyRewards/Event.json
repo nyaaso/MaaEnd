@@ -1,0 +1,12 @@
+{
+    "DailyEventFinish": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이벤트 보상 수령을 마쳤습니다"
+        }
+    },
+    "DailyEventUnreadUnknown": {
+        "focus": {
+            "Node.Recognition.Succeeded": "지원하지 않는 이벤트를 건너뜁니다"
+        }
+    }
+}

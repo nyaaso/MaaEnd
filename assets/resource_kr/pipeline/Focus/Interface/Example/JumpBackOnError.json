@@ -1,0 +1,12 @@
+{
+    "JumpBackOnErrorTestErrorFinished": {
+        "focus": {
+            "Node.Action.Starting": "테스트 결과: B가 on_error에 들어가 오류 경로가 끝났습니다"
+        }
+    },
+    "JumpBackOnErrorTestReturnedToParent": {
+        "focus": {
+            "Node.Action.Starting": "테스트 결과: JumpBackOnErrorTestParent로 돌아왔으므로 오류 경로에서 JumpBack이 일어났습니다"
+        }
+    }
+}

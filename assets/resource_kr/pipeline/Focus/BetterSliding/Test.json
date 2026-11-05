@@ -1,0 +1,62 @@
+{
+    "BetterSlidingTest": {
+        "focus": {
+            "Node.Recognition.Starting": "BetterSliding 테스트를 시작합니다"
+        }
+    },
+    "__BS-2": {
+        "focus": {
+            "Node.Action.Starting": "325 남기기"
+        }
+    },
+    "__BS-3": {
+        "focus": {
+            "Node.Action.Starting": "10% 슬라이드"
+        }
+    },
+    "__BS-4": {
+        "focus": {
+            "Node.Action.Starting": "10% 남기기"
+        }
+    },
+    "__BS-5": {
+        "focus": {
+            "Node.Action.Starting": "325 (미세 조정 없이 바로 마무리)"
+        }
+    },
+    "__BS-6": {
+        "focus": {
+            "Node.Action.Starting": "10000 남기기 (불가능)"
+        }
+    },
+    "__BS-7": {
+        "focus": {
+            "Node.Action.Starting": "325 (미세 조정 없이 Target 이상 보장)"
+        }
+    },
+    "__BS-8": {
+        "focus": {
+            "Node.Action.Starting": "325 (미세 조정 없이 Target 이하 보장)"
+        }
+    },
+    "__BS-T-2": {
+        "focus": {
+            "Node.Action.Starting": "원위치로 돌리는 중입니다"
+        }
+    },
+    "__BS-T-3": {
+        "focus": {
+            "Node.Recognition.Starting": "테스트를 종료합니다"
+        }
+    },
+    "__BS-T-4": {
+        "focus": {
+            "Node.Action.Starting": "라우팅 성공 (예상대로 동작, 버그 없음)"
+        }
+    },
+    "__BS-T-5": {
+        "focus": {
+            "Node.Action.Starting": "라우팅 실패 (버그 발생)"
+        }
+    }
+}

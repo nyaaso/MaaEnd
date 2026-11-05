@@ -1,0 +1,22 @@
+{
+    "GearAssemblyCheckMaterialEnough": {
+        "focus": {
+            "Node.Action.Succeeded": "가방이 가득 찼습니다"
+        }
+    },
+    "GearAssemblyNoAvailableGear": {
+        "focus": {
+            "Node.Action.Succeeded": "제작할 수 있는 장비가 없습니다"
+        }
+    },
+    "GearAssemblyCheckFailedAndFinish": {
+        "focus": {
+            "Node.Action.Succeeded": "제작할 수 없습니다"
+        }
+    },
+    "GearAssemblyCheckFailedAndContinue": {
+        "focus": {
+            "Node.Action.Succeeded": "제작할 수 없어 다음 장비를 찾습니다"
+        }
+    }
+}

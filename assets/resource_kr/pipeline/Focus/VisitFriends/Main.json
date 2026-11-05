@@ -1,0 +1,22 @@
+{
+    "VisitFriendsEnter": {
+        "focus": {
+            "Node.Action.Succeeded": "친구 방문을 시작합니다"
+        }
+    },
+    "VisitFriendsFull": {
+        "focus": {
+            "Node.Recognition.Succeeded": "친구 지원과 단서 교환 횟수가 모두 찼습니다. 방문을 멈춥니다"
+        }
+    },
+    "VisitFriendsAssistFull": {
+        "focus": {
+            "Node.Action.Succeeded": "지원 횟수가 찼습니다. 이제 목록에서 단서 교환이 가능한 친구만 찾습니다"
+        }
+    },
+    "VisitFriendsClueExchangeFull": {
+        "focus": {
+            "Node.Action.Succeeded": "단서 교환 횟수가 찼습니다. 단서 교환 확인과 수령을 끕니다"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "BatchUseDetectorFindValleyIVDetector": {
+        "focus": {
+            "Node.Action.Starting": "협곡 탐지기를 찾는 중입니다"
+        }
+    },
+    "BatchUseDetectorConfirmValleyIVDetectorName": {
+        "focus": {
+            "Node.Action.Starting": "협곡 탐지기 이름을 확인합니다"
+        }
+    },
+    "BatchUseDetectorFindValleyIVCompass": {
+        "focus": {
+            "Node.Action.Starting": "4번 협곡 협곡 나침반을 찾는 중입니다"
+        }
+    },
+    "BatchUseDetectorConfirmValleyIVCompassName": {
+        "focus": {
+            "Node.Action.Starting": "협곡 나침반 이름을 확인합니다"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "BatchAddFriendsUIDEnd": {
+        "focus": {
+            "Node.Action.Succeeded": "UID 친구 추가를 마쳤습니다"
+        }
+    },
+    "BatchAddFriendsStart": {
+        "focus": {
+            "Node.Action.Succeeded": "친구 일괄 추가를 시작합니다"
+        }
+    }
+}

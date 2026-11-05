@@ -1,0 +1,20 @@
+{
+    "__SceneCheckYellowColorFailed": {
+        "focus": {
+            "Node.Recognition.Succeeded": "<span style=\"color: #807F00; font-weight: bold;\">노란색 (#807F00)</span>",
+            "Node.Action.Starting": "$task.SceneManager.focus.color_match_failed_prefix"
+        }
+    },
+    "__SceneCheckTealColorFailed": {
+        "focus": {
+            "Node.Recognition.Succeeded": "<span style=\"color: #007F7F; font-weight: bold;\">청록색 (#007F7F)</span>",
+            "Node.Action.Starting": "$task.SceneManager.focus.color_match_failed_prefix"
+        }
+    },
+    "__SceneCheckPurpleColorFailed": {
+        "focus": {
+            "Node.Recognition.Succeeded": "<span style=\"color: #80007F; font-weight: bold;\">보라색 (#80007F)</span>",
+            "Node.Action.Starting": "$task.SceneManager.focus.color_match_failed_prefix"
+        }
+    }
+}

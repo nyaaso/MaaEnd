@@ -1,0 +1,27 @@
+{
+    "EssenceFilterMainFailed": {
+        "focus": {
+            "Node.Action.Failed": "기질 화면에 들어가지 못해 작업을 종료합니다"
+        }
+    },
+    "EssenceFilterCheckInInventory": {
+        "focus": {
+            "Node.Action.Succeeded": "기질 화면인 것을 확인했습니다"
+        }
+    },
+    "EssenceFilterNavigateToInventory": {
+        "focus": {
+            "Node.Action.Succeeded": "기질 화면이 아닙니다"
+        }
+    },
+    "EssenceFilterInit": {
+        "focus": {
+            "Node.Action.Succeeded": "초기화를 마쳤습니다"
+        }
+    },
+    "EssenceFilterFinish": {
+        "focus": {
+            "Node.Action.Succeeded": "작업을 완료했습니다"
+        }
+    }
+}

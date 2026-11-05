@@ -1,0 +1,22 @@
+{
+    "EssenceFilterClickLockItem": {
+        "focus": {
+            "Node.Action.Succeeded": "기질을 잠갔습니다"
+        }
+    },
+    "EssenceFilterCheckLocked": {
+        "focus": {
+            "Node.Action.Succeeded": "잠금을 확인했습니다"
+        }
+    },
+    "EssenceFilterClickDiscardItem": {
+        "focus": {
+            "Node.Action.Succeeded": "기질을 폐기했습니다"
+        }
+    },
+    "EssenceFilterCheckDiscarded": {
+        "focus": {
+            "Node.Action.Succeeded": "폐기를 확인했습니다"
+        }
+    }
+}

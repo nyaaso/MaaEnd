@@ -1,0 +1,42 @@
+{
+    "__SeizeDeliveryJobsInValleyIVDepotNode": {
+        "focus": {
+            "Node.Recognition.Succeeded": "4번 협곡 저장고 관리 화면에 있습니다"
+        }
+    },
+    "SeizeDeliveryJobsJobListIsValleyIVFilter": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이미 4번 협곡 필터라 바로 수주를 시작합니다"
+        }
+    },
+    "SeizeDeliveryJobsJobListSelectValleyIVFilterPre": {
+        "focus": {
+            "Node.Action.Succeeded": "지역 필터를 펼칩니다"
+        }
+    },
+    "SeizeDeliveryJobsJobListSelectValleyIVFilter": {
+        "focus": {
+            "Node.Action.Succeeded": "4번 협곡 필터로 바꿉니다"
+        }
+    },
+    "__SeizeDeliveryJobsInWulingDepotNode": {
+        "focus": {
+            "Node.Recognition.Succeeded": "무릉 저장고 관리 화면에 있습니다"
+        }
+    },
+    "SeizeDeliveryJobsJobListIsWulingFilter": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이미 무릉 필터라 바로 수주를 시작합니다"
+        }
+    },
+    "SeizeDeliveryJobsJobListSelectWulingFilterPre": {
+        "focus": {
+            "Node.Action.Succeeded": "지역 필터를 펼칩니다"
+        }
+    },
+    "SeizeDeliveryJobsJobListSelectWulingFilter": {
+        "focus": {
+            "Node.Action.Succeeded": "무릉 필터로 바꿉니다"
+        }
+    }
+}

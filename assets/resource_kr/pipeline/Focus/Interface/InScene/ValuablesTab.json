@@ -1,0 +1,12 @@
+{
+    "InStashProgressionTab": {
+        "focus": {
+            "Node.Action.Starting": "육성 재료 탭에 들어갑니다"
+        }
+    },
+    "InStashValuablesTab": {
+        "focus": {
+            "Node.Action.Starting": "희귀 아이템 탭에 들어갑니다"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "RealTimeQuickTeleportList": {
+        "focus": {
+            "Node.Action.Succeeded": "프로토콜 전송 지점을 누릅니다"
+        }
+    },
+    "RealTimeQuickTeleportDirect": {
+        "focus": {
+            "Node.Action.Succeeded": "순간이동 버튼을 누릅니다"
+        }
+    }
+}

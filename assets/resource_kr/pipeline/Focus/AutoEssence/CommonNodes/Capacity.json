@@ -1,0 +1,22 @@
+{
+    "AutoEssenceCapacityOverflow": {
+        "focus": {
+            "Node.Recognition.Succeeded": "무기 기질이 기준을 넘어 200개를 분해합니다"
+        }
+    },
+    "AutoEssenceCapacityEnough": {
+        "focus": {
+            "Node.Recognition.Succeeded": "무기 기질이 기준 이하라 필드로 돌아갑니다"
+        }
+    },
+    "AutoEssenceCapacityReadFailed": {
+        "focus": {
+            "Node.Action.Starting": "무기 기질 수량을 읽지 못해 작업을 중지했습니다"
+        }
+    },
+    "AutoEssenceCapacityClickDecompose": {
+        "focus": {
+            "Node.Action.Starting": "무기 기질 200개를 분해합니다"
+        }
+    }
+}

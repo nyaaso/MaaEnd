@@ -1,0 +1,12 @@
+{
+    "TrialOfSwordmancyCoatingRewardMode": {
+        "focus": {
+            "Node.Action.Succeeded": "오늘 남은 보상 횟수가 있습니다. 먼저 보상 연산을 완료하세요"
+        }
+    },
+    "TrialOfSwordmancyCoatingCheck5": {
+        "focus": {
+            "Node.Action.Succeeded": "목표 점수를 뽑았습니다"
+        }
+    }
+}

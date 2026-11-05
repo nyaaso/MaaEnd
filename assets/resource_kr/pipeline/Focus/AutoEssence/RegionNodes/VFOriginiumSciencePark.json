@@ -1,0 +1,34 @@
+{
+    "GotoTriggerPointSetAnchor_VFOriginiumSciencePark": {
+        "focus": {
+            "Node.Action.Starting": "📌목표 지점: 오리지늄 연구 구역"
+        }
+    },
+    "GotoTriggerPointMaybeTeleport_VFOriginiumSciencePark": {
+        "focus": {
+            "Node.Action.Starting": "✈️가장 가까운 앵커로 순간이동을 준비합니다"
+        }
+    },
+    "GotoTriggerPointMove_VFOriginiumSciencePark": {
+        "focus": {
+            "Node.Action.Starting": "🚶대기 위치로 이동하는 중입니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    },
+    "GotoTriggerPointMoveExact_VFOriginiumSciencePark": {
+        "focus": {
+            "Node.Action.Starting": "🚶활성화 지점으로 이동하는 중입니다",
+            "Node.Action.Succeeded": {
+                "trace": true
+            },
+            "Node.Action.Failed": {
+                "trace": true
+            }
+        }
+    }
+}

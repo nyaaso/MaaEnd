@@ -1,0 +1,32 @@
+{
+    "SeizeDeliveryJobsGuard": {
+        "focus": {
+            "Node.Recognition.Succeeded": "자동 도보 배송 기능을 쓰려면 일어날 수 있는 결과를 확인하고 동의해야 합니다"
+        }
+    },
+    "SeizeDeliveryJobsPrepareAtDijiang": {
+        "focus": {
+            "Node.Action.Starting": "수주 전에 제강호 갑판으로 순간이동합니다"
+        }
+    },
+    "SeizeDeliveryJobsExistDueTask": {
+        "focus": {
+            "Node.Recognition.Succeeded": "이미 배송 의뢰를 보유하고 있습니다"
+        }
+    },
+    "SeizeDeliveryJobsFailedExistDueTask": {
+        "focus": {
+            "Node.Recognition.Succeeded": "**배송 의뢰는 한 번에 하나만 받을 수 있습니다**"
+        }
+    },
+    "SeizeDeliveryJobsFailedChanceExhausted": {
+        "focus": {
+            "Node.Recognition.Succeeded": "**오늘 받을 수 있는 의뢰 수가 상한에 도달했습니다**"
+        }
+    },
+    "SeizeDeliveryJobsSuccessFetchOnly": {
+        "focus": {
+            "Node.Action.Starting": "**수주 성공! 제때 배송하세요~**"
+        }
+    }
+}
