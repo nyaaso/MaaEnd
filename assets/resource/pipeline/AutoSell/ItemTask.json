@@ -675,7 +675,8 @@
         "roi": "AutoSellStockRedistributionItemNameRecRecognition",
         "expected": [
             "锚点",
-            "錨點"
+            "錨點",
+            "앵커"
         ],
         "only_rec": true
     }

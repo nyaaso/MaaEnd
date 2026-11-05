@@ -14,7 +14,8 @@
                 "expected": [
                     "^会客室$",
                     "^會客室$",
-                    "Reception"
+                    "Reception",
+                    "^응접실$"
                 ]
             }
         },
@@ -372,7 +373,8 @@
                 "expected": [
                     "已达自有线索库容量上限",
                     "已達自有線索庫容量上限",
-                    "Local clue library is full"
+                    "Local clue library is full",
+                    "보유\\s*단서\\s*보관소의\\s*용량이\\s*최대치에\\s*도달"
                 ],
                 "only_rec": true
             }
@@ -1185,7 +1187,8 @@
                 "expected": [
                     "^会客室$",
                     "^會客室$",
-                    "Reception"
+                    "Reception",
+                    "^응접실$"
                 ]
             }
         },

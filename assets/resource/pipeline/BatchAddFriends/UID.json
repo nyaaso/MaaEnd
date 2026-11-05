@@ -186,7 +186,8 @@
                     "等待接受",
                     // @i18n-skip
                     "(?i).*Approval.*", // 原文：Waiting for Approval
-                    "承認待ち"
+                    "承認待ち",
+                    "수락\\s*대기"
                 ],
                 "threshold": 0.7
             }

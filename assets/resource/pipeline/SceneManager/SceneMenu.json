@@ -2116,7 +2116,8 @@
                 ],
                 "expected": [
                     "已解锁获得",
-                    "已解鎖獲得"
+                    "已解鎖獲得",
+                    "장비\\s*제작\\s*템플릿이\\s*해제"
                 ]
             },
             "YellowConfirmButtonType1"

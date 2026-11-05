@@ -116,7 +116,8 @@
         "expected": [
             // @i18n-skip
             "忽略并继续",
-            "忽略並繼續"
+            "忽略並繼續",
+            "무시하고\\s*계속"
         ],
         "pre_wait_freezes": 100,
         "action": "Click",
@@ -138,7 +139,8 @@
             // @i18n-skip
             "游戏中",
             "遊戲中",
-            "(?i)\\bRunning\\b"
+            "(?i)\\bRunning\\b",
+            "게임\\s*중"
         ]
     },
     "GameLauncherMinimized": {
@@ -202,7 +204,8 @@
             // @i18n-skip
             "开始游戏",
             "開始遊戲",
-            "(?i)\\bPlay\\b"
+            "(?i)\\bPlay\\b",
+            "게임\\s*시작"
         ]
     }
 }
