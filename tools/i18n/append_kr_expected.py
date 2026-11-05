@@ -252,6 +252,17 @@ def main() -> int:
                 if not lang_ids and not ambiguous_kr:
                     if not skip_marked:
                         unresolved.append(label)
+                    # 언어표로 해석되지 않는 배열이라도 한국어 항목의 공백 보정은 한다
+                    for value, value_start, value_end in elements:
+                        if HANGUL.search(value) and " " in value:
+                            regexified += 1
+                            replacements.append(
+                                (
+                                    value_start,
+                                    value_end,
+                                    json.dumps(re.sub(r" +", r"\\s*", value), ensure_ascii=False),
+                                )
+                            )
                     continue
 
                 # 언어표의 한국어 원문(또는 그 원문으로 만든 옛 정규식)과 같은 값만 새 규칙으로 보정한다
@@ -274,6 +285,14 @@ def main() -> int:
                             regexified += 1
                             element_fixes.append((value_start, value_end, json.dumps(value_regex, ensure_ascii=False)))
                             value = value_regex
+                    elif HANGUL.search(value) and " " in value:
+                        # 언어표에 없는(원본 기여자·사람이 쓴) 한국어 항목도 공백은 \s* 로 바꾼다
+                        # 한국어 OCR 은 띄어쓰기를 자주 빠뜨려 리터럴 공백이 있으면 명중하지 않는다
+                        # (예: ".?옛 정원의 나무.?를 촬영하기" ↔ OCR "'옛 정원의나무'를촬영하기")
+                        value_regex = re.sub(r" +", r"\\s*", value)
+                        regexified += 1
+                        element_fixes.append((value_start, value_end, json.dumps(value_regex, ensure_ascii=False)))
+                        value = value_regex
                     # 기존 항목은 순서·중복까지 그대로 유지한다
                     new_expected.append(value)
 

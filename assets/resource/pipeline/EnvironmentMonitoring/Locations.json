@@ -33,7 +33,35 @@
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
-            "EnvironmentMonitoringInOutskirtsMonitoringTerminal"
+            "EnvironmentMonitoringInOutskirtsMonitoringTerminal",
+            "EnvironmentMonitoringSelectOutskirtsMonitoringTerminalRetry"
+        ]
+    },
+    "EnvironmentMonitoringSelectOutskirtsMonitoringTerminalRetry": {
+        "desc": "城郊监测终端页签未切换时重新点击：刚进入界面时页签仍在滑入，首次点击可能落在页签外",
+        "max_hit": 5,
+        "recognition": "And",
+        "all_of": [
+            "EnvironmentMonitoringCheckOutskirtsMonitoringTerminalText",
+            "EnvironmentMonitoringInMonitoringTerminal",
+            "EnvironmentMonitoringOutskirtsMonitoringTerminalNotSelected"
+        ],
+        "pre_wait_freezes": {
+            "time": 300,
+            "target": [
+                16,
+                57,
+                600,
+                85
+            ]
+        },
+        "pre_delay": 0,
+        "action": "Click",
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "EnvironmentMonitoringInOutskirtsMonitoringTerminal",
+            "EnvironmentMonitoringSelectOutskirtsMonitoringTerminalRetry"
         ]
     },
     "EnvironmentMonitoringSelectMarkerStoneMonitoringTerminal": {
@@ -48,7 +76,83 @@
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
-            "EnvironmentMonitoringInMarkerStoneMonitoringTerminal"
+            "EnvironmentMonitoringInMarkerStoneMonitoringTerminal",
+            "EnvironmentMonitoringSelectMarkerStoneMonitoringTerminalRetry"
         ]
+    },
+    "EnvironmentMonitoringSelectMarkerStoneMonitoringTerminalRetry": {
+        "desc": "首墩监测终端页签未切换时重新点击：刚进入界面时页签仍在滑入，首次点击可能落在页签外",
+        "max_hit": 5,
+        "recognition": "And",
+        "all_of": [
+            "EnvironmentMonitoringCheckMarkerStoneMonitoringTerminalText",
+            "EnvironmentMonitoringInMonitoringTerminal",
+            "EnvironmentMonitoringMarkerStoneMonitoringTerminalNotSelected"
+        ],
+        "pre_wait_freezes": {
+            "time": 300,
+            "target": [
+                16,
+                57,
+                600,
+                85
+            ]
+        },
+        "pre_delay": 0,
+        "action": "Click",
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "EnvironmentMonitoringInMarkerStoneMonitoringTerminal",
+            "EnvironmentMonitoringSelectMarkerStoneMonitoringTerminalRetry"
+        ]
+    },
+    "EnvironmentMonitoringOutskirtsMonitoringTerminalNotSelected": {
+        // And 子识别里 inverse 不生效，改为直接识别未选中页签的深色底（选中时为白底）
+        "desc": "城郊监测终端页签尚未选中（深色底）",
+        "recognition": "ColorMatch",
+        "roi": "EnvironmentMonitoringCheckOutskirtsMonitoringTerminalText",
+        "roi_offset": [
+            0,
+            20,
+            0,
+            0
+        ],
+        "method": 40,
+        "lower": [
+            0,
+            0,
+            0
+        ],
+        "upper": [
+            180,
+            255,
+            80
+        ],
+        "count": 2000
+    },
+    "EnvironmentMonitoringMarkerStoneMonitoringTerminalNotSelected": {
+        // And 子识别里 inverse 不生效，改为直接识别未选中页签的深色底（选中时为白底）
+        "desc": "首墩监测终端页签尚未选中（深色底）",
+        "recognition": "ColorMatch",
+        "roi": "EnvironmentMonitoringCheckMarkerStoneMonitoringTerminalText",
+        "roi_offset": [
+            0,
+            20,
+            0,
+            0
+        ],
+        "method": 40,
+        "lower": [
+            0,
+            0,
+            0
+        ],
+        "upper": [
+            180,
+            255,
+            80
+        ],
+        "count": 2000
     }
 }

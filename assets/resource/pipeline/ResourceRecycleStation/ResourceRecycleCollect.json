@@ -254,7 +254,7 @@
             "遠端收取資源",
             "(?i)Remote\\s*Resource\\s*Collection",
             "遠隔受取",
-            "원거리로 자원 수령",
+            "원거리로\\s*자원\\s*수령",
             "자원\\s*원격\\s*회수"
         ],
         "action": "Click",

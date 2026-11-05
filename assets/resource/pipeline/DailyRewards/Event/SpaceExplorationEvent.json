@@ -81,7 +81,7 @@
             "太空主題活動",
             "Space Exploration Event",
             "宇宙事業",
-            "우주 테마 이벤트",
+            "우주\\s*테마\\s*이벤트",
             "콜라보\\s*이벤트"
         ],
         "only_rec": true

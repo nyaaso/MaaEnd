@@ -71,7 +71,7 @@
             "四號谷地事務總覽",
             "(?i)Valley\\s*IV\\s*Regional\\s*Overview",
             "四号谷地業務一覧",
-            "4번 협곡 전체 업무"
+            "4번\\s*협곡\\s*전체\\s*업무"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -91,7 +91,7 @@
             "武陵事務總覽",
             "(?i)Wuling\\s*Regional\\s*Overview",
             "武陵業務一覧",
-            "무릉 전체 업무"
+            "무릉\\s*전체\\s*업무"
         ],
         "pre_delay": 0,
         "post_delay": 0,
