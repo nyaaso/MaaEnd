@@ -161,6 +161,11 @@
                                 "minLength": 1,
                                 "title": "Key Regex",
                                 "description": "Optional. Regex applied to OCR text to derive the visited key (capture group 1 if present, otherwise the full match; fall back to raw text on no match). Without it, store/exclude the raw OCR string exactly. With it, the blacklist also tolerates non-digit OCR tail noise after the key. Game-specific truncation (e.g. remark cut at first ')', normal name cut at '#UID') belongs in Pipeline, not in this component."
+                            },
+                            "match_anywhere": {
+                                "type": "boolean",
+                                "title": "Match Anywhere",
+                                "description": "Optional. When true, exclude OCR text that contains any visited key anywhere (instead of only at the start). Use with a key_regex that captures a stable fragment such as a friend #UID."
                             }
                         }
                     }

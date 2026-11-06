@@ -36,6 +36,9 @@ type params struct {
 	// KeyRegex 可选。对 OCR 原文做匹配，命中后用第 1 捕获组（若有）否则用整段匹配作为
 	// 写入 attach.visited 的 key；未配置则用原文。配置后黑名单会额外容忍 key 后的非数字尾噪。
 	KeyRegex string `json:"key_regex"`
+	// MatchAnywhere 可选。为 true 时黑名单改为「OCR 原文任意位置包含已访问 key 即排除」，
+	// 用于 key 只取稳定片段（如好友 #UID）、而 OCR 原文前后常有漏字/尾噪的场景。
+	MatchAnywhere bool `json:"match_anywhere"`
 }
 
 // Run implements maa.CustomRecognitionRunner.
@@ -71,7 +74,7 @@ func (r *Recognition) Run(ctx *maa.Context, arg *maa.CustomRecognitionArg) (*maa
 		log.Error().Err(err).Str("component", componentName).Str("node", visitedOwner).Msg("load visited failed")
 		return nil, false
 	}
-	if err := injectBlacklist(ctx, ocrNode, visited, p.KeyRegex != ""); err != nil {
+	if err := injectBlacklist(ctx, ocrNode, visited, p.KeyRegex != "", p.MatchAnywhere); err != nil {
 		log.Error().Err(err).Str("component", componentName).Msg("inject expected blacklist failed")
 		return nil, false
 	}
@@ -208,7 +211,7 @@ func namedChild(allOf []json.RawMessage, boxIndex int) (string, error) {
 	return name, nil
 }
 
-func injectBlacklist(ctx *maa.Context, ocrNode string, visited []string, allowTrailingNoise bool) error {
+func injectBlacklist(ctx *maa.Context, ocrNode string, visited []string, allowTrailingNoise, matchAnywhere bool) error {
 	raw, err := ctx.GetNodeJSON(ocrNode)
 	if err != nil {
 		return err
@@ -222,7 +225,7 @@ func injectBlacklist(ctx *maa.Context, ocrNode string, visited []string, allowTr
 	}
 	// 只覆盖 expected；order_by 等字段由框架保留原值。
 	return ctx.OverridePipeline(map[string]any{
-		ocrNode: map[string]any{"expected": withBlacklist(base, visited, allowTrailingNoise)},
+		ocrNode: map[string]any{"expected": withBlacklist(base, visited, allowTrailingNoise, matchAnywhere)},
 	})
 }
 
@@ -295,10 +298,16 @@ func stripBlacklistPrefix(pattern string, allowTrailingNoise bool) string {
 	if loc := re.FindStringIndex(pattern); loc != nil {
 		return pattern[loc[1]:]
 	}
+	// 剥掉 match_anywhere 形式 ^(?!.*(?:alts))
+	if loc := anywherePrefixRe.FindStringIndex(pattern); loc != nil {
+		return pattern[loc[1]:]
+	}
 	return pattern
 }
 
-func withBlacklist(base, visited []string, allowTrailingNoise bool) []string {
+var anywherePrefixRe = regexp.MustCompile(`^\^\(\?!\.\*\(\?:(?:[^\\]|\\.)*?\)\)`)
+
+func withBlacklist(base, visited []string, allowTrailingNoise, matchAnywhere bool) []string {
 	escaped := make([]string, 0, len(visited))
 	for _, v := range visited {
 		v = strings.TrimSpace(v)
@@ -313,6 +322,9 @@ func withBlacklist(base, visited []string, allowTrailingNoise bool) []string {
 			suffix = trailingNoiseSuffix
 		}
 		prefix = fmt.Sprintf("^(?!(?:%s)%s$)", strings.Join(escaped, "|"), suffix)
+		if matchAnywhere {
+			prefix = fmt.Sprintf("^(?!.*(?:%s))", strings.Join(escaped, "|"))
+		}
 	}
 	out := make([]string, 0, len(base))
 	for _, item := range base {

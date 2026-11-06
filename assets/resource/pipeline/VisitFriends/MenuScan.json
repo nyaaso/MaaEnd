@@ -51,7 +51,9 @@
         "custom_recognition_param": {
             "candidate": "VisitFriendsRecognitionItemWithPriority",
             "visited_node": "VisitFriendsMenuScanVisited",
-            "key_regex": "(?:[（(])?([^（(）)]*\\#\\d+)"
+            // 好友 #UID 固定 4 位；名字 OCR 常漏字或把徽章读成尾随数字（Jeb#633813 / #6338），只用 #UID 作 key 并按包含排除
+            "key_regex": "(\\#\\d{4})",
+            "match_anywhere": true
         }
     },
     "VisitFriendsMenuScanSelectFriendRemarkConsumable": {
@@ -61,7 +63,9 @@
         "custom_recognition_param": {
             "candidate": "VisitFriendsRecognitionItemWithRemark",
             "visited_node": "VisitFriendsMenuScanVisited",
-            "key_regex": "(?:[（(])?([^（(）)]*\\#\\d+)"
+            // 好友 #UID 固定 4 位；名字 OCR 常漏字或把徽章读成尾随数字（Jeb#633813 / #6338），只用 #UID 作 key 并按包含排除
+            "key_regex": "(\\#\\d{4})",
+            "match_anywhere": true
         }
     },
     "VisitFriendsMenuScanSelectFriendConsumable": {
@@ -71,7 +75,9 @@
         "custom_recognition_param": {
             "candidate": "VisitFriendsRecognitionItemWithName",
             "visited_node": "VisitFriendsMenuScanVisited",
-            "key_regex": "(?:[（(])?([^（(）)]*\\#\\d+)"
+            // 好友 #UID 固定 4 位；名字 OCR 常漏字或把徽章读成尾随数字（Jeb#633813 / #6338），只用 #UID 作 key 并按包含排除
+            "key_regex": "(\\#\\d{4})",
+            "match_anywhere": true
         }
     },
     "VisitFriendsMenuScanTargetFriendOpenPriority": {

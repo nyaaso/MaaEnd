@@ -12,6 +12,8 @@
   - `EnvironmentMonitoring/Locations.json` 관측 단말기 탭 Retry/NotSelected 노드
   - `GiftOperator/GiftOperatorNavigation.json` 방향 전환 4개 추가(동북/남/남서/북), `GiftOperatorMain.json` ClearHitCount 목록
   - `SceneManager/SceneMenu.json` 메뉴 닫기 버튼 템플릿 판정, `EnvironmentMonitoring/.../AncientTree.json` 「[웅움]덩이」
+  - `VisitFriends/MenuScan.json` 방문한 친구 key 를 `#UID`(4자리)로 저장하고 `match_anywhere` 로 제외(`agent/go-service/common/expendable` 의 `match_anywhere` 옵션)
+- UI 한국어 문구는 2026-11-06 전체 다듬기 기준(켜면/끄면, 작업/임무 구분, 「」/' ' 따옴표, 스탯·의뢰 수락·빠른 전송·실시간 어시스트·불러오기 용어)을 따릅니다.
 - 한국어 용어 기준: 관리권, 집라인, 4번 협곡, 응접실, 재배실, 선검 연무, 궁극기, 배틀 스킬, 가방, 변동 수요 물자, 배송, 증정, 엔드필드, 기질, 이성, ~하세요 체.
 
 ## 준비
