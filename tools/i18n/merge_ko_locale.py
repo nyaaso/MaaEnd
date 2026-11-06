@@ -1,4 +1,4 @@
-"""ko_kr 로케일 3방향 병합 (업스트림 병합 충돌 해결용).
+"""로케일 3방향 병합 (업스트림 병합 충돌 해결용, ko_kr 및 다른 언어 파일 모두).
 
 base = 공통 조상, ours = 한국어 점검본(HEAD), theirs = 원본(upstream/v2)
 - 키 구성은 theirs 를 따르고 키는 정렬한다(sortLocaleKeys)
@@ -20,6 +20,7 @@ import sys
 from pathlib import Path
 
 DOMAINS = ("interface", "go-service", "cpp-algo")
+LANGS = ("ko_kr", "zh_cn", "zh_tw", "en_us", "ja_jp")
 MD_ICON = re.compile(r"!\[[^\]]*\]\([^)]*\)\s*")
 
 
@@ -38,8 +39,10 @@ def main() -> int:
         return 2
     base_rev, theirs_rev, report_path = sys.argv[1], sys.argv[2], Path(sys.argv[3])
     report = {}
-    for domain in DOMAINS:
-        path = f"assets/locales/{domain}/ko_kr.json"
+    for domain, lang in ((d, lang) for d in DOMAINS for lang in LANGS):
+        path = f"assets/locales/{domain}/{lang}.json"
+        if not Path(path).exists():
+            continue
         base, theirs, ours = show(base_rev, path), show(theirs_rev, path), show("HEAD", path)
         merged: dict = {}
         stats = {"theirs_only_change": 0, "ours_only_change": 0, "md_strip_auto": 0, "manual": 0, "new_keys": 0}
@@ -71,13 +74,13 @@ def main() -> int:
         stats["dropped"] = len([k for k in ours if k not in theirs and k in base])
         merged = {k: merged[k] for k in sorted(merged)}
         Path(path).write_text(json.dumps(merged, ensure_ascii=False, indent=4) + "\n", encoding="utf-8")
-        report[domain] = {
+        report[f"{domain}/{lang}"] = {
             "stats": stats,
             "manual": manual,
             "new_keys": [k for k in theirs if k not in ours],
             "theirs_changed_keys": [k for k in theirs if k in ours and ours[k] == base.get(k) and theirs[k] != ours[k]],
         }
-        print(domain, stats)
+        print(f"{domain}/{lang}", stats)
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     return 0
 

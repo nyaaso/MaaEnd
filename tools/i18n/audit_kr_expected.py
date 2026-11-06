@@ -53,6 +53,8 @@ IGNORE = {
     "__AccountSwitchCheckAccount",
     "__AccountSwitchVerifySelected",
 }
+# 중국 클라우드 전용 등 접두사로 제외
+IGNORE_PREFIXES = ("CloudEndfield",)
 
 
 def core(value: str) -> str:
@@ -89,7 +91,7 @@ def main() -> int:
         parser = s.JsoncParser(text)
         root, _ = parser.parse_object_members(parser.skip_ws_comments(0))
         for member in root:
-            if text[member.value_start] != "{" or member.key in IGNORE:
+            if text[member.value_start] != "{" or member.key in IGNORE or member.key.startswith(IGNORE_PREFIXES):
                 continue
             for idx, em in enumerate(a.collect_ocr_expected_members(parser, member.value_start)):
                 values = array_values(parser, text, em)

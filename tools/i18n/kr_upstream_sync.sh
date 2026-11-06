@@ -29,9 +29,9 @@ merge)
     echo "--- 새 원본 커밋"
     git log --oneline HEAD..upstream/v2
     git merge --no-ff --no-commit upstream/v2 >/dev/null 2>&1
-    # ko_kr 로케일은 충돌 여부와 관계없이 3방향 규칙으로 다시 만든다
+    # 로케일(ko_kr 및 다른 언어)은 충돌 여부와 관계없이 3방향 규칙으로 다시 만든다
     python3 tools/i18n/merge_ko_locale.py "$base" "$theirs" "$REPORT_DIR/locale_report.json"
-    git add assets/locales/*/ko_kr.json
+    git add assets/locales/*/*.json
     conflicts=$(git diff --name-only --diff-filter=U)
     if [ -n "$conflicts" ]; then
         echo "--- 수동 해결이 필요한 충돌"
