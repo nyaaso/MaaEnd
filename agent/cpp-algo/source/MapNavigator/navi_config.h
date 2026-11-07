@@ -199,6 +199,11 @@ constexpr int32_t kOffRouteWedgeFailMs = 12000;
 constexpr double kDwellWatchdogRadius = 20.0;
 constexpr int32_t kDwellWatchdogFailMs = 120000;
 
+// 导航失败时回放的时长与取位采样间隔
+constexpr int32_t kFailureTrailWindowMs = 90000;
+constexpr int32_t kFailureTrailSampleIntervalMs = 1000;
+constexpr int32_t kFailureTrailSlowArrivalMs = 200; // 短于此的到点动作不记
+
 // 跨层脱困的到达距离, 须同时已回到基础区才算退出
 constexpr double kCrossTierEscapeArrivalM = 3.0;
 constexpr int32_t kCrossTierEscapeHardStallMs = 12000;
@@ -408,6 +413,7 @@ constexpr int32_t kActionWalkTogglePressMs = 30;
 
 constexpr const char* kObstacleDeviceEntry = "MapNavigatorObstacleDevice";
 constexpr const char* kObstacleDeviceProbeNode = "__MapNavigatorObstacleDevice_InteractPre";
+constexpr const char* kObstacleDeviceInteractPostNode = "__MapNavigatorObstacleDevice_InteractPost";
 constexpr const char* kObstacleDeviceTemplateRelativePath = "MapNavigator/ObstacleDevice/InteractButton.png";
 constexpr double kObstacleDeviceMatchThreshold = 0.65;
 constexpr const char* kObstacleDeviceMoveNode = "__MapNavigatorObstacleDevice_MoveDevice";
@@ -420,7 +426,7 @@ constexpr const char* kDefaultDigEntry = "AutoCollectDigStart";
 constexpr const char* kDigPipelineOverride = R"({"AutoCollectDigEnd":{"next":[]}})";
 constexpr int32_t kDigPostSleepMs = 80;
 
-// 丢定位即将超时、小地图被界面盖住时交给场景管理清一次
+// 小地图被界面盖住时交给场景管理清一次
 constexpr const char* kSceneRecoveryEntryNode = "SceneAnyEnterWorld";
 // 剧情与 NPC 对话不交给场景管理
 constexpr const char* kSceneRecoveryStoryNode = "__ScenePrivateWorldStorySkip";
