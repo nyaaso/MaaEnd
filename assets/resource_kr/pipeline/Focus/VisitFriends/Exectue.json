@@ -9,5 +9,10 @@
                 "trace": true
             }
         }
+    },
+    "VisitFriendsBtwSellFinished": {
+        "focus": {
+            "Node.Recognition.Succeeded": "판매액 15만을 채워 판매를 마칩니다"
+        }
     }
 }
