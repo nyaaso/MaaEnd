@@ -14,6 +14,8 @@
   - `SceneManager/SceneMenu.json` 메뉴 닫기 버튼 템플릿 판정, `EnvironmentMonitoring/.../AncientTree.json` 「[웅움]덩이」
   - `VisitFriends/Main.json` `Visit*CountZero` OCR expected 에 「이」, `[Oo]\s*/\s*5` 추가(한국어 OCR 이 「0/5」를 「1이5」로 읽음)
   - `EnvironmentMonitoring` 긴 제목 `In*Mission` 노드(10개)에 첫 줄 앞부분 expected 추가(지도 패널에서 제목이 두 줄로 나뉨)
+  - `SceneManager/SceneMenu.json` 메뉴 목록 귀중품 창고·문서 보관소에 첫 줄(`^귀중품$`, `^문서$`) expected 추가(한국어 이름이 두 줄로 나뉨)
+  - `RestaurantDaily.json` `RestaurantKitchen*Picker` 에 「주방에\s*배치한\s*오퍼」 추가(한국어 문구가 roi 보다 김)
   - `VisitFriends/MenuScan.json` 방문한 친구 key 를 `#UID`(4자리)로 저장하고 `match_anywhere` 로 제외(`agent/go-service/common/expendable` 의 `match_anywhere` 옵션)
 - UI 한국어 문구는 2026-11-06 전체 다듬기 기준(켜면/끄면, 작업/임무 구분, 「」/' ' 따옴표, 스탯·의뢰 수락·빠른 전송·실시간 어시스트·불러오기 용어)을 따릅니다.
 - 한국어 용어 기준: 관리권, 집라인, 4번 협곡, 응접실, 재배실, 선검 연무, 궁극기, 배틀 스킬, 가방, 변동 수요 물자, 배송, 증정, 엔드필드, 기질, 이성, ~하세요 체.
