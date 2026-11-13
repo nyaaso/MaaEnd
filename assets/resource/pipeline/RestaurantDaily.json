@@ -740,10 +740,7 @@
         "next": [
             "RestaurantPatronageAvailable",
             "RestaurantPatronageInsufficient"
-        ],
-        "focus": {
-            "Node.Recognition.Succeeded": "$task.RestaurantDaily.focus.theme_selected"
-        }
+        ]
     },
     "RestaurantPatronageOCR": {
         "desc": "OCR 读取右上角客源数字。",
@@ -775,7 +772,7 @@
             "RestaurantFormalStart"
         ],
         "focus": {
-            "Node.Recognition.Succeeded": "$task.RestaurantDaily.focus.patronage_available"
+            "Node.Recognition.Succeeded": "$task.RestaurantDaily.focus.theme_selected"
         }
     },
     "RestaurantPatronageInsufficient": {
@@ -792,7 +789,7 @@
             "RestaurantCloseTheme"
         ],
         "focus": {
-            "Node.Recognition.Succeeded": "当前客源小于60，结束经营流程"
+            "Node.Recognition.Succeeded": "$task.RestaurantDaily.focus.theme_selected"
         }
     },
     "RestaurantCloseTheme": {
@@ -818,7 +815,10 @@
         "next": [
             "RestaurantShopAfterRounds",
             "StopNode"
-        ]
+        ],
+        "focus": {
+            "Node.Action.Starting": "当前客源小于60，结束经营流程"
+        }
     },
     "RestaurantFormalStart": {
         "desc": "点击“正式经营”。",
@@ -855,7 +855,10 @@
         ],
         "on_error": [
             "FailedNode"
-        ]
+        ],
+        "focus": {
+            "Node.Action.Starting": "$task.RestaurantDaily.focus.patronage_available"
+        }
     },
     "RestaurantManagementReady": {
         "desc": "确认“营业设定”页面已打开，并判断是否需要清除上局设置。",
@@ -2114,10 +2117,7 @@
         "rate_limit": 0,
         "next": [
             "RestaurantOpenKitchenPanel"
-        ],
-        "focus": {
-            "Node.Recognition.Succeeded": "$task.RestaurantDaily.focus.business_started"
-        }
+        ]
     },
     // 720p 固定派单按钮坐标；最多点击 10 次（默认间隔 3 秒），覆盖约 30 秒加载动画。
     "RestaurantOpenKitchenPanel": {
@@ -2159,7 +2159,10 @@
         ],
         "on_error": [
             "FailedNode"
-        ]
+        ],
+        "focus": {
+            "Node.Action.Starting": "$task.RestaurantDaily.focus.business_started"
+        }
     },
     "RestaurantKitchenPanelReady": {
         "desc": "识别厨房面板已打开。",
@@ -2219,10 +2222,7 @@
         "rate_limit": 0,
         "next": [
             "RestaurantSettlementContinue"
-        ],
-        "focus": {
-            "Node.Recognition.Succeeded": "$task.RestaurantDaily.focus.business_ended"
-        }
+        ]
     },
     "RestaurantSettlementContinue": {
         "desc": "点击结算界面的继续按钮。",
@@ -2261,7 +2261,10 @@
         "rate_limit": 0,
         "next": [
             "RestaurantSettlementComplete"
-        ]
+        ],
+        "focus": {
+            "Node.Action.Starting": "$task.RestaurantDaily.focus.business_ended"
+        }
     },
     "RestaurantSettlementComplete": {
         "desc": "点击结算界面的完成按钮。",
