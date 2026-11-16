@@ -14,6 +14,8 @@ var currentRun *RunState
 type RunState struct {
 	TaskID    int64
 	Inventory *inventoryState
+	// PendingInventory holds the after-battle increments of the current loot run until they are committed.
+	PendingInventory []inventoryDelta
 	// Stats
 	MatchedCount            int
 	ExtFuturePromisingCount int
@@ -29,6 +31,12 @@ type RunState struct {
 	CurrentSkills      [3]string
 	CurrentSkillLevels [3]int
 
+	// CurrentLocked is the lock state of the grid cell chosen by the C++ scanner.
+	CurrentLocked bool
+
+	// LockLimit is the per-combination quota plan; nil unless the lock-limit option is enabled.
+	LockLimit *lockLimitPlanner
+
 	// After-battle grid cache
 	RowBoxes [][4]int
 	RowIndex int
@@ -36,7 +44,7 @@ type RunState struct {
 	// EssenceMode derived from selection: flawless_only / pure_only / both
 	EssenceMode EssenceMode
 
-	// PipelineOpts is a copy of EssenceFilterInit attach JSON; filled in Init for the run (avoids re-parsing).
+	// PipelineOpts is a copy of the init node's attach JSON; filled in Init for the run (avoids re-parsing).
 	PipelineOpts EssenceFilterOptions
 }
 

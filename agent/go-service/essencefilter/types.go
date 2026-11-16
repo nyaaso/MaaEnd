@@ -1,8 +1,29 @@
 package essencefilter
 
+// InitMode is the init node's attach.mode, selecting how EssenceFilterInitAction initializes a run.
+type InitMode string
+
+const (
+	InitModeFilter      InitMode = "filter"
+	InitModeInventory   InitMode = "inventory"
+	InitModeAfterBattle InitMode = "after_battle"
+)
+
+// AfterBattlePass is attach.after_battle_pass, selecting one of the two after-battle loot passes.
+type AfterBattlePass string
+
+const (
+	// AfterBattlePassReadOnly records what the loot round holds without locking or discarding.
+	AfterBattlePassReadOnly AfterBattlePass = "readonly"
+	// AfterBattlePassExecute locks and discards under the per-combination quota.
+	AfterBattlePassExecute AfterBattlePass = "execute"
+)
+
 // EssenceFilterOptions is unmarshaled from Pipeline node attach JSON (full UI / filter options).
 // Matching uses the subset type matchapi.EssenceFilterOptions; see actions.go for the mapping.
 type EssenceFilterOptions struct {
+	Mode InitMode `json:"mode"`
+
 	Rarity6Weapon   bool `json:"rarity6_weapon"`
 	Rarity5Weapon   bool `json:"rarity5_weapon"`
 	Rarity4Weapon   bool `json:"rarity4_weapon"`
@@ -24,10 +45,12 @@ type EssenceFilterOptions struct {
 	LockSlot3Practical bool `json:"lock_slot3_practical"`
 	// 未匹配时废弃而非跳过
 	DiscardUnmatched bool `json:"discard_unmatched"`
-	// 筛选结束后推荐预刻写方案（枚举最优方案并输出到日志）；开启时会同时写入用户数据目录 ./EssencePlan.html（每次覆盖）
+	// 限制相同词条基质的锁定数量：筛选前须已有基质库存，按适配武器数作为每个词条组合的锁定名额
+	LimitLockedPerCombination bool `json:"limit_locked_per_combination"`
+	// 战后筛选遍次：只读遍只记录本轮持有份数，执行遍按名额落锁；留空等同执行遍
+	AfterBattlePass AfterBattlePass `json:"after_battle_pass"`
+	// 筛选结束后推荐预刻写方案（枚举最优方案并输出到日志）；开启时会同时写入用户数据目录 debug/record/EssencePlan.html（每次覆盖）
 	ExportCalculatorScript bool `json:"export_calculator_script"`
-	// ExportInventory selects the read-only flawless inventory preset.
-	ExportInventory bool `json:"export_inventory"`
 	// InputLanguage is game/OCR language for skill matching: CN|TC|EN|JP|KR.
 	// Empty / omitted / AUTO: detect via __EssenceFilterDetectLang* OCR nodes at Init.
 	// Explicit CN|TC|EN|JP|KR: force that locale (debug / override).

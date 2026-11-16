@@ -7,11 +7,13 @@ func Register() {
 	maa.AgentServerRegisterCustomAction("EssenceFilterInitAction", &EssenceFilterInitAction{})
 	maa.AgentServerRegisterCustomAction("EssenceFilterCheckItemAction", &EssenceFilterCheckItemAction{})
 	maa.AgentServerRegisterCustomAction("EssenceFilterCheckItemLevelAction", &EssenceFilterCheckItemLevelAction{})
+	maa.AgentServerRegisterCustomAction("EssenceFilterReadLockStateAction", &EssenceFilterReadLockStateAction{})
 	maa.AgentServerRegisterCustomAction("EssenceFilterSkillDecisionAction", &EssenceFilterSkillDecisionAction{})
 	maa.AgentServerRegisterCustomAction("EssenceFilterFinishAction", &EssenceFilterFinishAction{})
 
 	//战斗后识别版本
 	maa.AgentServerRegisterCustomAction("EssenceFilterAfterBattleSkillDecisionAction", &EssenceFilterAfterBattleSkillDecisionAction{})
+	maa.AgentServerRegisterCustomAction("EssenceFilterAfterBattleInventoryCommitAction", &EssenceFilterAfterBattleInventoryCommitAction{})
 	maa.AgentServerRegisterCustomAction("EssenceFilterAfterBattleTierGateAction", &EssenceFilterAfterBattleTierGateAction{})
 	maa.AgentServerRegisterCustomRecognition("EssenceFilterAfterBattleNthRecognition", &EssenceFilterAfterBattleNthRecognition{})
 }

@@ -19,9 +19,9 @@
             "Node.Action.Succeeded": "📦목표 모드: 기질 보관함을 불러왔습니다"
         }
     },
-    "AutoEssenceTargetPrepareFailed": {
+    "AutoEssenceInventoryScanFailed": {
         "focus": {
-            "Node.Action.Starting": "❌**목표 모드: 기질 재고 확인에 실패했습니다**\n기질 화면에서 재고를 확인할 수 있는 상태인지 확인한 뒤 다시 시도하세요"
+            "Node.Action.Starting": "❌**기질 재고 확인에 실패했습니다**\n기질 화면에서 재고를 확인할 수 있는 상태인지 확인한 뒤 다시 시도하세요"
         }
     },
     "AutoEssenceDispatcher": {
