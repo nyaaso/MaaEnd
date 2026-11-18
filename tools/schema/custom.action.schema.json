@@ -81,7 +81,6 @@
                 "OutpostTradingPrioritySession",
                 "OutpostTradingReserveSession",
                 "PipelineOverride",
-                "PipelineOverrideAction",
                 "PostStop",
                 "PullCountCalculatorAction",
                 "PuzzleAction",
@@ -92,6 +91,7 @@
                 "SceneManagerMenuListClickItemAction",
                 "SeizeDeliveryJobsResetScanStateAction",
                 "SeizeDeliveryJobsScanTargetAction",
+                "SetItemQuantity",
                 "SubTask",
                 "SyncItemData",
                 "TextInputAction",
@@ -583,6 +583,20 @@
                         }
                     }
                 }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {"const": "SetItemQuantity"}
+                },
+                "required": ["custom_action"]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {"$ref": "./components/ims.schema.json#/$defs/SetItemQuantityParam"}
+                },
+                "required": ["custom_action_param"]
             }
         },
         {

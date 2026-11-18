@@ -98,7 +98,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameEngravingPermit": {
@@ -241,7 +241,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -357,7 +357,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -473,7 +473,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -589,7 +589,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -705,7 +705,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -821,7 +821,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -937,7 +937,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameIndustrial": {
@@ -1053,7 +1053,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameIndustrial": {
@@ -1169,7 +1169,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -1285,7 +1285,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -1401,7 +1401,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -1517,7 +1517,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -1633,7 +1633,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -1749,7 +1749,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -1865,7 +1865,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -1981,7 +1981,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameEngravingPermit": {
@@ -2097,7 +2097,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -2213,7 +2213,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -2329,7 +2329,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -2445,7 +2445,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -2561,7 +2561,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -2677,7 +2677,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameArtificingCatalyst": {
@@ -2793,7 +2793,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameIndustrial": {
@@ -2909,7 +2909,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameIndustrial": {
@@ -3025,7 +3025,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -3141,7 +3141,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -3257,7 +3257,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -3373,7 +3373,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -3489,7 +3489,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -3605,7 +3605,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -3721,7 +3721,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -3837,7 +3837,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -3953,7 +3953,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -4069,7 +4069,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameIndustrial": {
@@ -4185,7 +4185,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -4301,7 +4301,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -4417,7 +4417,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -4533,7 +4533,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -4649,7 +4649,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -4919,7 +4919,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -5035,7 +5035,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameDaily": {
@@ -5151,7 +5151,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {
@@ -5267,7 +5267,7 @@
         "action": {
             "type": "Custom",
             "param": {
-                "custom_action": "PipelineOverrideAction",
+                "custom_action": "PipelineOverride",
                 "custom_action_param": {
                     "patch": {
                         "AutoStockInStapleItemNameCultural": {

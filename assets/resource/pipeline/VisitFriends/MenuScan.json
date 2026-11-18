@@ -23,7 +23,7 @@
         "recognition": "DirectHit",
         "pre_delay": 0,
         "action": "Custom",
-        "custom_action": "PipelineOverrideAction",
+        "custom_action": "PipelineOverride",
         "custom_action_param": {
             "patch": {
                 "VisitFriendsAssistCountZero": {
@@ -288,7 +288,7 @@
         "recognition": "DirectHit",
         "pre_delay": 0,
         "action": "Custom",
-        "custom_action": "PipelineOverrideAction",
+        "custom_action": "PipelineOverride",
         "custom_action_param": {
             "patch": {
                 "VisitFriendsAssistFull": {
@@ -320,7 +320,7 @@
         "recognition": "DirectHit",
         "pre_delay": 0,
         "action": "Custom",
-        "custom_action": "PipelineOverrideAction",
+        "custom_action": "PipelineOverride",
         "custom_action_param": {
             "patch": {
                 "VisitFriendsMenuScanTargetFriendOpenPriority": {
@@ -354,7 +354,7 @@
         "recognition": "DirectHit",
         "pre_delay": 0,
         "action": "Custom",
-        "custom_action": "PipelineOverrideAction",
+        "custom_action": "PipelineOverride",
         "custom_action_param": {
             "patch": {
                 "VisitFriendsMenuScanTargetFriendOpenPriority": {
@@ -394,7 +394,7 @@
         "recognition": "DirectHit",
         "pre_delay": 0,
         "action": "Custom",
-        "custom_action": "PipelineOverrideAction",
+        "custom_action": "PipelineOverride",
         "custom_action_param": {
             "patch": {
                 "VisitFriendsMenuScanTargetFriendOpenRemark": {

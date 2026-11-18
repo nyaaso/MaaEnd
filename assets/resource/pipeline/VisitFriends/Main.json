@@ -237,7 +237,7 @@
         ],
         "pre_delay": 0,
         "action": "Custom",
-        "custom_action": "PipelineOverrideAction",
+        "custom_action": "PipelineOverride",
         "custom_action_param": {
             "patch": {
                 "VisitFriendsCheckAssistControlNexus": {
@@ -324,7 +324,7 @@
         ],
         "pre_delay": 0,
         "action": "Custom",
-        "custom_action": "PipelineOverrideAction",
+        "custom_action": "PipelineOverride",
         "custom_action_param": {
             "patch": {
                 "VisitFriendsCheckAssistClueExchange": {
