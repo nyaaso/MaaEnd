@@ -80,5 +80,6 @@ git push origin feat/kr-resource:v2
      (이 경우 `maafw`, `MaaEnd.exe`, OCR 기본 모델은 PC 기존 파일을 그대로 씁니다).
 2. PC 에서 MaaEnd(`MaaEnd.exe`, `go-service`, `cpp-algo`)가 실행 중이면 배포하지 않고 다음 기회로 미룹니다.
 3. `L:\MaaEnd-win-x86_64\config` 를 `L:\MaaEnd-config-backup-<시각>` 으로 백업합니다.
+   백업은 최신 하나만 남깁니다. 새 백업의 파일 수·해시를 확인한 뒤 예전 `L:\MaaEnd-config-backup-*` 폴더는 지웁니다.
 4. 압축을 임시 폴더에 풀고 `robocopy <임시> L:\MaaEnd-win-x86_64 /E /XD config debug cache` 로 덮어씁니다(삭제 없음).
 5. 복사한 파일 해시가 모두 같은지, `interface.json` 의 `version` 이 새 버전인지 확인하고 임시 파일을 지웁니다.

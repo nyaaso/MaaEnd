@@ -343,6 +343,9 @@
         "action": {
             "type": "Click"
         },
+        "anchor": {
+            "MouseMoveResetAnchor": "MouseMoveReset"
+        },
         "post_wait_freezes": {
             "time": 200,
             "target": [
@@ -355,6 +358,7 @@
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
+            "[JumpBack][Anchor]MouseMoveResetAnchor",
             "GiftOperatorTrustFilterApplied"
         ]
     },
@@ -492,6 +496,9 @@
         "action": {
             "type": "Click"
         },
+        "anchor": {
+            "MouseMoveResetAnchor": "MouseMoveReset"
+        },
         "post_wait_freezes": {
             "time": 200,
             "target": [
@@ -504,6 +511,7 @@
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
+            "[JumpBack][Anchor]MouseMoveResetAnchor",
             "GiftOperatorTrustRestored"
         ]
     },

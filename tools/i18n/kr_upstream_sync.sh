@@ -69,7 +69,7 @@ apply)
     fi
     pnpm exec prettier --write assets/resource_kr/pipeline/Focus >/dev/null || rc=30
     uv run tools/validate_schema.py --resource-dirs assets/resource \
-        --overlay-dirs assets/resource_adb/pipeline assets/resource_cloud/pipeline assets/resource_linux/pipeline \
+        --overlay-dirs assets/resource_adb/pipeline assets/resource_cloud/pipeline assets/resource_cloud_web/pipeline assets/resource_linux/pipeline \
         assets/resource_macos/pipeline assets/resource_kr/pipeline \
         --exclude-dirs assets/resource/gamedata assets/resource/image assets/resource/model \
         --task-dirs assets/tasks 2>&1 | tail -3 || rc=30

@@ -240,6 +240,7 @@
     "trialofswordmancy.action.unreachable": "상태 도달 불가",
     "trialofswordmancy.doubled": "2배 적용됨",
     "trialofswordmancy.focus": "선검 연무\n손패 %s\n덱 %s\n연산%d 2배%d 포기%s %s\n뽑기 결정 → %s",
+    "trialofswordmancy.free_calc_unreachable": "선검 연무: 목표 점수 범위(%d-%d)는 덱 %s로 만들 수 없습니다",
     "trialofswordmancy.hand_empty": "없음",
     "trialofswordmancy.recognition_failed": "선검 연무: 인식 실패",
     "trialofswordmancy.undoubled": "2배 미적용",
