@@ -146,22 +146,6 @@
             }
         }
     },
-    "EnterCameraModeKeyUp": {
-        "action": {
-            "type": "KeyUp",
-            "param": {
-                "key": 15
-            }
-        }
-    },
-    "EnterCameraModeLongPress": {
-        "action": {
-            "type": "KeyDown",
-            "param": {
-                "key": 15
-            }
-        }
-    },
     "GameLauncherWakePressEsc": {
         "action": {
             "type": "ClickKey",
@@ -275,14 +259,6 @@
         }
     },
     "ProtocolSpaceTouchExitTouch": {
-        "action": {
-            "type": "ClickKey",
-            "param": {
-                "key": 3
-            }
-        }
-    },
-    "ProtocolSpaceTouchExitTouchRetry": {
         "action": {
             "type": "ClickKey",
             "param": {
@@ -839,6 +815,22 @@
             "type": "ClickKey",
             "param": {
                 "key": 122
+            }
+        }
+    },
+    "__TakePhotoHoldR": {
+        "action": {
+            "type": "KeyDown",
+            "param": {
+                "key": 15
+            }
+        }
+    },
+    "__TakePhotoKeyUp": {
+        "action": {
+            "type": "KeyUp",
+            "param": {
+                "key": 15
             }
         }
     },

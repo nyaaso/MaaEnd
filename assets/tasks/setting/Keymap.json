@@ -21,10 +21,10 @@
                 }
             ],
             "pipeline_override": {
-                "EnterCameraModeLongPress": {
+                "__TakePhotoHoldR": {
                     "key": "{KeymapUseCurrentQuickTool.primary}"
                 },
-                "EnterCameraModeKeyUp": {
+                "__TakePhotoKeyUp": {
                     "key": "{KeymapUseCurrentQuickTool.primary}"
                 },
                 "__WorldToolSprayHoldR": {
@@ -58,9 +58,6 @@
                     "key": "{KeymapInteract.primary}"
                 },
                 "ProtocolSpaceTouchExitTouch": {
-                    "key": "{KeymapInteract.primary}"
-                },
-                "ProtocolSpaceTouchExitTouchRetry": {
                     "key": "{KeymapInteract.primary}"
                 },
                 "AutoMissionNpcProxyTrackCurrentMission": {
