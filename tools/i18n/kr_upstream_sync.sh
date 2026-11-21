@@ -73,7 +73,7 @@ apply)
         assets/resource_macos/pipeline assets/resource_kr/pipeline \
         --exclude-dirs assets/resource/gamedata assets/resource/image assets/resource/model \
         --task-dirs assets/tasks 2>&1 | tail -3 || rc=30
-    pnpm run check >"$REPORT_DIR/check.txt" 2>&1 || { echo "!!! pnpm check 실패: $REPORT_DIR/check.txt"; rc=30; }
+    NODE_OPTIONS="${NODE_OPTIONS:---max-old-space-size=6144}" pnpm run check >"$REPORT_DIR/check.txt" 2>&1 || { echo "!!! pnpm check 실패: $REPORT_DIR/check.txt"; rc=30; }
     if git diff --cached --name-only HEAD | grep -q '^agent/go-service/' || git diff --name-only HEAD | grep -q '^agent/go-service/'; then
         (cd agent/go-service && go build ./... && go vet ./...) || { echo "!!! go build/vet 실패"; rc=30; }
     fi
