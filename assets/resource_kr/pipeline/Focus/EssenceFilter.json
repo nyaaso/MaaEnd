@@ -1,9 +1,4 @@
 {
-    "EssenceFilterNavigateToInventoryFailed": {
-        "focus": {
-            "Node.Action.Failed": "기질 화면에 들어가지 못해 작업을 종료합니다"
-        }
-    },
     "EssenceFilterCheckInInventory": {
         "focus": {
             "Node.Action.Succeeded": "기질 화면인 것을 확인했습니다"

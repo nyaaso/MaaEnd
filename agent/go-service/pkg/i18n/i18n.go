@@ -35,6 +35,7 @@ var htmlTemplates = map[string]string{
 	"tasker.hdr_warning":                      "HTML/hdr-warning.html",
 	"tasker.aspect_ratio_warning":             "HTML/aspect-ratio-warning.html",
 	"essencefilter.loot_summary":              "HTML/essencefilter-loot-summary.html",
+	"essencefilter.progress":                  "HTML/essencefilter-progress.html",
 	"essencefilter.init_weapons":              "HTML/essencefilter-init-weapons.html",
 	"essencefilter.init_skills":               "HTML/essencefilter-init-skills.html",
 	"essencefilter.plan_recommend":            "HTML/essencefilter-plan-recommend.html",
@@ -53,7 +54,6 @@ var htmlTemplates = map[string]string{
 	"dijiangrewards.wait_exchange_countdown":  "HTML/dijiangrewards-wait-exchange-countdown.html",
 	"ims.sync_item_summary":                   "HTML/ims-sync-item-summary.html",
 	"ims.add_item_summary":                    "HTML/ims-add-item-summary.html",
-	"dynamic_html_log.log":                    "HTML/dynamic-log.html",
 }
 
 var (

@@ -11,7 +11,7 @@
     },
     "AutoEssenceTargetPrepare": {
         "focus": {
-            "Node.Action.Starting": "📦목표 모드: 기질 재고 확인을 시작합니다"
+            "Node.Action.Starting": "📦목표 모드: 현재 계정의 기질 재고를 확인합니다"
         }
     },
     "AutoEssenceTargetLoadInventory": {
@@ -133,11 +133,6 @@
     "AutoEssenceLowSpStop": {
         "focus": {
             "Node.Action.Starting": "😴**이성이 부족하여 작업을 종료합니다**\n계속 파밍하려면 이성을 충분히 회복하세요~"
-        }
-    },
-    "AutoEssenceCloseObtainDialog": {
-        "focus": {
-            "Node.Action.Starting": "👆나가기 버튼을 누릅니다"
         }
     },
     "AutoEssenceOnSuccess": {

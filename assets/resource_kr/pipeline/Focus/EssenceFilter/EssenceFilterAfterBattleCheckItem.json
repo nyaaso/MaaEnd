@@ -1,7 +1,7 @@
 {
     "EssenceFindLockItem": {
         "focus": {
-            "Node.Action.Succeeded": "기질이 잠겨 있지 않습니다"
+            "Node.Action.Succeeded": "기질 상세 정보를 찾았습니다"
         }
     },
     "EssenceFilterAfterBattleIsflawless": {

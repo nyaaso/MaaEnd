@@ -54,6 +54,8 @@ IGNORE = {
     "__AccountSwitchVerifySelected",
     # 「^水$」는 「清水」 앞 글자를 놓친 OCR 보정용, 한국어는 「^청정수$」로 충분
     "__WorldToolSprayPickWater",
+    # 중국 클라우드 웹(云终末地) 통행증 로그인 페이지 문구라 한국어 화면이 없음
+    "CloudWebLoginRequired",
 }
 # 중국 클라우드 전용 등 접두사로 제외
 IGNORE_PREFIXES = ("CloudEndfield",)
