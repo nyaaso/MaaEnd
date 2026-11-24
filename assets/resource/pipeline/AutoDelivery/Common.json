@@ -61,7 +61,7 @@
             "ready": false
         }
     },
-    "AutoDeliveryCheckDeliveryMissionListItem": {
+    "AutoDeliveryCheckDeliveryMissionListItemText": {
         "desc": "在任务列表中识别送货任务",
         "recognition": "OCR",
         "roi": [
@@ -80,7 +80,7 @@
         ],
         "order_by": "Expected"
     },
-    "AutoDeliveryCheckDeliveryMissionSelected": {
+    "AutoDeliveryCheckDeliveryMissionSelectedText": {
         "desc": "确认右侧详情已经切换到送货任务",
         "recognition": "OCR",
         "roi": [
@@ -106,7 +106,7 @@
         "desc": "确认任务条件区域包含黄色文本，并保留送货目标 OCR 结果",
         "recognition": "And",
         "all_of": [
-            "AutoDeliveryCheckDestinationYellowText",
+            "AutoDeliveryCheckDestinationYellowColor",
             "AutoDeliveryCheckDestinationText"
         ],
         "box_index": 1
@@ -124,7 +124,7 @@
         "only_rec": false,
         "order_by": "Horizontal"
     },
-    "AutoDeliveryCheckDestinationYellowText": {
+    "AutoDeliveryCheckDestinationYellowColor": {
         "desc": "确认任务条件区域存在黄色文本，避免把白色任务说明当作终点",
         "recognition": "ColorMatch",
         "roi": [
@@ -195,7 +195,7 @@
         "recognition": "And",
         "all_of": [
             "InMenuMission",
-            "AutoDeliveryCheckDeliveryMissionSelected"
+            "AutoDeliveryCheckDeliveryMissionSelectedText"
         ],
         "box_index": 1,
         "pre_wait_freezes": {
@@ -271,7 +271,7 @@
         "recognition": "And",
         "all_of": [
             "InMenuMission",
-            "AutoDeliveryCheckDeliveryMissionListItem"
+            "AutoDeliveryCheckDeliveryMissionListItemText"
         ],
         "box_index": 1,
         "pre_delay": 0,
