@@ -36,6 +36,8 @@ struct ZiplineRoute
     std::vector<zipline::ZiplineNode> towers;
     // 与 towers 逐跳对应(最后一根没有), 列出这根架子上下一跳以外的索通向的架子
     std::vector<std::vector<zipline::ZiplineNode>> hop_alternates;
+    // 与 hop_alternates 逐跳对应, 列出 hop_alternates 以外可能落到的架子
+    std::vector<std::vector<zipline::ZiplineNode>> hop_bystanders;
     // 折算成等效走路距离
     double cost = 0.0;
     // 链首依次试的上索站位, 为空表示只能按架子坐标走
@@ -46,14 +48,14 @@ struct ZiplineRoute
 // SameTower 靠世界坐标认架子, 漏一个分量就退化成按像素认, 所以两侧共用这份映射
 ZiplineNodeRef ToNodeRef(const zipline::ZiplineNode& node);
 
-// walking_path 为空表示步行不可达, goal_deck_y 须与步行方案一致, 两个区名不可互换
+// baseline_cost 为空表示步行不可达, goal_deck_y 须与步行方案一致, 两个区名不可互换
 struct ZiplineLegRequest
 {
     std::string locator_zone;
     std::string navmesh_zone;
     navmesh::WorldPoint start;
     navmesh::WorldPoint goal;
-    const navmesh::WorldPath* walking_path = nullptr;
+    std::optional<double> baseline_cost;
     // 下索后落哪层的偏好, 到不了时照常落最近的面
     float goal_floor_y = navmesh::kBaseNavFloorYNone;
     std::optional<double> goal_deck_y;

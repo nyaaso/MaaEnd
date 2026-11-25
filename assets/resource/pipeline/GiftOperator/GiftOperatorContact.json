@@ -206,6 +206,7 @@
             "type": "And",
             "param": {
                 "all_of": [
+                    "GiftOperatorTrustIcon",
                     "GiftOperatorCheckSelectedLabelColor",
                     "GiftOperatorCheckSelectedTextColor",
                     "GiftOperatorCheckSelectedText1"
@@ -298,11 +299,12 @@
         "recognition": {
             "type": "ColorMatch",
             "param": {
-                "roi": [
-                    0,
-                    0,
-                    1280,
-                    562
+                "roi": "GiftOperatorTrustIcon",
+                "roi_offset": [
+                    26,
+                    -86,
+                    20,
+                    3
                 ],
                 "method": 40,
                 "lower": [
@@ -316,7 +318,7 @@
                     255
                 ],
                 "connected": true,
-                "count": 10,
+                "count": 150,
                 "order_by": "Area"
             }
         }
@@ -401,6 +403,7 @@
             "type": "And",
             "param": {
                 "all_of": [
+                    "GiftOperatorTrustIcon",
                     "GiftOperatorCheckSelectedLabelColor",
                     "GiftOperatorCheckSelectedTextColor",
                     "GiftOperatorCheckSelectedText1"
@@ -417,6 +420,7 @@
             "type": "And",
             "param": {
                 "all_of": [
+                    "GiftOperatorTrustIcon",
                     "GiftOperatorCheckSelectedLabelColor",
                     "GiftOperatorCheckSelectedTextColor",
                     "GiftOperatorCheckSelectedText2"
@@ -433,6 +437,7 @@
             "type": "And",
             "param": {
                 "all_of": [
+                    "GiftOperatorTrustIcon",
                     "GiftOperatorCheckSelectedLabelColor",
                     "GiftOperatorCheckSelectedTextColor",
                     "GiftOperatorCheckSelectedText3"
