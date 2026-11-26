@@ -57,13 +57,15 @@ jobs:
           pnpm generate:AutoStockStaple
           pnpm generate:GiftOperator
           pnpm generate:SceneTeleport
+          pnpm generate:MapOverview
           pnpm generate:AutoEssence
 
       - name: Get version info
         id: version
         run: |
-          # 版本写在每份数据的最前面（version 字段），不再有单独的 version.txt。
-          echo "version=$(jq -r .version tools/zmdmap/data/delivery_destinations.json)" >> "$GITHUB_OUTPUT"
+          # 版本取自上游清单：单份数据文件里的 version 只说明那份内容来自哪一批，内容没变的那份不会被重新
+          # 下载，标签会停在上一批，标题就会显示旧版本。
+          echo "version=$(uv run zmdmap version)" >> "$GITHUB_OUTPUT"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
@@ -93,6 +95,7 @@ jobs:
             - AutoStockStaple
             - GiftOperator
             - SceneTeleport
+            - MapOverview
             - AutoEssence
 
             **Version Information:**
@@ -143,7 +146,8 @@ jobs:
       - name: Get version info
         id: version
         run: |
-          echo "version=$(jq -r .version tools/zmdmap/data/delivery_destinations.json)" >> "$GITHUB_OUTPUT"
+          # 同 sync-pipeline-generate：版本取上游清单，不读单份数据文件。
+          echo "version=$(uv run zmdmap version)" >> "$GITHUB_OUTPUT"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
@@ -276,9 +280,12 @@ jobs:
           uv run python -u tools/essence_filter/extract_skill_pools.py
           uv run python -u tools/essence_filter/build_locations.py
 
+      # 新地图上线后，激发点所属地区要先在 locations.go 的 locationLevelToKey、五语文案与 RegionNodes 里登记
+      # （导航节点要实机信息），任务选项才带得上它。--allow-missing-regions：还没登记的地区跳过并打警告，
+      # 图标与 EssenceFilter 数据照常发；地区补上后下一次运行会自动带上，本地跑仍按默认报错提醒。
       - name: Generate AutoEssence task
         if: steps.weapon-icons.outputs.missing == '0'
-        run: uv run python -u tools/essence_filter/build_autoessence_tasks.py
+        run: uv run python -u tools/essence_filter/build_autoessence_tasks.py --allow-missing-regions
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
@@ -286,18 +293,12 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
           committer: "maaendbotapp[bot] <305547419+maaendbotapp[bot]@users.noreply.github.com>"
           author: "maaendbotapp[bot] <305547419+maaendbotapp[bot]@users.noreply.github.com>"
+          # 按目录提，不逐条列文件：这个作业的产物都在 assets/ 与 tools/（图标、目录数据、essence 数据、
+          # 两个任务），逐条列既没必要，写错一个路径（目录写成文件、文件写成目录）还会让 git add 直接 fatal，
+          # 提交变空、action 抛一个消息为空的 Unexpected error。
           add-paths: |
-            tools/zmdmap
-            assets/data/IconRecognition
-            assets/data/EssenceFilter
-            assets/resource/image/IconRecognition
-            assets/resource/image/UI/Item
-            assets/tasks/AutoEssence
-            assets/tasks/StashBackpack.json
-            assets/interface.json
-            assets/resource/pipeline/AutoEssence
-            assets/resource/pipeline/StashBackpack
-            assets/locales/interface
+            assets
+            tools
           commit-message: "chore(sync-zmdmap): sync icon resources, EssenceFilter data and dependent tasks"
           branch: chore/sync-zmdmap-icons-and-tasks
           title: "chore(sync-zmdmap): sync icon resources, EssenceFilter data and dependent tasks"
