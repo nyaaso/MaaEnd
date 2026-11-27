@@ -29,6 +29,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import sync_ocr_expected as s
 
+SKIP_PREFIXES = ("CloudEndfield",)
+
 HANGUL = re.compile(r"[가-힣]")
 CJK = re.compile(r"[\u4e00-\u9fff\u3040-\u30ff]")
 
@@ -228,6 +230,9 @@ def main() -> int:
 
         for node_member in root_members:
             if text[node_member.value_start] != "{":
+                continue
+            # 중국 클라우드(云终末地) 전용 노드는 한국어 화면이 없으므로 추가하지 않음(audit IGNORE_PREFIXES 와 같음)
+            if node_member.key.startswith(SKIP_PREFIXES):
                 continue
             for index, expected_member in enumerate(collect_ocr_expected_members(parser, node_member.value_start)):
                 label = f"{path.relative_to(repo_root)}::{node_member.key}"
